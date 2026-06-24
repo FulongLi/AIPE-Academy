@@ -1,86 +1,147 @@
-# 🔋 Double Pulse Test (DPT) Platform
+# Spirit Connect Academy
 
-This repository provides documentation, scripts, and guidelines for conducting **Double Pulse Testing (DPT)** on power semiconductor devices such as **IGBTs**, **SiC MOSFETs**, and **GaN HEMTs**. DPT is a widely adopted method to evaluate **switching behavior**, **losses**, and **dynamic performance** of power devices under realistic operating conditions.
+Spirit Connect Academy is an open-source learning framework for power electronics education in the AI era.
 
----
+The goal is simple: a learner with only a computer, curiosity, and an AI coding assistant should be able to move from zero background to practical power electronics capability through a structured, project-based path.
 
-## 📘 Principle of Double Pulse Test
+This repository is the public front door for that vision. It will host the learning map, teaching materials, project briefs, simulation tasks, lab-style exercises, and AI interaction prompts that help students learn power electronics step by step.
 
-The Double Pulse Test applies two sequential gate pulses to the Device Under Test (DUT) in a half-bridge configuration:
+## Why This Exists
 
-1. The **first pulse** builds up current in the inductor.
-2. The **second pulse** initiates the switching event, allowing measurement of the device’s dynamic behavior at a known current level.
+Traditional engineering education is powerful, but it is often expensive, slow, and hard to personalize. AI changes the learning interface.
 
-This enables accurate characterization of:
+Spirit Connect Academy treats AI as a one-on-one mentor that can:
 
-- **Turn-on and turn-off switching transients**
-- **Switching losses (E<sub>on</sub>, E<sub>off</sub>)**
-- **Voltage/current overshoots**
-- **Parasitic effects** such as ringing and crosstalk
+- explain concepts at the learner's level
+- turn theory into simulations and small experiments
+- review calculations, code, and design choices
+- guide students through a curriculum without requiring a formal university setting
 
----
+The long-term vision is to make power electronics education open, practical, and accessible to junior high students, high school students, self-taught engineers, and industry beginners.
 
-## 🧰 Test Setup
+## Learning Path
 
-A typical DPT setup includes the following components:
+The curriculum is designed as a progressive syllabus rather than a collection of disconnected notes.
 
-- **Half-bridge test board** with low-inductance layout
-- **Gate driver** with isolated power supplies and adjustable gate resistance
-- **Load inductor** to set the desired test current
-- **DC-link capacitor** (low ESL film or ceramic types)
-- **Current sensing**: Rogowski coil, current transformer (CT), or shunt resistor
-- **Voltage sensing**: High-bandwidth differential voltage probe
-- **Oscilloscope**: ≥ 500 MHz bandwidth and ≥ 1 GS/s sampling rate
+1. Foundations
+   - electricity, voltage, current, power, and energy
+   - basic circuit laws and measurement thinking
+   - math tools used in power electronics
 
-You may also require a digital delay generator and external logic isolators for precise timing.
+2. Electronic Components
+   - resistors, capacitors, inductors, diodes, MOSFETs, IGBTs, SiC, and GaN
+   - ideal behavior versus real-world parasitics
+   - datasheet reading and component selection
 
----
+3. Conversion Principles
+   - buck, boost, buck-boost, flyback, forward, half-bridge, and full-bridge converters
+   - PWM, duty cycle, ripple, efficiency, and loss
+   - continuous and discontinuous conduction modes
 
-## ⚡ Testing Tips by Device Type
+4. Control and Simulation
+   - feedback loops, compensation, stability, and transient response
+   - SPICE, Python, MATLAB-style analysis, and digital control basics
+   - AI-assisted simulation workflows
 
-| Device Type   | Gate Drive Recommendation       | Measurement Notes                            | Safety & Notes                              |
-|---------------|----------------------------------|-----------------------------------------------|----------------------------------------------|
-| **IGBT**      | +15V/-5V, soft turn-off R<sub>g</sub> | Moderate switching speed, V<sub>CE</sub> overshoot | Tail current must be captured accurately     |
-| **SiC MOSFET**| +18V/-5V or -4V, low R<sub>g</sub>   | Fast dV/dt and dI/dt; high voltage overshoot   | Layout parasitics critical to performance     |
-| **GaN HEMT**  | 0/6V or 0/5V, very low R<sub>g</sub> | Ultra-fast switching; potential for ringing    | Use coaxial probing, precise dead-time control|
+5. Power Devices and Gate Driving
+   - MOSFET, IGBT, SiC MOSFET, and GaN HEMT behavior
+   - gate drivers, dead time, isolation, protection, and layout influence
+   - switching loss, ringing, EMI, and thermal constraints
 
----
+6. Systems and Applications
+   - motor drives, EV power systems, solar inverters, chargers, UPS, and grid converters
+   - reliability, safety, standards awareness, and design tradeoffs
+   - project reviews and design documentation
 
-## 🎛️ Measurement & Waveform Capture
+7. From Learner to Contributor
+   - build small converter projects
+   - document learning notes and experiments
+   - contribute tutorials, simulations, diagrams, and AI prompts back to the community
 
-- **Voltage probe**: Use a high-voltage differential probe rated above V<sub>ds</sub>/V<sub>ce</sub> of DUT
-- **Current probe**: Prefer Rogowski coils or CTs with high bandwidth; shunt resistors may distort fast edges
-- **Oscilloscope settings**:
-  - ≥ 1 GS/s sampling rate
-  - Disable bandwidth limit
-  - Use **single-shot trigger mode**
-- **Triggering**:
-  - Trigger on gate signal or inductor current step
-  - Ensure horizontal delay is adjusted to observe both pre- and post-switching events
+## AI-Native Study Loop
 
----
+Each topic should eventually include:
 
-## 🧮 Post-Processing of Waveforms
+- a plain-language explanation
+- a concept map
+- example calculations
+- simulation tasks
+- hands-on or lab-style exercises
+- common mistakes
+- AI tutor prompts
+- self-check questions
+- extension challenges
 
-Use MATLAB or Python (NumPy, SciPy, matplotlib) for waveform processing and loss calculation.
+The intended workflow is:
 
-### ⚙️ Switching Loss Calculations
+1. Read the topic brief.
+2. Ask an AI mentor to explain it at your level.
+3. Run a simulation or calculation.
+4. Compare the result with the expected behavior.
+5. Ask the AI to challenge your understanding.
+6. Record what you learned.
+7. Move to the next project.
 
-\[
-E_{on} = \int_{t_{on\_start}}^{t_{on\_end}} V_{ds}(t) \cdot I_d(t) \, dt
-\]
-\[
-E_{off} = \int_{t_{off\_start}}^{t_{off\_end}} V_{ds}(t) \cdot I_d(t) \, dt
-\]
+## Repository Structure
 
-### 📊 Additional Metrics
+Current starter structure:
 
-- **Voltage/current overshoot**
-- **Ringing frequency**
-- **dV/dt and dI/dt estimation**
-- **Thermal energy estimation over multiple switching cycles**
+```text
+.
+├── index.html
+├── styles.css
+├── assets/
+│   └── hero-power-electronics-ai.png
+├── README.md
+└── LICENSE.md
+```
 
-Example scripts will be included in the `/scripts` directory for automated waveform processing.
+Planned structure:
 
----
+```text
+curriculum/
+  00-orientation/
+  01-foundations/
+  02-components/
+  03-converters/
+  04-control-and-simulation/
+  05-devices-and-gate-driving/
+  06-systems/
+  07-projects/
 
+prompts/
+  ai-tutor-prompts.md
+  project-review-prompts.md
+  simulation-helper-prompts.md
+
+labs/
+  spice/
+  python/
+  hardware/
+```
+
+## Website
+
+Open `index.html` in a browser to view the current static showcase page.
+
+No build step is required.
+
+## Contributing Direction
+
+Good contributions should help learners move from confusion to capability.
+
+Useful contribution types include:
+
+- beginner-friendly explanations
+- diagrams and concept maps
+- converter design walkthroughs
+- simulation files
+- Python analysis notebooks
+- datasheet reading guides
+- safety notes
+- AI prompt templates
+- project briefs with expected learning outcomes
+
+## License
+
+The repository currently includes a Creative Commons Attribution 4.0 International license in `LICENSE.md`, suitable for open educational content.
