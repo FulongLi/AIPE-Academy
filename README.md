@@ -23,40 +23,44 @@ The long-term vision is to make power electronics education open, practical, and
 
 The curriculum is designed as a progressive syllabus rather than a collection of disconnected notes.
 
-1. Foundations
-   - electricity, voltage, current, power, and energy
-   - basic circuit laws and measurement thinking
-   - math tools used in power electronics
+The first domain track is power electronics. Its technical direction is inspired by the learning philosophy behind Robert W. Erickson and Dragan Maksimovic's *Fundamentals of Power Electronics*: build from first principles, understand steady-state converter behavior, move into modeling and control, and then connect theory to practical engineering constraints.
 
-2. Electronic Components
-   - resistors, capacitors, inductors, diodes, MOSFETs, IGBTs, SiC, and GaN
+This project does not copy textbook content. It uses original explanations, learning maps, simulations, projects, and AI tutor prompts.
+
+1. Orientation
+   - what power electronics is and why it matters
+   - DC-DC, AC-DC, DC-AC, and AC-AC conversion
+   - applications in chargers, EVs, solar, batteries, motor drives, servers, and the grid
+
+2. Foundations
+   - voltage, current, power, energy, KCL, KVL, and equivalent circuits
+   - capacitors, inductors, transients, waveforms, average value, and RMS
+   - the minimum math and measurement thinking used in power electronics
+
+3. Components
+   - resistors, capacitors, inductors, transformers, diodes, MOSFETs, IGBTs, SiC, and GaN
    - ideal behavior versus real-world parasitics
-   - datasheet reading and component selection
+   - datasheet reading, component selection, thermal limits, and packaging
 
-3. Conversion Principles
-   - buck, boost, buck-boost, flyback, forward, half-bridge, and full-bridge converters
+4. Converters
+   - buck, boost, buck-boost, flyback, forward, half-bridge, full-bridge, and resonant converter awareness
    - PWM, duty cycle, ripple, efficiency, and loss
    - continuous and discontinuous conduction modes
 
-4. Control and Simulation
+5. Modeling and Control
+   - averaged models, small-signal thinking, transfer functions, and Bode plots
    - feedback loops, compensation, stability, and transient response
-   - SPICE, Python, MATLAB-style analysis, and digital control basics
-   - AI-assisted simulation workflows
+   - voltage-mode control, current-mode control, and digital control awareness
 
-5. Power Devices and Gate Driving
-   - MOSFET, IGBT, SiC MOSFET, and GaN HEMT behavior
-   - gate drivers, dead time, isolation, protection, and layout influence
-   - switching loss, ringing, EMI, and thermal constraints
+6. Practical Design
+   - magnetics, gate driving, isolation, protection, PCB layout, EMI, and thermal design
+   - measurement artifacts, safe lab habits, first-power-up checklists, and design reviews
+   - engineering tradeoffs between efficiency, cost, density, reliability, and safety
 
-6. Systems and Applications
-   - motor drives, EV power systems, solar inverters, chargers, UPS, and grid converters
-   - reliability, safety, standards awareness, and design tradeoffs
-   - project reviews and design documentation
-
-7. From Learner to Contributor
-   - build small converter projects
-   - document learning notes and experiments
-   - contribute tutorials, simulations, diagrams, and AI prompts back to the community
+7. Systems and Applications
+   - motor drives, EV power systems, solar inverters, chargers, UPS, storage, server power, and grid converters
+   - requirements, reliability, manufacturability, standards awareness, and product tradeoffs
+   - project documentation and specialization paths
 
 ## AI-Native Study Loop
 
@@ -84,40 +88,50 @@ The intended workflow is:
 
 ## Repository Structure
 
-Current starter structure:
+Current structure:
 
 ```text
 .
-├── index.html
-├── styles.css
-├── assets/
-│   └── hero-power-electronics-ai.png
-├── README.md
-└── LICENSE.md
++-- index.html
++-- styles.css
++-- assets/
+|   +-- hero-power-electronics-ai.png
++-- curriculum/
+|   +-- README.md
+|   +-- 00-orientation/
+|   +-- 01-foundations/
+|   +-- 02-components/
+|   +-- 03-converters/
+|   +-- 04-modeling-and-control/
+|   +-- 05-practical-design/
+|   +-- 06-systems-and-applications/
++-- prompts/
+|   +-- ai-tutor-prompts.md
++-- references/
+|   +-- power-electronics-reading-map.md
++-- templates/
+|   +-- topic-template.md
++-- README.md
++-- LICENSE.md
 ```
 
-Planned structure:
+Planned expansion:
 
 ```text
-curriculum/
-  00-orientation/
-  01-foundations/
-  02-components/
-  03-converters/
-  04-control-and-simulation/
-  05-devices-and-gate-driving/
-  06-systems/
-  07-projects/
-
-prompts/
-  ai-tutor-prompts.md
-  project-review-prompts.md
-  simulation-helper-prompts.md
-
 labs/
   spice/
   python/
   hardware/
+
+projects/
+  beginner/
+  intermediate/
+  advanced/
+
+diagrams/
+  concept-maps/
+  converter-current-paths/
+  system-block-diagrams/
 ```
 
 ## Website
@@ -145,3 +159,4 @@ Useful contribution types include:
 ## License
 
 The repository currently includes a Creative Commons Attribution 4.0 International license in `LICENSE.md`, suitable for open educational content.
+
