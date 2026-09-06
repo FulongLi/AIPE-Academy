@@ -1,0 +1,271 @@
+{
+  "project": "AIPE Academy",
+  "checked_on": "2026-09-06",
+  "scope": "基础课程、教材、教学安排和教法的首轮索引；不是原始教材或附件镜像。",
+  "sources": [
+    {
+      "id": "mit-6002-syllabus",
+      "institution_or_publisher": "MIT",
+      "course_or_title": "6.002",
+      "term_or_edition": "Spring 2007",
+      "category": "circuits",
+      "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/syllabus/",
+      "resource_type": "public_syllabus",
+      "access_notes": "已核实目标、先修、教材与教学组织",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "mit-6002-calendar",
+      "institution_or_publisher": "MIT",
+      "course_or_title": "6.002",
+      "term_or_edition": "Spring 2007",
+      "category": "circuits",
+      "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/calendar/",
+      "resource_type": "public_schedule",
+      "access_notes": "已读取授课顺序，摘要归类；未镜像原页",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "mit-6002-labs",
+      "institution_or_publisher": "MIT",
+      "course_or_title": "6.002",
+      "term_or_edition": "Spring 2007",
+      "category": "laboratory",
+      "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/labs/",
+      "resource_type": "public_resource_index",
+      "access_notes": "已核实实验资源入口，附件未逐一审阅",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "mit-601-syllabus",
+      "institution_or_publisher": "MIT",
+      "course_or_title": "6.01SC",
+      "term_or_edition": "Spring 2011",
+      "category": "integrated_intro",
+      "url": "https://ocw.mit.edu/courses/6-01sc-introduction-to-electrical-engineering-and-computer-science-i-spring-2011/pages/syllabus/",
+      "resource_type": "public_syllabus",
+      "access_notes": "部分活动来自 2011 秋；校内 Online Tutor 未随 OCW 提供",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "mit-601-practice",
+      "institution_or_publisher": "MIT",
+      "course_or_title": "6.01SC",
+      "term_or_edition": "Historical instructor insights",
+      "category": "pedagogy",
+      "url": "https://ocw.mit.edu/courses/6-01sc-introduction-to-electrical-engineering-and-computer-science-i-spring-2011/pages/instructor-insights/shifting-to-a-practice-theory-practice-approach/",
+      "resource_type": "public_teaching_interview",
+      "access_notes": "实践—理论—实践方法",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "mit-601-assessment",
+      "institution_or_publisher": "MIT",
+      "course_or_title": "6.01SC",
+      "term_or_edition": "Historical instructor insights",
+      "category": "pedagogy",
+      "url": "https://ocw.mit.edu/courses/6-01sc-introduction-to-electrical-engineering-and-computer-science-i-spring-2011/pages/instructor-insights/formative-assessment-during-design-labs/",
+      "resource_type": "public_teaching_interview",
+      "access_notes": "对话与实验过程中的形成性评估",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "mit-802",
+      "institution_or_publisher": "MIT",
+      "course_or_title": "8.02",
+      "term_or_edition": "Spring 2007",
+      "category": "physics",
+      "url": "https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/pages/syllabus/",
+      "resource_type": "public_syllabus",
+      "access_notes": "电磁学与实验基础",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "mit-1801",
+      "institution_or_publisher": "MIT",
+      "course_or_title": "18.01SC",
+      "term_or_edition": "Fall 2010",
+      "category": "mathematics",
+      "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/syllabus/",
+      "resource_type": "public_syllabus",
+      "access_notes": "单变量微积分",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "mit-1803",
+      "institution_or_publisher": "MIT",
+      "course_or_title": "18.03",
+      "term_or_edition": "Spring 2010",
+      "category": "mathematics",
+      "url": "https://www.ocw.mit.edu/courses/18-03-differential-equations-spring-2010/pages/syllabus/",
+      "resource_type": "public_syllabus",
+      "access_notes": "常微分方程；18.01 先修，18.02 同修",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "mit-1806",
+      "institution_or_publisher": "MIT",
+      "course_or_title": "18.06SC",
+      "term_or_edition": "Fall 2011",
+      "category": "mathematics",
+      "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/syllabus/",
+      "resource_type": "public_syllabus",
+      "access_notes": "线性代数；本轮未逐项下载习题",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "mit-python",
+      "institution_or_publisher": "MIT",
+      "course_or_title": "6.0001",
+      "term_or_edition": "Fall 2016",
+      "category": "programming",
+      "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/syllabus/",
+      "resource_type": "public_syllabus",
+      "access_notes": "Python 编程入门",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "mit-signals",
+      "institution_or_publisher": "MIT",
+      "course_or_title": "6.003",
+      "term_or_edition": "Fall 2011",
+      "category": "signals_systems",
+      "url": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/pages/syllabus/",
+      "resource_type": "public_syllabus",
+      "access_notes": "信号与系统",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "princeton-curriculum",
+      "institution_or_publisher": "Princeton",
+      "course_or_title": "ECE undergraduate",
+      "term_or_edition": "Current public page checked 2026-09-06",
+      "category": "program_structure",
+      "url": "https://ece.princeton.edu/academics/undergraduate/curriculum",
+      "resource_type": "public_curriculum",
+      "access_notes": "培养结构；部分专业选项含历史备注，不等同于当学期开课清单",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "princeton-catalog",
+      "institution_or_publisher": "Princeton",
+      "course_or_title": "ECE course catalog",
+      "term_or_edition": "Current public page checked 2026-09-06",
+      "category": "course_classification",
+      "url": "https://ece.princeton.edu/academics/courses/catalog",
+      "resource_type": "public_catalog",
+      "access_notes": "基础、系统、独立项目等课程描述；不是完整逐周 syllabus",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "princeton-203-archive",
+      "institution_or_publisher": "Princeton",
+      "course_or_title": "ELE 203",
+      "term_or_edition": "Spring 2021",
+      "category": "circuits",
+      "url": "https://ece.princeton.edu/courses/electronic-circuit-design-analysis-and-implementation-0",
+      "resource_type": "public_course_description",
+      "access_notes": "历史课程说明；未核实指定教材",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "princeton-201",
+      "institution_or_publisher": "Princeton",
+      "course_or_title": "ELE 201",
+      "term_or_edition": "Spring semester 2016-17",
+      "category": "signals_systems",
+      "url": "https://www.princeton.edu/~cuff/ele201/",
+      "resource_type": "public_course_site",
+      "access_notes": "历史课程站；不能当作 2026 课程",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "princeton-201-schedule",
+      "institution_or_publisher": "Princeton",
+      "course_or_title": "ELE 201",
+      "term_or_edition": "Spring semester 2016-17",
+      "category": "signals_systems",
+      "url": "https://www.princeton.edu/~cuff/ele201/schedule.html",
+      "resource_type": "public_schedule",
+      "access_notes": "已读取周安排；页面生成时间不等于授课年份",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "princeton-201-labs",
+      "institution_or_publisher": "Princeton",
+      "course_or_title": "ELE 201",
+      "term_or_edition": "Spring semester 2016-17",
+      "category": "laboratory",
+      "url": "https://www.princeton.edu/~cuff/ele201/labs.html",
+      "resource_type": "public_resource_index",
+      "access_notes": "实验目录可访问；附件未逐一审阅",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "princeton-201-notes",
+      "institution_or_publisher": "Princeton",
+      "course_or_title": "ELE 201",
+      "term_or_edition": "Spring semester 2016-17",
+      "category": "reading",
+      "url": "https://www.princeton.edu/~cuff/ele201/kulkarni.html",
+      "resource_type": "public_resource_index",
+      "access_notes": "Kulkarni 讲义目录可见；章节正文未逐一审阅",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "princeton-abet",
+      "institution_or_publisher": "Princeton",
+      "course_or_title": "ECE course folders",
+      "term_or_edition": "Page checked 2026-09-06",
+      "category": "access_limit",
+      "url": "https://ece.princeton.edu/abet",
+      "resource_type": "public_notice_protected_folders",
+      "access_notes": "页面说明课程文件夹有密码保护；未访问受保护内容",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "alexander-sadiku",
+      "institution_or_publisher": "McGraw Hill",
+      "course_or_title": "Fundamentals of Electric Circuits",
+      "term_or_edition": "Page checked 2026-09-06",
+      "category": "textbook",
+      "url": "https://www.mheducation.com/highered/product/Fundamentals-of-Electric-Circuits-Alexander.html",
+      "resource_type": "publisher_catalog",
+      "access_notes": "公开目录与作者信息；商业教材全文未下载；不宣称为所查学校指定书",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "nilsson-riedel",
+      "institution_or_publisher": "Pearson",
+      "course_or_title": "Electric Circuits",
+      "term_or_edition": "12th edition",
+      "category": "textbook",
+      "url": "https://www.pearson.com/content/dam/one-dot-com/one-dot-com/us/en/files/14939-ENG-Nilsson-ElectricCircuits-12E.pdf",
+      "resource_type": "publisher_fact_sheet",
+      "access_notes": "出版商书目信息；非教材全文；不宣称为所查学校指定书",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "openstax-algebra",
+      "institution_or_publisher": "OpenStax",
+      "course_or_title": "Algebra and Trigonometry",
+      "term_or_edition": "2e",
+      "category": "math_bridge",
+      "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/preface",
+      "resource_type": "official_book_entry",
+      "access_notes": "官方检索可见；本轮未完整阅读或下载教材",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "openstax-physics",
+      "institution_or_publisher": "OpenStax",
+      "course_or_title": "University Physics Volume 2",
+      "term_or_edition": "Page checked 2026-09-06",
+      "category": "physics_bridge",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/preface",
+      "resource_type": "official_book_entry",
+      "access_notes": "官方检索可见；详情页动态内容未被浏览工具解析；未完整下载教材",
+      "checked_on": "2026-09-06"
+    }
+  ]
+}

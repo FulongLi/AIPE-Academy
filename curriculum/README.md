@@ -2,6 +2,8 @@
 
 This track is the first domain inside AIPE Academy.
 
+For a guided first session, use [Start here](../START-HERE.md). Before the domain stages, diagnose the learner's needs using the [foundation prerequisite path](01-foundations/prerequisite-path.zh-CN.md). Its F-series modules are submodules of Foundations, not additional academy phases.
+
 These seven stages form the Education phase. A later Research phase will build on demonstrated design skills through literature study, reproduction, and original investigation. See the [foundation review and proposed progression](../references/erickson-foundation-review.zh-CN.md); the research curriculum remains a discussion draft.
 
 The goal is to make power electronics learnable by anyone with curiosity, a computer, and an AI mentor. It is designed for beginners, but it should also remain useful for engineers who want a structured review path.

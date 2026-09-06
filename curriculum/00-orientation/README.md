@@ -1,5 +1,7 @@
 # Stage 00: Orientation
 
+New to both electricity and AI-assisted learning? Start with [the learner entry point](../../START-HERE.md). You do not need to know course names or prepare a technical prompt.
+
 ## Purpose
 
 This stage helps a beginner answer the first important question: what is power electronics, and why should I care?
@@ -38,4 +40,3 @@ Before moving on, the learner should be able to explain:
 - what switching converters do
 - what makes power electronics different from ordinary electronics
 - why efficiency, heat, size, cost, and safety matter
-

@@ -1,5 +1,7 @@
 # Stage 01: Foundations
 
+For beginners, start with the [prerequisite path (中文)](prerequisite-path.zh-CN.md) and [first lesson](first-lesson.zh-CN.md). The path separates what is needed before basic converter analysis from what can be learned later alongside control and design. See the [MIT / Princeton source review](../../references/undergraduate-foundations-review.zh-CN.md) for the evidence behind this structure.
+
 ## Purpose
 
 This stage builds the minimum electrical, mathematical, and measurement intuition required before converter analysis.
@@ -40,4 +42,3 @@ Before moving on, the learner should be able to:
 - explain capacitor voltage and inductor current continuity
 - compute average power in simple cases
 - read a basic waveform and describe what is changing
-

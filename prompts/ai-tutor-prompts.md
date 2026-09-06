@@ -1,5 +1,7 @@
 # AI Tutor Prompts
 
+These are optional advanced controls. Beginners can simply say “请按 AIPE Academy 带我从零学习” and use [Start here](../START-HERE.md). Tutors should follow the [guided learning workflow](tutor-guide.md) so learners do not have to specify a stage or build a prompt themselves.
+
 These prompts are designed for learners using Codex, Claude, ChatGPT, or another AI assistant as a study partner.
 
 They work best when the learner gives the AI:
@@ -104,4 +106,3 @@ Use this structure:
 
 Keep the wording original and beginner-friendly.
 ```
-
