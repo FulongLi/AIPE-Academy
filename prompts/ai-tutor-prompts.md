@@ -13,7 +13,7 @@ They work best when the learner gives the AI:
 ## Start a Stage
 
 ```text
-You are my power electronics tutor. I am studying Stage [number/name] in Spirit Connect Academy.
+You are my power electronics tutor. I am studying Stage [number/name] in AIPE Academy.
 
 My current background is: [describe honestly].
 
@@ -91,7 +91,7 @@ Please identify risks in safety, device stress, thermal design, control stabilit
 ## Build a Learning Note
 
 ```text
-Turn my messy notes into a clear learning note for Spirit Connect Academy.
+Turn my messy notes into a clear learning note for AIPE Academy.
 
 Use this structure:
 1. concept

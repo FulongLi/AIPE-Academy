@@ -1,12 +1,16 @@
 # Power Electronics Reading Map
 
-This file records how Spirit Connect Academy relates to established power electronics learning resources.
+This file records how AIPE Academy relates to established power electronics learning resources.
 
 The main technical inspiration for this track is:
 
 - Robert W. Erickson and Dragan Maksimovic, *Fundamentals of Power Electronics*, 3rd edition, Springer, 2020.
 
 Use the book as a rigorous reference. Use this repository as an open, AI-guided learning path.
+
+Publisher record: [third edition, 2020](https://link.springer.com/book/10.1007/978-3-030-43881-4).
+
+For verified CU Boulder course resources, access limitations, and the proposed Education → Research progression, see the [foundation review (中文)](erickson-foundation-review.zh-CN.md) and [source register](erickson-sources.json). Last checked: 2026-09-06.
 
 ## How This Project Should Use References
 
@@ -37,7 +41,7 @@ The academy track should gradually cover these areas in original form:
 - rectifiers and harmonics
 - resonant conversion and soft switching
 
-## Spirit Connect Academy Translation
+## AIPE Academy Translation
 
 The academy should translate rigorous references into:
 
@@ -51,4 +55,3 @@ The academy should translate rigorous references into:
 - open contribution tasks
 
 The north star is simple: help learners move from confusion to capability.
-

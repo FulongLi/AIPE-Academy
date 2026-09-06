@@ -1,0 +1,161 @@
+{
+  "project": "AIPE Academy",
+  "checked_on": "2026-09-06",
+  "purpose": "首轮基石调研的来源与访问状态；配套摘要见 erickson-foundation-review.zh-CN.md。",
+  "storage_policy": "保存书目、链接、原创摘要与课程映射；未镜像教材、讲义、作业或实验附件。外部资料不自动适用本仓库许可证。",
+  "sources": [
+    {
+      "id": "erickson-profile",
+      "title": "Erickson 官方人员页",
+      "url": "https://www.colorado.edu/powerelectronics/robert-w-erickson/",
+      "resource_type": "faculty_profile",
+      "access_status": "verified_public",
+      "notes": "当前列为 Emeritus Professor；具体退休日期未核实。",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "erickson-experts",
+      "title": "CU Experts 人员与教学记录",
+      "url": "https://experts.colorado.edu/display/fisid_105514",
+      "resource_type": "faculty_database",
+      "access_status": "verified_public",
+      "notes": "有近年教学记录。",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "erickson-teaching",
+      "title": "Erickson 教学主页",
+      "url": "https://www.colorado.edu/faculty/erickson/teaching",
+      "resource_type": "teaching_overview",
+      "access_status": "verified_public_historical",
+      "notes": "含过时开课规划，不能当作当前完整 syllabus。",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "erickson-textbook-old",
+      "title": "Erickson 旧教材页面",
+      "url": "https://www.colorado.edu/faculty/erickson/textbook",
+      "resource_type": "book_overview",
+      "access_status": "verified_public_historical",
+      "notes": "第三版预计出版时间已过时，以出版社为准。",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "fpe-third-edition",
+      "title": "Fundamentals of Power Electronics, Third Edition",
+      "url": "https://link.springer.com/book/10.1007/978-3-030-43881-4",
+      "resource_type": "publisher_record",
+      "access_status": "verified_public",
+      "notes": "核对作者、版次、年份和公开目录；未下载教材。",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "cu-ecen-catalog",
+      "title": "CU Boulder ECEN 课程目录",
+      "url": "https://catalog.colorado.edu/courses-a-z/ecen/",
+      "resource_type": "course_catalog",
+      "access_status": "verified_public",
+      "notes": "核实 5797、5807、5817、5857；不是逐周 syllabus。",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "cu-ecea-catalog",
+      "title": "CU Boulder ECEA 课程目录",
+      "url": "https://catalog.colorado.edu/courses-a-z/ecea/",
+      "resource_type": "course_catalog",
+      "access_status": "verified_public",
+      "notes": "核实线上课程与 5715–5718 项目描述；不是原始实验附件。",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "coursera-pe",
+      "title": "Power Electronics 专项",
+      "url": "https://www.coursera.org/specializations/power-electronics",
+      "resource_type": "specialization_outline",
+      "access_status": "verified_public",
+      "notes": "本次页面列四门课；未访问课程内部付费或登录材料。",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "coursera-intro",
+      "title": "Introduction to Power Electronics",
+      "url": "https://www.coursera.org/learn/power-electronics",
+      "resource_type": "public_module_outline",
+      "access_status": "verified_public",
+      "notes": "可见入门模块和部分仿真材料条目；附件未下载。",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "coursera-control",
+      "title": "Modeling and Control of Power Electronics",
+      "url": "https://www.coursera.org/specializations/modeling-and-control-of-power-electronics",
+      "resource_type": "specialization_outline",
+      "access_status": "verified_public",
+      "notes": "本次页面列五门课，教师为 Dragan Maksimovic。",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "copec",
+      "title": "Colorado Power Electronics Center",
+      "url": "https://www.colorado.edu/powerelectronics/",
+      "resource_type": "research_overview",
+      "access_status": "verified_public",
+      "notes": "用于学科研究方向概览。",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "pels-scope",
+      "title": "IEEE PELS About",
+      "url": "https://www.ieee-pels.org/about-pels/",
+      "resource_type": "professional_society_scope",
+      "access_status": "verified_public",
+      "notes": "用于领域定义。",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "tpel-scope",
+      "title": "IEEE Transactions on Power Electronics",
+      "url": "https://www.ieee-pels.org/publications/transactions-on-power-electronics/",
+      "resource_type": "journal_scope",
+      "access_status": "verified_public",
+      "notes": "用于研究范围与验证方法概览。",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "legacy-ecen-5797",
+      "title": "ECEN 5797 旧课程站",
+      "url": "https://ecee.colorado.edu/~ecen5797/",
+      "resource_type": "legacy_course_site",
+      "access_status": "unavailable_this_session",
+      "notes": "官方教学页链接；浏览访问失败，直接请求出现 DNS 解析失败，未取得 syllabus。",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "legacy-ecen-5807",
+      "title": "ECEN 5807 旧课程站",
+      "url": "https://ecee.colorado.edu/~ecen5807/",
+      "resource_type": "legacy_course_site",
+      "access_status": "unavailable_this_session",
+      "notes": "官方教学页链接；浏览访问失败，直接请求出现 DNS 解析失败，未取得 syllabus。",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "legacy-ecen-5817",
+      "title": "ECEN 5817 旧课程站",
+      "url": "https://ecee.colorado.edu/~ecen5817/",
+      "resource_type": "legacy_course_site",
+      "access_status": "unavailable_this_session",
+      "notes": "官方教学页链接；浏览访问失败，直接请求出现 DNS 解析失败，未取得 syllabus。",
+      "checked_on": "2026-09-06"
+    },
+    {
+      "id": "legacy-ecen-4517",
+      "title": "ECEN 4517 旧课程站",
+      "url": "https://ecee.colorado.edu/~ecen4517/",
+      "resource_type": "legacy_course_site",
+      "access_status": "unavailable_this_session",
+      "notes": "官方教学页链接；浏览访问失败，直接请求出现 DNS 解析失败，未取得 syllabus。",
+      "checked_on": "2026-09-06"
+    }
+  ]
+}

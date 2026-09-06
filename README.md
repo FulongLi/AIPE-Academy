@@ -1,16 +1,25 @@
-# Spirit Connect Academy
+# AIPE Academy
 
-Spirit Connect Academy is an open-source learning framework for power electronics education in the AI era.
+AIPE Academy is an open-source learning framework for power electronics education in the AI era.
 
 The goal is simple: a learner with only a computer, curiosity, and an AI coding assistant should be able to move from zero background to practical power electronics capability through a structured, project-based path.
 
 This repository is the public front door for that vision. It will host the learning map, teaching materials, project briefs, simulation tasks, lab-style exercises, and AI interaction prompts that help students learn power electronics step by step.
 
+## Education to Research
+
+AIPE Academy is intended to support two phases, with power electronics as its first domain:
+
+1. **Education — current priority.** Build the prerequisites, physical intuition, analysis skills, and project experience needed to understand and design power converters with an AI mentor. The seven curriculum stages below belong to this phase.
+2. **Research — planned progression.** Move from understanding established results to reading papers, reproducing results, defining research questions, and validating original work. This phase is a direction for development, not an implemented research curriculum.
+
+The technical foundation is Erickson and Maksimović's *Fundamentals of Power Electronics* and the CU Boulder power electronics teaching ecosystem. See the [initial research and framework discussion (中文)](references/erickson-foundation-review.zh-CN.md) and [source register](references/erickson-sources.json), checked on September 6, 2026. The framework mapping is AIPE Academy's proposal, not a CU Boulder program or endorsement.
+
 ## Why This Exists
 
 Traditional engineering education is powerful, but it is often expensive, slow, and hard to personalize. AI changes the learning interface.
 
-Spirit Connect Academy treats AI as a one-on-one mentor that can:
+AIPE Academy treats AI as a one-on-one mentor that can:
 
 - explain concepts at the learner's level
 - turn theory into simulations and small experiments
@@ -159,4 +168,3 @@ Useful contribution types include:
 ## License
 
 The repository currently includes a Creative Commons Attribution 4.0 International license in `LICENSE.md`, suitable for open educational content.
-
