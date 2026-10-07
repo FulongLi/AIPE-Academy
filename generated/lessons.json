@@ -1,0 +1,324 @@
+{
+  "lessons": [
+    {
+      "domain": "power-electronics",
+      "estimated_time": 120,
+      "language": "en",
+      "learning_objectives": [
+        "Explain buck energy transfer and continuous conduction assumptions",
+        "Connect averaged models to control and physical implementation limits"
+      ],
+      "level": "undergraduate",
+      "next": [
+        "buck-open-lab"
+      ],
+      "prerequisites": [
+        "converters"
+      ],
+      "references": [
+        "references/erickson-sources.json"
+      ],
+      "sha256": "19dc19d2f1cfb0919259c4a4768bcf432acb68427f42313fb4575caf79cf5e0f",
+      "slug": "buck-converter",
+      "source": "curriculum/03-converters/buck-converter.md",
+      "status": "draft",
+      "title": "Buck converter: from principles to design",
+      "tools": [
+        {
+          "id": "matlab",
+          "licence_class": "commercial",
+          "optional": true
+        },
+        {
+          "id": "plecs",
+          "licence_class": "commercial",
+          "optional": true
+        },
+        {
+          "id": "ltspice",
+          "licence_class": "free_proprietary",
+          "optional": true
+        }
+      ],
+      "track": "power-electronics",
+      "type": "tutorial",
+      "url": "/academy/power-electronics/buck-converter/"
+    },
+    {
+      "domain": "power-electronics",
+      "estimated_time": 45,
+      "language": "en",
+      "learning_objectives": [
+        "Derive volt-second balance and ripple in SI units",
+        "Detect failure of a continuous conduction assumption"
+      ],
+      "level": "undergraduate",
+      "next": [
+        "dynamics-and-control"
+      ],
+      "prerequisites": [
+        "converters"
+      ],
+      "references": [
+        "references/erickson-sources.json"
+      ],
+      "sha256": "3e4ab946e91b69ad737efddd9aa62608dac19ccf8047bd65ffb006465c9363b5",
+      "slug": "buck-open-lab",
+      "source": "curriculum/03-converters/buck-open-lab.md",
+      "status": "available",
+      "title": "Predict and check an ideal buck converter",
+      "tools": [
+        {
+          "id": "python",
+          "licence_class": "open_source",
+          "optional": false
+        }
+      ],
+      "track": "power-electronics",
+      "type": "lab",
+      "url": "/academy/power-electronics/buck-open-lab/"
+    },
+    {
+      "domain": "power-electronics",
+      "estimated_time": 30,
+      "language": "en",
+      "learning_objectives": [
+        "Identify the stage's knowledge requirements and evidence of readiness"
+      ],
+      "level": "undergraduate",
+      "next": [
+        "converters"
+      ],
+      "prerequisites": [
+        "foundations"
+      ],
+      "references": [
+        "references/erickson-sources.json"
+      ],
+      "sha256": "bc580623a495a2a2227aa8be07829ba76383b9de73e4a19ae01e8eac156d17c4",
+      "slug": "components",
+      "source": "curriculum/02-components/README.md",
+      "status": "outline",
+      "title": "Devices and switching models",
+      "tools": [],
+      "track": "power-electronics",
+      "type": "stage",
+      "url": "/academy/power-electronics/components/"
+    },
+    {
+      "domain": "power-electronics",
+      "estimated_time": 30,
+      "language": "en",
+      "learning_objectives": [
+        "Identify the stage's knowledge requirements and evidence of readiness"
+      ],
+      "level": "undergraduate",
+      "next": [
+        "buck-converter",
+        "buck-open-lab",
+        "dynamics-and-control"
+      ],
+      "prerequisites": [
+        "components"
+      ],
+      "references": [
+        "references/erickson-sources.json"
+      ],
+      "sha256": "24772bb3427435be9368b06441efa3b4bb479402c6b40ceead21917a20ddb480",
+      "slug": "converters",
+      "source": "curriculum/03-converters/README.md",
+      "status": "outline",
+      "title": "Steady-state converters",
+      "tools": [],
+      "track": "power-electronics",
+      "type": "stage",
+      "url": "/academy/power-electronics/converters/"
+    },
+    {
+      "domain": "power-electronics",
+      "estimated_time": 30,
+      "language": "en",
+      "learning_objectives": [
+        "Identify the stage's knowledge requirements and evidence of readiness"
+      ],
+      "level": "undergraduate",
+      "next": [
+        "practical-design"
+      ],
+      "prerequisites": [
+        "converters"
+      ],
+      "references": [
+        "references/erickson-sources.json"
+      ],
+      "sha256": "adcd1619f4fec35787f871547c46b98e30a052a36f760231c9f6fc60fbb04bd9",
+      "slug": "dynamics-and-control",
+      "source": "curriculum/04-modeling-and-control/README.md",
+      "status": "outline",
+      "title": "Dynamics, transfer functions and control",
+      "tools": [],
+      "track": "power-electronics",
+      "type": "stage",
+      "url": "/academy/power-electronics/dynamics-and-control/"
+    },
+    {
+      "domain": "foundations",
+      "estimated_time": 30,
+      "language": "zh-CN",
+      "learning_objectives": [
+        "区分电压、电流、功率和能量",
+        "计算理想电阻电路并解释单位"
+      ],
+      "level": "beginner",
+      "next": [
+        "components"
+      ],
+      "prerequisites": [],
+      "references": [
+        "references/erickson-sources.json"
+      ],
+      "sha256": "4d386288d6f351affa22386ec3dcd59a80544673116e8bffdedc0c550847dbef",
+      "slug": "first-circuit-zh",
+      "source": "curriculum/01-foundations/first-lesson.zh-CN.md",
+      "status": "available",
+      "title": "一个简单电路用了多少电？",
+      "tools": [],
+      "track": "beginner-bridge",
+      "type": "lesson",
+      "url": "/academy/foundations/first-circuit-zh/"
+    },
+    {
+      "domain": "foundations",
+      "estimated_time": 30,
+      "language": "en",
+      "learning_objectives": [
+        "Identify the stage's knowledge requirements and evidence of readiness"
+      ],
+      "level": "beginner",
+      "next": [
+        "prerequisite-path-zh",
+        "components"
+      ],
+      "prerequisites": [
+        "orientation"
+      ],
+      "references": [
+        "references/erickson-sources.json"
+      ],
+      "sha256": "f81b5b9165ed920d1e51d9de59f33616dac560073c1eeb6c4443d19cb220d82f",
+      "slug": "foundations",
+      "source": "curriculum/01-foundations/README.md",
+      "status": "outline",
+      "title": "Foundations readiness map",
+      "tools": [],
+      "track": "beginner-bridge",
+      "type": "stage",
+      "url": "/academy/foundations/foundations/"
+    },
+    {
+      "domain": "foundations",
+      "estimated_time": 30,
+      "language": "en",
+      "learning_objectives": [
+        "Identify the stage's knowledge requirements and evidence of readiness"
+      ],
+      "level": "beginner",
+      "next": [
+        "foundations"
+      ],
+      "prerequisites": [],
+      "references": [
+        "references/erickson-sources.json"
+      ],
+      "sha256": "b3336c884facec23e40ec5a860fcfe0b59fc75047c36fbd48a2d72db1086054a",
+      "slug": "orientation",
+      "source": "curriculum/00-orientation/README.md",
+      "status": "outline",
+      "title": "Orientation and learning methods",
+      "tools": [],
+      "track": "beginner-bridge",
+      "type": "stage",
+      "url": "/academy/foundations/orientation/"
+    },
+    {
+      "domain": "power-electronics",
+      "estimated_time": 30,
+      "language": "en",
+      "learning_objectives": [
+        "Identify the stage's knowledge requirements and evidence of readiness"
+      ],
+      "level": "undergraduate",
+      "next": [
+        "systems-applications"
+      ],
+      "prerequisites": [
+        "dynamics-and-control"
+      ],
+      "references": [
+        "references/erickson-sources.json"
+      ],
+      "sha256": "8195423937dd858df65190c6c055eef95d1a832e9ec61fe5575b48be5a1366a3",
+      "slug": "practical-design",
+      "source": "curriculum/05-practical-design/README.md",
+      "status": "outline",
+      "title": "Magnetics and practical design",
+      "tools": [],
+      "track": "power-electronics",
+      "type": "stage",
+      "url": "/academy/power-electronics/practical-design/"
+    },
+    {
+      "domain": "foundations",
+      "estimated_time": 30,
+      "language": "zh-CN",
+      "learning_objectives": [
+        "Identify the stage's knowledge requirements and evidence of readiness"
+      ],
+      "level": "beginner",
+      "next": [
+        "first-circuit-zh"
+      ],
+      "prerequisites": [
+        "orientation"
+      ],
+      "references": [
+        "references/erickson-sources.json"
+      ],
+      "sha256": "5fafaae38dc7777970dae69aadb942ad9da2f16872d8429a2a9de7c4ddaf85a7",
+      "slug": "prerequisite-path-zh",
+      "source": "curriculum/01-foundations/prerequisite-path.zh-CN.md",
+      "status": "outline",
+      "title": "电力电子之前：先修课程路线",
+      "tools": [],
+      "track": "beginner-bridge",
+      "type": "guide",
+      "url": "/academy/foundations/prerequisite-path-zh/"
+    },
+    {
+      "domain": "power-electronics",
+      "estimated_time": 30,
+      "language": "en",
+      "learning_objectives": [
+        "Identify the stage's knowledge requirements and evidence of readiness"
+      ],
+      "level": "undergraduate",
+      "next": [],
+      "prerequisites": [
+        "practical-design"
+      ],
+      "references": [
+        "references/erickson-sources.json"
+      ],
+      "sha256": "cef74ab2df57e0cfc3c5a7716bdec5b7a50ed54ead853cb2418c33a2f69b78df",
+      "slug": "systems-applications",
+      "source": "curriculum/06-systems-and-applications/README.md",
+      "status": "outline",
+      "title": "Systems and applications",
+      "tools": [],
+      "track": "power-electronics",
+      "type": "stage",
+      "url": "/academy/power-electronics/systems-applications/"
+    }
+  ],
+  "schema_version": "0.1.0"
+}

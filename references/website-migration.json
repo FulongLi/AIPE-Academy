@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1.0",
+  "checked_on": "2026-10-07",
+  "entries": [
+    {
+      "source_repository": "https://github.com/FulongLi/Spirit-Connect-AIPE-Labs",
+      "source_revision": "267393d3a786a76dc859a1e292f357a57e52781d",
+      "source_path": "_posts/2026-09-11-buck-converter-from-zero-to-everything.md",
+      "source_sha256": "796bf4dd76399a5fd7773660224252f35915205ded76d6bdaaccfb3f8e07059c",
+      "author": "Dr. Fulong Li",
+      "license": "CC-BY-4.0",
+      "canonical_source": "curriculum/03-converters/buck-converter.md",
+      "canonical_url": "/academy/power-electronics/buck-converter/",
+      "legacy_url": "/resources/blog/buck-converter-from-zero-to-everything/",
+      "changes": [
+        "Convert Jekyll includes to portable Markdown",
+        "Copy attributed figure and download assets",
+        "Add open-source lab path and mark proprietary variants optional"
+      ],
+      "assets": [
+        {
+          "source": "assets/blog/figures/circuit-buck.svg",
+          "destination": "assets/migrated/buck/circuit-buck.svg",
+          "sha256": "5c68f09363f44f8fa142d0ef212c2e076d3673bdfb9d2ceb48b444511e1085ba"
+        },
+        {
+          "source": "assets/blog/figures/buck-waveforms.svg",
+          "destination": "assets/migrated/buck/buck-waveforms.svg",
+          "sha256": "f1e4f94ab7f690d28304ffed8c23ed46d641ccf0c0257dfbe635f5346d4b9574"
+        },
+        {
+          "source": "assets/blog/figures/feedback-loop.svg",
+          "destination": "assets/migrated/buck/feedback-loop.svg",
+          "sha256": "13b1e64fde8f95f246bf2ee3b0b40d68976b9f6762db16202972966e2cbd68fb"
+        },
+        {
+          "source": "assets/downloads/buck-converter/buck_ccm_analysis.m",
+          "destination": "assets/migrated/buck/buck_ccm_analysis.m",
+          "sha256": "1d928af3e0b755b18bd53a2cb732f984fb2403f7384c3f23828ecaba66422318"
+        },
+        {
+          "source": "assets/downloads/buck-converter/buck_open_loop.cir",
+          "destination": "assets/migrated/buck/buck_open_loop.cir",
+          "sha256": "8c1c58c4c452a5e89e547b7da56f77509f22358ae7ac8ec03cd382050f7aec1f"
+        }
+      ],
+      "translation_status": "Chinese original retained at existing website URL; not migrated in v0.1",
+      "hash_normalization": "UTF-8 text with LF newlines"
+    }
+  ]
+}

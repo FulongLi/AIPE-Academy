@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-label="Feedback: compare, correct, actuate, measure">
+<title>Feedback: compare, correct, actuate, measure</title>
+<rect width="900" height="100%" fill="white"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8" fill="#175d85"/></marker></defs>
+<g font-family="Arial, sans-serif" fill="#202b35">
+<text x="30.00" y="35.00" font-size="23" text-anchor="start" fill="#202b35" font-weight="bold">Feedback: compare, correct, actuate, measure</text>
+<text x="26.00" y="150.00" font-size="18" text-anchor="start" fill="#202b35" font-weight="normal">Reference</text>
+<circle cx="170" cy="143" r="22" fill="white" stroke="#202b35" stroke-width="2"/>
+<text x="161.00" y="147.00" font-size="20" text-anchor="start" fill="#202b35" font-weight="normal">+</text>
+<text x="183.00" y="179.00" font-size="22" text-anchor="start" fill="#202b35" font-weight="normal">−</text>
+<line x1="110.00" y1="143.00" x2="146.00" y2="143.00" stroke="#175d85" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="235" y="103" width="155" height="80" rx="6" fill="#edf4f8" stroke="#175d85"/>
+<text x="312.50" y="138.00" font-size="20" text-anchor="middle" fill="#202b35" font-weight="bold">Controller</text>
+<text x="312.50" y="162.00" font-size="17" text-anchor="middle" fill="#687581" font-weight="normal">Gc(s)</text>
+<line x1="195.00" y1="143.00" x2="230.00" y2="143.00" stroke="#175d85" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="450" y="103" width="145" height="80" rx="6" fill="#edf4f8" stroke="#175d85"/>
+<text x="522.50" y="138.00" font-size="20" text-anchor="middle" fill="#202b35" font-weight="bold">PWM</text>
+<text x="522.50" y="162.00" font-size="17" text-anchor="middle" fill="#687581" font-weight="normal">duty / timing</text>
+<line x1="410.00" y1="143.00" x2="445.00" y2="143.00" stroke="#175d85" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="660" y="103" width="180" height="80" rx="6" fill="#edf4f8" stroke="#175d85"/>
+<text x="750.00" y="138.00" font-size="20" text-anchor="middle" fill="#202b35" font-weight="bold">Power stage</text>
+<text x="750.00" y="162.00" font-size="17" text-anchor="middle" fill="#687581" font-weight="normal">Gvd(s)</text>
+<line x1="620.00" y1="143.00" x2="655.00" y2="143.00" stroke="#175d85" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="840.00" y1="143.00" x2="875.00" y2="143.00" stroke="#175d85" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="867.00" y="115.00" font-size="18" text-anchor="start" fill="#202b35" font-weight="normal">vo</text>
+<line x1="860.00" y1="143.00" x2="860.00" y2="267.00" stroke="#175d85" stroke-width="2"/>
+<rect x="475" y="230" width="195" height="70" rx="6" fill="#f7f8f9" stroke="#bac4cc"/>
+<text x="572.50" y="260.00" font-size="20" text-anchor="middle" fill="#202b35" font-weight="bold">Sensor</text>
+<text x="572.50" y="284.00" font-size="17" text-anchor="middle" fill="#687581" font-weight="normal">H(s)</text>
+<line x1="860.00" y1="267.00" x2="675.00" y2="267.00" stroke="#175d85" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="475.00" y1="267.00" x2="170.00" y2="267.00" stroke="#175d85" stroke-width="2"/>
+<line x1="170.00" y1="267.00" x2="170.00" y2="170.00" stroke="#175d85" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="44.00" y="217.00" font-size="17" text-anchor="start" fill="#687581" font-weight="normal">Measured output</text>
+<text x="30.00" y="318.00" font-size="17" text-anchor="start" fill="#687581" font-weight="normal">All gains and signs include scaling. Delay, saturation and anti-windup belong in the</text>
+<text x="30.00" y="338.00" font-size="17" text-anchor="start" fill="#687581" font-weight="normal">implementation.</text>
+</g></svg>
