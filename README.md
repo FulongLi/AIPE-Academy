@@ -2,7 +2,7 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-AIPE Academy is an open-source learning framework for power electronics education in the AI era.
+AIPE Academy is an open learning framework for **AI for Power Engineering**, with power electronics as the primary v0.1 curriculum.
 
 ## Start learning with Codex
 
@@ -234,3 +234,7 @@ Useful contribution types include:
 ## License
 
 The repository currently includes a Creative Commons Attribution 4.0 International license in `LICENSE.md`, suitable for open educational content.
+
+## Ecosystem v0.1
+
+Existing stages remain canonical. See [metadata, coverage and open labs](docs/ecosystem-v0.1.md), the [open buck lab](curriculum/03-converters/buck-open-lab.md), and [generated lesson catalogue](generated/lessons.json). Future power-engineering domains can add metadata without moving these files.

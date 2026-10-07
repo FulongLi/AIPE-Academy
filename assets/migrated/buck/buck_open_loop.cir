@@ -1,0 +1,23 @@
+* 24 V to approximately 12 V buck -- open-loop LTspice teaching draft
+* Dr. Fulong Li -- September 2026. Native LTspice execution pending.
+* Generic lossy elements, not a selected or validated hardware BOM.
+.param VIN=24 FS=100k DUTY=0.5 LVAL=150u CVAL=100u RLOAD=4.8
+Vinput in 0 {VIN}
+S1 in sw gate 0 SWMOD
+D1 0 sw DMOD
+Rwind sw lin 0.05
+L1 lin out {LVAL}
+Cout out 0 {CVAL}
+Rload out 0 {RLOAD}
+Vgate gate 0 PULSE(0 5 10u 10n 10n {DUTY/FS} {1/FS})
+.model SWMOD SW(Ron=0.02 Roff=100Meg Vt=2.5 Vh=0)
+.model DMOD D(Is=1u N=1.1 Rs=0.03 Cjo=100p Tt=0)
+* Switch is off at t=0, so the output starts from zero and ramps up when
+* PWM begins. This is a PWM-enable transient, not a characterised startup.
+.tran 0 6m 5m 20n
+.options plotwinsize=0
+.meas tran Vout_avg AVG V(out) FROM 5m TO 6m
+.meas tran Vout_pp PP V(out) FROM 5.98m TO 6m
+.meas tran IL_avg AVG I(L1) FROM 5m TO 6m
+.meas tran IL_peak MAX I(L1) FROM 5m TO 6m
+.end

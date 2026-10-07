@@ -1,2 +1,6 @@
 # Personal learning records belong to each learner's local workspace.
 /learning/
+
+__pycache__/
+*.pyc
+.pytest_cache/
