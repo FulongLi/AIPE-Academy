@@ -1,0 +1,36 @@
+{
+  "name": "aipe-academy",
+  "displayName": "AIPE Academy",
+  "version": "0.2.0",
+  "description": "AI-native tutor for electrical power and energy engineering: the open AIPE Academy curriculum (Foundations, Power Electronics, Power Systems, Renewable Energy) with reproducible Python labs, prerequisite-aware learning paths, local progress records and an MIT OpenCourseWare academic reference baseline.",
+  "author": {
+    "name": "AIPE Academy contributors",
+    "url": "https://github.com/FulongLi/AIPE-Academy"
+  },
+  "homepage": "https://aipel.co.uk/academy/",
+  "repository": "https://github.com/FulongLi/AIPE-Academy",
+  "license": "CC-BY-4.0",
+  "keywords": ["education", "power-electronics", "power-systems", "renewable-energy", "electrical-engineering", "tutor", "aipe"],
+  "commands": {
+    "learn": {
+      "content": "Use the aipe-academy skill. Start or continue a guided AIPE Academy learning session: run the companion command `status` and `resume`; if there is no learning record, run `onboarding` with the learner's goal, ask the diagnostic questions one at a time, and teach the first lesson from the checkout. Learner request: $ARGUMENTS",
+      "description": "Start or continue guided learning with AIPE Academy",
+      "argumentHint": "[what you want to learn]"
+    },
+    "explain": {
+      "content": "Use the aipe-academy skill to explain a topic from the AIPE Academy curriculum. Run `search` and `lesson <slug> --content`, teach intuition before equations in the learner's language, ask for a prediction before revealing results, and finish with one check question. Topic: $ARGUMENTS",
+      "description": "Explain a power or energy engineering topic from the curriculum",
+      "argumentHint": "<topic>"
+    },
+    "lab": {
+      "content": "Use the aipe-academy skill to run a reproducible lab. Ask the learner to predict the key output, run `lab $ARGUMENTS` through the companion command (append `-- --help` first if the flags are unknown), relay the JSON, and interpret the result including the model's limitations. An exit code of 2 means the lab rejected an input or assumption; explain why.",
+      "description": "Run and interpret an AIPE Academy calculation or simulation lab",
+      "argumentHint": "<lesson slug> [-- lab arguments]"
+    },
+    "references": {
+      "content": "Use the aipe-academy skill to show the academic references for a topic. Run `search`, then `references --lesson <slug>` or `references --module <id>`, link the official MIT OpenCourseWare pages, describe which subjects they cover, and state that MIT OpenCourseWare is an external resource and that AIPE Academy is not affiliated with or endorsed by MIT. Topic: $ARGUMENTS",
+      "description": "Show the MIT OpenCourseWare academic references for a topic",
+      "argumentHint": "<topic or lesson slug>"
+    }
+  }
+}

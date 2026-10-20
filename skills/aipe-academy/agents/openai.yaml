@@ -1,0 +1,6 @@
+interface:
+  display_name: "AIPE Academy"
+  short_description: "Guided power and energy engineering tutor with reproducible labs"
+  default_prompt: "Guide me through AIPE Academy from the beginning. Find my starting point with short questions, then teach the first lesson."
+policy:
+  allow_implicit_invocation: true
