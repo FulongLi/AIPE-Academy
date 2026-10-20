@@ -1,12 +1,15 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "AIPE Academy lesson metadata v0.1",
+  "title": "AIPE Academy lesson metadata v0.2",
+  "description": "One record of curriculum/catalogue.json. v0.2 adds the knowledge-architecture fields (module, covers), language mapping (concept, translation_status), reproducible labs (labs), the academic reference baseline (academic_references) and the standard lesson format marker (format). Every v0.1 field keeps its meaning; new fields other than module and concept are optional so existing records stay valid.",
   "type": "object",
   "required": [
     "title",
     "slug",
     "domain",
     "track",
+    "module",
+    "concept",
     "level",
     "type",
     "status",
@@ -21,108 +24,67 @@
   ],
   "additionalProperties": false,
   "properties": {
-    "title": {
-      "type": "string",
-      "minLength": 1
+    "title": {"type": "string", "minLength": 1},
+    "slug": {"type": "string", "minLength": 1, "pattern": "^[a-z][a-z0-9-]*$", "description": "Stable lesson id and URL segment: /academy/<domain>/<slug>/"},
+    "domain": {"type": "string", "minLength": 1, "pattern": "^[a-z][a-z0-9-]*$", "description": "A domain id from curriculum/taxonomy.json"},
+    "track": {"type": "string", "minLength": 1, "pattern": "^[a-z][a-z0-9-]*$", "description": "A track id from curriculum/taxonomy.json belonging to the same domain"},
+    "module": {
+      "type": ["string", "null"],
+      "pattern": "^[a-z]{1,3}\\.[a-z][a-z0-9-]*$",
+      "description": "The knowledge module this lesson teaches (module id from curriculum/taxonomy.json). Null only for type 'stage' overviews that describe a whole track."
     },
-    "slug": {
+    "covers": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^[a-z]{1,3}\\.[a-z][a-z0-9-]*$"},
+      "description": "Additional module ids this lesson teaches at introductory depth."
+    },
+    "concept": {
       "type": "string",
       "minLength": 1,
-      "pattern": "^[a-z][a-z0-9-]*$"
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Language-independent concept key. Records that share a concept are translations of the same knowledge unit and must differ in language."
     },
-    "domain": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "^[a-z][a-z0-9-]*$"
+    "translation_status": {
+      "enum": ["original", "reviewed-translation", "machine-translation"],
+      "description": "original: written in this language; reviewed-translation: translated and reviewed by a person; machine-translation: machine output not yet reviewed. Defaults to original."
     },
-    "track": {
-      "type": "string",
-      "minLength": 1
+    "level": {"enum": ["beginner", "undergraduate", "graduate", "advanced"]},
+    "type": {"enum": ["stage", "guide", "lesson", "tutorial", "lab"]},
+    "status": {"enum": ["outline", "draft", "available"]},
+    "format": {
+      "enum": ["legacy", "aipe-lesson-v2"],
+      "description": "aipe-lesson-v2 lessons must contain the thirteen standard sections of templates/lesson-template.md in order; the build checks this."
     },
-    "level": {
-      "type": "string",
-      "minLength": 1
-    },
-    "type": {
-      "type": "string",
-      "minLength": 1
-    },
-    "status": {
-      "enum": [
-        "outline",
-        "draft",
-        "available"
-      ]
-    },
-    "source": {
-      "type": "string",
-      "minLength": 1
-    },
-    "language": {
-      "type": "string",
-      "minLength": 1
-    },
-    "prerequisites": {
+    "source": {"type": "string", "minLength": 1, "description": "Repository-relative Markdown path"},
+    "language": {"enum": ["en", "zh-CN"]},
+    "prerequisites": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}, "description": "Lesson slugs; cross-domain references are allowed"},
+    "learning_objectives": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "next": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "references": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}, "description": "Repository-relative reference files or https URLs"},
+    "academic_references": {
       "type": "array",
       "uniqueItems": true,
-      "items": {
-        "type": "string",
-        "minLength": 1
-      }
+      "items": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+      "description": "Ids from references/mit-ocw-catalogue.json. The lesson's Academic References section must link each course's official URL."
     },
-    "learning_objectives": {
+    "labs": {
       "type": "array",
       "uniqueItems": true,
-      "items": {
-        "type": "string",
-        "minLength": 1
-      }
+      "items": {"type": "string", "pattern": "^labs/[A-Za-z0-9_./-]+\\.py$"},
+      "description": "Repository-relative Python lab scripts this lesson uses"
     },
-    "next": {
-      "type": "array",
-      "uniqueItems": true,
-      "items": {
-        "type": "string",
-        "minLength": 1
-      }
-    },
-    "references": {
-      "type": "array",
-      "uniqueItems": true,
-      "items": {
-        "type": "string",
-        "minLength": 1
-      }
-    },
-    "estimated_time": {
-      "type": "integer",
-      "minimum": 1
-    },
+    "estimated_time": {"type": "integer", "minimum": 1},
     "tools": {
       "type": "array",
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": [
-          "id",
-          "licence_class",
-          "optional"
-        ],
+        "required": ["id", "licence_class", "optional"],
         "properties": {
-          "id": {
-            "type": "string",
-            "minLength": 1
-          },
-          "licence_class": {
-            "enum": [
-              "open_source",
-              "free_proprietary",
-              "commercial"
-            ]
-          },
-          "optional": {
-            "type": "boolean"
-          }
+          "id": {"type": "string", "minLength": 1},
+          "licence_class": {"enum": ["open_source", "free_proprietary", "commercial"]},
+          "optional": {"type": "boolean"}
         }
       }
     }

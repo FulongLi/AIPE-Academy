@@ -1,57 +1,66 @@
-# Power Electronics Learning Track
+# Curriculum
 
-This track is the first domain inside AIPE Academy.
+AIPE Academy organises knowledge in four domains, each a tree of tracks and
+modules ([taxonomy.json](taxonomy.json)), and attaches lessons, labs,
+tutorials, guides and stage outlines to modules through
+[catalogue.json](catalogue.json). Learning paths are a separate dimension: a
+recommended order through the modules, with readiness gates.
 
-For a guided first session, use [Start here](../START-HERE.md). Before the domain stages, diagnose the learner's needs using the [foundation prerequisite path](01-foundations/prerequisite-path.zh-CN.md). Its F-series modules are submodules of Foundations, not additional academy phases.
+For a guided first session, use [Start here](../START-HERE.md); AI tutors
+follow the [shared skill](../skills/aipe-academy/SKILL.md) and the
+[tutor workflow](../prompts/tutor-guide.md).
 
-These seven stages form the Education phase. A later Research phase will build on demonstrated design skills through literature study, reproduction, and original investigation. See the [foundation review and proposed progression](../references/erickson-foundation-review.zh-CN.md); the research curriculum remains a discussion draft.
+## Four domains
 
-The goal is to make power electronics learnable by anyone with curiosity, a computer, and an AI mentor. It is designed for beginners, but it should also remain useful for engineers who want a structured review path.
+| Domain | Folder(s) | Complete reference lesson |
+| --- | --- | --- |
+| Foundations | `00-orientation/`, `01-foundations/` (v0.1), `foundations/` (v0.2) | [DC circuit fundamentals](foundations/circuits/dc-circuit-fundamentals.md); Chinese first lesson and prerequisite path in `01-foundations/` |
+| Power Electronics | `02-components/` … `06-systems-and-applications/` (v0.1 stages), `power-electronics/` (v0.2) | [Buck converter fundamentals](power-electronics/dc-dc-conversion/buck-converter-fundamentals.md), then the [open Buck lab](03-converters/buck-open-lab.md) and the [Buck design tutorial](03-converters/buck-converter.md) |
+| Power Systems | `power-systems/` | [Three-phase system fundamentals](power-systems/ac-power-networks/three-phase-fundamentals.md) |
+| Renewable Energy | `renewable-energy/` | [Solar PV fundamentals](renewable-energy/solar-photovoltaics/solar-pv-fundamentals.md) |
 
-The curriculum is inspired by the learning philosophy behind Robert W. Erickson and Dragan Maksimovic's *Fundamentals of Power Electronics*: start from first principles, build converter intuition, connect steady-state operation to modeling and control, and then move toward real engineering constraints.
+Lesson URLs on the website are `/academy/<domain>/<slug>/` and never depend on
+these folders, so v0.1 files stay where they are. New lessons go into
+`<domain>/<track>/` and follow [templates/lesson-template.md](../templates/lesson-template.md)
+(see [docs/curriculum-guide.md](../docs/curriculum-guide.md)).
 
-This repository does not copy textbook content. It uses public educational structure, original explanations, simulations, projects, and AI-native study workflows.
+## The power-electronics learning path (seven stages, preserved)
 
-## Seven Stages
+This track was the first domain inside AIPE Academy and remains its most
+developed learning path (`power-electronics-core` in taxonomy.json):
 
-1. Orientation: understand what power electronics is and why it matters.
-2. Foundations: build the electrical, mathematical, and measurement intuition needed for the field.
-3. Components: learn the real parts that make power converters possible.
-4. Converters: study the core switching topologies and their steady-state behavior.
-5. Modeling and Control: learn how converters behave dynamically and how to regulate them.
-6. Practical Design: connect theory to engineering constraints such as magnetics, layout, EMI, thermal design, protection, and safety.
-7. Systems and Applications: understand how converters become products and infrastructure.
+1. [Orientation](00-orientation/README.md): understand what power electronics is and why it matters.
+2. [Foundations](01-foundations/README.md): build the electrical, mathematical and measurement intuition needed for the field (F00–F09), introduced as tasks require them.
+3. [Components](02-components/README.md): learn the real parts that make power converters possible.
+4. [Converters](03-converters/README.md): study the core switching topologies and their steady-state behaviour (readiness check G1).
+5. [Modeling and Control](04-modeling-and-control/README.md): learn how converters behave dynamically and how to regulate them (G2).
+6. [Practical Design](05-practical-design/README.md): connect theory to magnetics, layout, EMI, thermal design, protection and safety.
+7. [Systems and Applications](06-systems-and-applications/README.md): understand how converters become products and infrastructure (G3).
 
-## Learning Loop
+A later Research phase will build on demonstrated design skills through
+literature study, reproduction and original investigation; it remains a
+planned progression. The curriculum is inspired by the learning philosophy
+behind Robert W. Erickson and Dragan Maksimović's *Fundamentals of Power
+Electronics* and benchmarked against MIT 6.622 (see
+[references/](../references/mit-ocw-baseline.md)); it copies neither.
 
-Every topic should follow the same learner-centered loop:
+## Learning loop
 
-1. Start with a plain-language explanation.
-2. Build a mental model.
-3. Do the minimum math.
-4. Run a calculation or simulation.
-5. Interpret waveforms and tradeoffs.
-6. Ask an AI tutor to challenge your understanding.
-7. Document what changed in your thinking.
-8. Move to a slightly harder project.
+Every topic follows the same learner-centred loop:
 
-## Track Outcomes
+1. Start with a plain-language explanation and a prediction question.
+2. Build a mental model, then do the minimum mathematics.
+3. Run a reproducible calculation or simulation and compare it with the prediction.
+4. Interpret waveforms, numbers and trade-offs; change one parameter at a time.
+5. Ask the AI tutor to challenge your understanding with a fresh task.
+6. Record what changed in your thinking (locally, in `learning/`).
+7. Move to the next module along your path.
 
-A learner who completes this track should be able to:
+## Status vocabulary
 
-- explain what power electronics does in modern energy and electronic systems
-- analyze basic DC-DC converter operation in steady state
-- estimate duty cycle, ripple, power loss, efficiency, and thermal limits
-- read basic component datasheets and identify practical constraints
-- simulate converters and interpret voltage/current waveforms
-- understand why feedback control is needed and what stability means
-- recognize engineering risks in layout, isolation, EMI, thermal design, and high-voltage work
-- complete small project briefs and communicate design decisions clearly
-
-## Suggested Repository Flow
-
-Use the stage folders in order. Each stage can contain topic files, simulations, project briefs, diagrams, and self-check questions.
-
-For a new topic, copy the structure from `templates/topic-template.md`.
-
-For AI-guided study, start with `prompts/ai-tutor-prompts.md`.
+`available` lessons are complete; `draft` lessons are complete enough to study
+with care; `outline` records describe planned coverage; modules without any
+lesson are `planned`. The generated catalogue
+([generated/lessons.json](../generated/lessons.json),
+[generated/knowledge-graph.json](../generated/knowledge-graph.json)) is the
+authoritative list.

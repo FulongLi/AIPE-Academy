@@ -1,14 +1,27 @@
 {
   "lessons": [
     {
+      "academic_references": [
+        "mit-6-622-2023",
+        "mit-6-334-2007"
+      ],
+      "concept": "buck-converter-design",
+      "covers": [
+        "pe.modelling",
+        "pe.control",
+        "pe.practical"
+      ],
       "domain": "power-electronics",
       "estimated_time": 120,
+      "format": "legacy",
+      "labs": [],
       "language": "en",
       "learning_objectives": [
         "Explain buck energy transfer and continuous conduction assumptions",
         "Connect averaged models to control and physical implementation limits"
       ],
       "level": "undergraduate",
+      "module": "pe.buck",
       "next": [
         "buck-open-lab"
       ],
@@ -16,9 +29,10 @@
         "converters"
       ],
       "references": [
-        "references/erickson-sources.json"
+        "references/erickson-sources.json",
+        "references/website-migration.json"
       ],
-      "sha256": "19dc19d2f1cfb0919259c4a4768bcf432acb68427f42313fb4575caf79cf5e0f",
+      "sha256": "5d30e67000ff970c9e22dcb2ab5681e5cfc9361b420939605cf8d853594edfec",
       "slug": "buck-converter",
       "source": "curriculum/03-converters/buck-converter.md",
       "status": "draft",
@@ -40,19 +54,94 @@
           "optional": true
         }
       ],
-      "track": "power-electronics",
+      "track": "dc-dc-conversion",
+      "translation_status": "original",
+      "translations": {
+        "en": "buck-converter",
+        "zh-CN": null
+      },
       "type": "tutorial",
       "url": "/academy/power-electronics/buck-converter/"
     },
     {
+      "academic_references": [
+        "mit-6-622-2023",
+        "mit-6-334-2007",
+        "mit-6-002-2007"
+      ],
+      "concept": "buck-converter-fundamentals",
+      "covers": [
+        "pe.topologies"
+      ],
+      "domain": "power-electronics",
+      "estimated_time": 120,
+      "format": "aipe-lesson-v2",
+      "labs": [
+        "labs/buck_open.py",
+        "labs/power-electronics/buck_switching.py"
+      ],
+      "language": "en",
+      "learning_objectives": [
+        "Explain buck operation from the two switch states and their current paths",
+        "Derive the conversion ratio from volt-second balance and the inductor ripple from the on-interval",
+        "Identify the CCM/DCM boundary and compare analytical predictions with a switching simulation",
+        "State the limits of the ideal model and what losses, ESR and startup change"
+      ],
+      "level": "undergraduate",
+      "module": "pe.buck",
+      "next": [
+        "buck-open-lab",
+        "buck-converter",
+        "dynamics-and-control"
+      ],
+      "prerequisites": [
+        "dc-circuit-fundamentals",
+        "converters"
+      ],
+      "references": [
+        "references/mit-ocw-catalogue.json",
+        "references/erickson-sources.json"
+      ],
+      "sha256": "283bd287b7f5e6140e0f51cc6dd54aeee621948f9a6e39d205525a173960b438",
+      "slug": "buck-converter-fundamentals",
+      "source": "curriculum/power-electronics/dc-dc-conversion/buck-converter-fundamentals.md",
+      "status": "available",
+      "title": "Buck converter fundamentals: from switch states to ripple and conduction modes",
+      "tools": [
+        {
+          "id": "python",
+          "licence_class": "open_source",
+          "optional": false
+        }
+      ],
+      "track": "dc-dc-conversion",
+      "translation_status": "original",
+      "translations": {
+        "en": "buck-converter-fundamentals",
+        "zh-CN": null
+      },
+      "type": "lesson",
+      "url": "/academy/power-electronics/buck-converter-fundamentals/"
+    },
+    {
+      "academic_references": [
+        "mit-6-622-2023"
+      ],
+      "concept": "buck-open-lab",
+      "covers": [],
       "domain": "power-electronics",
       "estimated_time": 45,
+      "format": "legacy",
+      "labs": [
+        "labs/buck_open.py"
+      ],
       "language": "en",
       "learning_objectives": [
         "Derive volt-second balance and ripple in SI units",
         "Detect failure of a continuous conduction assumption"
       ],
       "level": "undergraduate",
+      "module": "pe.buck",
       "next": [
         "dynamics-and-control"
       ],
@@ -62,7 +151,7 @@
       "references": [
         "references/erickson-sources.json"
       ],
-      "sha256": "3e4ab946e91b69ad737efddd9aa62608dac19ccf8047bd65ffb006465c9363b5",
+      "sha256": "dd3c64bd570e1202202af736f4c78c93f6f9777fe791bf370770d90673085544",
       "slug": "buck-open-lab",
       "source": "curriculum/03-converters/buck-open-lab.md",
       "status": "available",
@@ -74,18 +163,31 @@
           "optional": false
         }
       ],
-      "track": "power-electronics",
+      "track": "dc-dc-conversion",
+      "translation_status": "original",
+      "translations": {
+        "en": "buck-open-lab",
+        "zh-CN": null
+      },
       "type": "lab",
       "url": "/academy/power-electronics/buck-open-lab/"
     },
     {
+      "academic_references": [],
+      "concept": "components-stage",
+      "covers": [
+        "pe.passives"
+      ],
       "domain": "power-electronics",
       "estimated_time": 30,
+      "format": "legacy",
+      "labs": [],
       "language": "en",
       "learning_objectives": [
         "Identify the stage's knowledge requirements and evidence of readiness"
       ],
       "level": "undergraduate",
+      "module": "pe.devices",
       "next": [
         "converters"
       ],
@@ -101,19 +203,37 @@
       "status": "outline",
       "title": "Devices and switching models",
       "tools": [],
-      "track": "power-electronics",
+      "track": "devices-and-components",
+      "translation_status": "original",
+      "translations": {
+        "en": "components",
+        "zh-CN": null
+      },
       "type": "stage",
       "url": "/academy/power-electronics/components/"
     },
     {
+      "academic_references": [],
+      "concept": "converters-stage",
+      "covers": [
+        "pe.boost",
+        "pe.rectifiers",
+        "pe.inverters",
+        "pe.isolated",
+        "pe.losses"
+      ],
       "domain": "power-electronics",
       "estimated_time": 30,
+      "format": "legacy",
+      "labs": [],
       "language": "en",
       "learning_objectives": [
         "Identify the stage's knowledge requirements and evidence of readiness"
       ],
       "level": "undergraduate",
+      "module": "pe.topologies",
       "next": [
+        "buck-converter-fundamentals",
         "buck-converter",
         "buck-open-lab",
         "dynamics-and-control"
@@ -130,18 +250,89 @@
       "status": "outline",
       "title": "Steady-state converters",
       "tools": [],
-      "track": "power-electronics",
+      "track": "dc-dc-conversion",
+      "translation_status": "original",
+      "translations": {
+        "en": "converters",
+        "zh-CN": null
+      },
       "type": "stage",
       "url": "/academy/power-electronics/converters/"
     },
     {
+      "academic_references": [
+        "mit-6-002-2007",
+        "mit-8-02-2007",
+        "mit-18-01sc-2010"
+      ],
+      "concept": "dc-circuit-fundamentals",
+      "covers": [
+        "f.quantities"
+      ],
+      "domain": "foundations",
+      "estimated_time": 90,
+      "format": "aipe-lesson-v2",
+      "labs": [
+        "labs/foundations/dc_circuits.py"
+      ],
+      "language": "en",
+      "learning_objectives": [
+        "Define voltage, current, resistance, power and energy with SI units and distinguish W from Wh",
+        "Apply Ohm's law, KCL and KVL to series, parallel and loaded-divider circuits",
+        "Verify hand calculations with a reproducible Python lab and interpret model limits"
+      ],
+      "level": "beginner",
+      "module": "f.dc-circuits",
+      "next": [
+        "components",
+        "buck-converter-fundamentals",
+        "three-phase-fundamentals"
+      ],
+      "prerequisites": [
+        "orientation"
+      ],
+      "references": [
+        "references/mit-ocw-catalogue.json",
+        "references/undergraduate-sources.json"
+      ],
+      "sha256": "6970689aac954c724454f17df7d7ef81f08a65b2fc8d83435194653e7965170c",
+      "slug": "dc-circuit-fundamentals",
+      "source": "curriculum/foundations/circuits/dc-circuit-fundamentals.md",
+      "status": "available",
+      "title": "DC circuit fundamentals: voltage, current, power and the circuit laws",
+      "tools": [
+        {
+          "id": "python",
+          "licence_class": "open_source",
+          "optional": false
+        }
+      ],
+      "track": "circuits",
+      "translation_status": "original",
+      "translations": {
+        "en": "dc-circuit-fundamentals",
+        "zh-CN": null
+      },
+      "type": "lesson",
+      "url": "/academy/foundations/dc-circuit-fundamentals/"
+    },
+    {
+      "academic_references": [],
+      "concept": "dynamics-and-control-stage",
+      "covers": [
+        "pe.control",
+        "pe.simulation"
+      ],
       "domain": "power-electronics",
       "estimated_time": 30,
+      "format": "legacy",
+      "labs": [],
       "language": "en",
       "learning_objectives": [
         "Identify the stage's knowledge requirements and evidence of readiness"
       ],
       "level": "undergraduate",
+      "module": "pe.modelling",
       "next": [
         "practical-design"
       ],
@@ -157,25 +348,42 @@
       "status": "outline",
       "title": "Dynamics, transfer functions and control",
       "tools": [],
-      "track": "power-electronics",
+      "track": "modelling-and-control",
+      "translation_status": "original",
+      "translations": {
+        "en": "dynamics-and-control",
+        "zh-CN": null
+      },
       "type": "stage",
       "url": "/academy/power-electronics/dynamics-and-control/"
     },
     {
+      "academic_references": [
+        "mit-6-002-2007"
+      ],
+      "concept": "first-circuit",
+      "covers": [
+        "f.quantities"
+      ],
       "domain": "foundations",
       "estimated_time": 30,
+      "format": "legacy",
+      "labs": [],
       "language": "zh-CN",
       "learning_objectives": [
         "区分电压、电流、功率和能量",
         "计算理想电阻电路并解释单位"
       ],
       "level": "beginner",
+      "module": "f.dc-circuits",
       "next": [
+        "dc-circuit-fundamentals",
         "components"
       ],
       "prerequisites": [],
       "references": [
-        "references/erickson-sources.json"
+        "references/erickson-sources.json",
+        "references/undergraduate-sources.json"
       ],
       "sha256": "4d386288d6f351affa22386ec3dcd59a80544673116e8bffdedc0c550847dbef",
       "slug": "first-circuit-zh",
@@ -183,27 +391,40 @@
       "status": "available",
       "title": "一个简单电路用了多少电？",
       "tools": [],
-      "track": "beginner-bridge",
+      "track": "circuits",
+      "translation_status": "original",
+      "translations": {
+        "en": null,
+        "zh-CN": "first-circuit-zh"
+      },
       "type": "lesson",
       "url": "/academy/foundations/first-circuit-zh/"
     },
     {
+      "academic_references": [],
+      "concept": "foundations-readiness",
+      "covers": [],
       "domain": "foundations",
       "estimated_time": 30,
+      "format": "legacy",
+      "labs": [],
       "language": "en",
       "learning_objectives": [
         "Identify the stage's knowledge requirements and evidence of readiness"
       ],
       "level": "beginner",
+      "module": null,
       "next": [
         "prerequisite-path-zh",
+        "dc-circuit-fundamentals",
         "components"
       ],
       "prerequisites": [
         "orientation"
       ],
       "references": [
-        "references/erickson-sources.json"
+        "references/erickson-sources.json",
+        "references/undergraduate-sources.json"
       ],
       "sha256": "f81b5b9165ed920d1e51d9de59f33616dac560073c1eeb6c4443d19cb220d82f",
       "slug": "foundations",
@@ -211,18 +432,29 @@
       "status": "outline",
       "title": "Foundations readiness map",
       "tools": [],
-      "track": "beginner-bridge",
+      "track": "learning-methods",
+      "translation_status": "original",
+      "translations": {
+        "en": "foundations",
+        "zh-CN": null
+      },
       "type": "stage",
       "url": "/academy/foundations/foundations/"
     },
     {
+      "academic_references": [],
+      "concept": "orientation",
+      "covers": [],
       "domain": "foundations",
       "estimated_time": 30,
+      "format": "legacy",
+      "labs": [],
       "language": "en",
       "learning_objectives": [
         "Identify the stage's knowledge requirements and evidence of readiness"
       ],
       "level": "beginner",
+      "module": "f.learning-with-ai",
       "next": [
         "foundations"
       ],
@@ -236,18 +468,34 @@
       "status": "outline",
       "title": "Orientation and learning methods",
       "tools": [],
-      "track": "beginner-bridge",
+      "track": "learning-methods",
+      "translation_status": "original",
+      "translations": {
+        "en": "orientation",
+        "zh-CN": null
+      },
       "type": "stage",
       "url": "/academy/foundations/orientation/"
     },
     {
+      "academic_references": [],
+      "concept": "practical-design-stage",
+      "covers": [
+        "pe.magnetics",
+        "pe.thermal",
+        "pe.gate-driving",
+        "pe.emi-pcb"
+      ],
       "domain": "power-electronics",
       "estimated_time": 30,
+      "format": "legacy",
+      "labs": [],
       "language": "en",
       "learning_objectives": [
         "Identify the stage's knowledge requirements and evidence of readiness"
       ],
       "level": "undergraduate",
+      "module": "pe.practical",
       "next": [
         "systems-applications"
       ],
@@ -263,18 +511,29 @@
       "status": "outline",
       "title": "Magnetics and practical design",
       "tools": [],
-      "track": "power-electronics",
+      "track": "practical-design",
+      "translation_status": "original",
+      "translations": {
+        "en": "practical-design",
+        "zh-CN": null
+      },
       "type": "stage",
       "url": "/academy/power-electronics/practical-design/"
     },
     {
+      "academic_references": [],
+      "concept": "prerequisite-path",
+      "covers": [],
       "domain": "foundations",
       "estimated_time": 30,
+      "format": "legacy",
+      "labs": [],
       "language": "zh-CN",
       "learning_objectives": [
         "Identify the stage's knowledge requirements and evidence of readiness"
       ],
       "level": "beginner",
+      "module": null,
       "next": [
         "first-circuit-zh"
       ],
@@ -282,7 +541,8 @@
         "orientation"
       ],
       "references": [
-        "references/erickson-sources.json"
+        "references/erickson-sources.json",
+        "references/undergraduate-sources.json"
       ],
       "sha256": "5fafaae38dc7777970dae69aadb942ad9da2f16872d8429a2a9de7c4ddaf85a7",
       "slug": "prerequisite-path-zh",
@@ -290,18 +550,83 @@
       "status": "outline",
       "title": "电力电子之前：先修课程路线",
       "tools": [],
-      "track": "beginner-bridge",
+      "track": "learning-methods",
+      "translation_status": "original",
+      "translations": {
+        "en": null,
+        "zh-CN": "prerequisite-path-zh"
+      },
       "type": "guide",
       "url": "/academy/foundations/prerequisite-path-zh/"
     },
     {
+      "academic_references": [
+        "mit-2-627-2013",
+        "mit-ec-s07-2004",
+        "mit-6-012-2005"
+      ],
+      "concept": "solar-pv-fundamentals",
+      "covers": [
+        "re.mppt"
+      ],
+      "domain": "renewable-energy",
+      "estimated_time": 120,
+      "format": "aipe-lesson-v2",
+      "labs": [
+        "labs/renewable-energy/pv_model.py"
+      ],
+      "language": "en",
+      "learning_objectives": [
+        "Explain photovoltaic energy conversion and the current-source-plus-diode picture of a solar cell",
+        "Read an I-V curve: short-circuit current, open-circuit voltage, fill factor and the maximum power point",
+        "Predict and simulate the effect of irradiance and temperature with a single-diode model",
+        "Explain why a converter and an MPPT algorithm are needed and demonstrate perturb-and-observe"
+      ],
+      "level": "undergraduate",
+      "module": "re.pv",
+      "next": [],
+      "prerequisites": [
+        "dc-circuit-fundamentals",
+        "buck-converter-fundamentals"
+      ],
+      "references": [
+        "references/mit-ocw-catalogue.json"
+      ],
+      "sha256": "2d4d77ce00b8f1071ea0506b9845b19e6b06889f966c93a9ae23ce34be53f60e",
+      "slug": "solar-pv-fundamentals",
+      "source": "curriculum/renewable-energy/solar-photovoltaics/solar-pv-fundamentals.md",
+      "status": "available",
+      "title": "Solar PV fundamentals: from photons to the maximum power point",
+      "tools": [
+        {
+          "id": "python",
+          "licence_class": "open_source",
+          "optional": false
+        }
+      ],
+      "track": "solar-photovoltaics",
+      "translation_status": "original",
+      "translations": {
+        "en": "solar-pv-fundamentals",
+        "zh-CN": null
+      },
+      "type": "lesson",
+      "url": "/academy/renewable-energy/solar-pv-fundamentals/"
+    },
+    {
+      "academic_references": [],
+      "concept": "systems-applications-stage",
+      "covers": [],
       "domain": "power-electronics",
       "estimated_time": 30,
+      "format": "legacy",
+      "labs": [],
       "language": "en",
       "learning_objectives": [
         "Identify the stage's knowledge requirements and evidence of readiness"
       ],
       "level": "undergraduate",
+      "module": "pe.applications",
       "next": [],
       "prerequisites": [
         "practical-design"
@@ -315,10 +640,69 @@
       "status": "outline",
       "title": "Systems and applications",
       "tools": [],
-      "track": "power-electronics",
+      "track": "systems-integration",
+      "translation_status": "original",
+      "translations": {
+        "en": "systems-applications",
+        "zh-CN": null
+      },
       "type": "stage",
       "url": "/academy/power-electronics/systems-applications/"
+    },
+    {
+      "academic_references": [
+        "mit-6-061-2011",
+        "mit-6-002-2007"
+      ],
+      "concept": "three-phase-fundamentals",
+      "covers": [
+        "ps.per-unit"
+      ],
+      "domain": "power-systems",
+      "estimated_time": 120,
+      "format": "aipe-lesson-v2",
+      "labs": [
+        "labs/power-systems/three_phase.py"
+      ],
+      "language": "en",
+      "learning_objectives": [
+        "Explain why balanced three-phase systems deliver constant power and relate phase and line quantities",
+        "Compute real, reactive, apparent power and power factor for balanced wye and delta loads",
+        "Convert network quantities to per-unit values and explain why the per-unit system simplifies analysis",
+        "Reproduce every result with an open Python lab and recognise the limits of the balanced model"
+      ],
+      "level": "undergraduate",
+      "module": "ps.three-phase",
+      "next": [
+        "solar-pv-fundamentals"
+      ],
+      "prerequisites": [
+        "dc-circuit-fundamentals"
+      ],
+      "references": [
+        "references/mit-ocw-catalogue.json"
+      ],
+      "sha256": "3a5ac0ce8b06da1a43e47911f2e1d22232e1722ec201db3948c87195f7d9b27a",
+      "slug": "three-phase-fundamentals",
+      "source": "curriculum/power-systems/ac-power-networks/three-phase-fundamentals.md",
+      "status": "available",
+      "title": "Three-phase system fundamentals: balanced operation, power and the per-unit system",
+      "tools": [
+        {
+          "id": "python",
+          "licence_class": "open_source",
+          "optional": false
+        }
+      ],
+      "track": "ac-power-networks",
+      "translation_status": "original",
+      "translations": {
+        "en": "three-phase-fundamentals",
+        "zh-CN": null
+      },
+      "type": "lesson",
+      "url": "/academy/power-systems/three-phase-fundamentals/"
     }
   ],
-  "schema_version": "0.1.0"
+  "schema_version": "0.2.0"
 }

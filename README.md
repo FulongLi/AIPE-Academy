@@ -2,49 +2,55 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-AIPE Academy is an open learning framework for **AI for Power Engineering**, with power electronics as the primary v0.1 curriculum.
+AIPE Academy is an open-source, AI-native learning platform for **Electrical Power and Energy Engineering**: Foundations, Power Electronics, Power Systems and Renewable Energy. One knowledge base, maintained here, is served through three interfaces: this repository, the [AIPE website](https://aipel.co.uk/academy/) and AI coding agents (a Codex skill and a Claude Code plugin). The goal is that a learner with a computer, curiosity and an AI assistant can move from zero background to genuine engineering capability through guided study, reproducible calculations and simulations.
 
-## Start learning with Codex
+v0.2 adds the four-domain knowledge architecture, a verified [MIT OpenCourseWare academic baseline](references/mit-ocw-baseline.md), one complete reference lesson with a Python lab per domain, and the `aipe-academy` agent integration. MIT OpenCourseWare is an external resource; AIPE Academy is not affiliated with or endorsed by MIT.
 
-Share this repository link or open this folder in Codex, then say: **“Guide me through AIPE Academy from the beginning.”** You do not need to know how to write prompts or choose a textbook first.
+## Start learning
 
-Start with [Start here](START-HERE.md). The tutor uses a short conversation to find your starting point, guides small exercises and projects, and records evidence of progress. For AI assistants responding to a learning request: read [the tutor workflow](prompts/tutor-guide.md) before beginning.
+| Interface | Do this |
+| --- | --- |
+| **Claude Code** | `/plugin install aipe-academy --marketplace FulongLi/AIPE-Academy`, then `/aipe-academy:learn` or simply "Teach me electrical engineering from the beginning." |
+| **Codex** | `git clone https://github.com/FulongLi/AIPE-Academy`, open the folder in Codex, type `$aipe-academy` or say "Guide me through AIPE Academy from the beginning." |
+| **Any AI assistant** | Share this repository link and say "Guide me through AIPE Academy from the beginning." The assistant reads [START-HERE.md](START-HERE.md) and the [tutor workflow](prompts/tutor-guide.md). |
+| **Website** | Browse the four domains, the knowledge graph and the lessons at <https://aipel.co.uk/academy/>. |
 
-The [prerequisite path (in Chinese)](curriculum/01-foundations/prerequisite-path.zh-CN.md) bridges school-level basics to undergraduate circuits and power electronics. The [MIT / Princeton foundation review (in Chinese)](references/undergraduate-foundations-review.zh-CN.md) explains the course and textbook references. The first introductory lesson is available; most later topics remain outlines for development.
+The tutor finds your starting point with short diagnostic tasks, teaches intuition before equations, runs reproducible labs with you, checks understanding progressively and keeps your progress in a local `learning/` folder that is never committed. Installation details and what has been tested: [docs/plugin-installation.md](docs/plugin-installation.md).
 
-The goal is simple: a learner with only a computer, curiosity, and an AI coding assistant should be able to move from zero background to practical power electronics capability through a structured, project-based path.
+## Four knowledge domains
 
-This repository is the public front door for that vision. It will host the learning map, teaching materials, project briefs, simulation tasks, lab-style exercises, and AI interaction prompts that help students learn power electronics step by step.
+The canonical hierarchy is **Domain → Track → Module → Lesson → Lab** ([curriculum/taxonomy.json](curriculum/taxonomy.json), 57 modules). Prerequisites cross domains: the Buck converter builds on DC circuits and energy storage, power flow on AC circuits and complex power, solar inverters on power electronics and power systems.
 
-## Education to Research
+| Domain | Tracks | Complete reference lesson (v0.2) | Lab |
+| --- | --- | --- | --- |
+| **Foundations** | learning with AI, mathematics, physics, circuits, electronics, signals and control, computation, magnetism and measurement (F00–F09 preserved) | [DC circuit fundamentals](curriculum/foundations/circuits/dc-circuit-fundamentals.md) · Chinese: [第一节](curriculum/01-foundations/first-lesson.zh-CN.md) | `labs/foundations/dc_circuits.py` |
+| **Power Electronics** | devices and components, DC/DC conversion, AC/DC and DC/AC, isolated and resonant, losses and thermal, modelling and control, magnetics design, practical design, systems | [Buck converter fundamentals](curriculum/power-electronics/dc-dc-conversion/buck-converter-fundamentals.md) → [open Buck lab](curriculum/03-converters/buck-open-lab.md) → [Buck design tutorial](curriculum/03-converters/buck-converter.md) | `labs/buck_open.py`, `labs/power-electronics/buck_switching.py` |
+| **Power Systems** | AC power networks, transformers and machines, power flow / faults / protection, stability and grid control, modern converter-dominated grids | [Three-phase system fundamentals](curriculum/power-systems/ac-power-networks/three-phase-fundamentals.md) | `labs/power-systems/three_phase.py` |
+| **Renewable Energy** | solar photovoltaics, wind, energy storage, energy conversion, grid integration and systems | [Solar PV fundamentals](curriculum/renewable-energy/solar-photovoltaics/solar-pv-fundamentals.md) | `labs/renewable-energy/pv_model.py` |
 
-AIPE Academy is intended to support two phases, with power electronics as its first domain:
+Every complete lesson follows the same thirteen-section format ([template](templates/lesson-template.md)): learning objectives, prerequisites, physical intuition, principles, derivations, worked examples, a numerical or simulation lab, parameter exploration, misconceptions, AI tutor exercises, knowledge assessment, academic references and further learning. Most other modules are outlines or planned; the catalogue says which ([generated/lessons.json](generated/lessons.json), [generated/knowledge-graph.json](generated/knowledge-graph.json)).
 
-1. **Education — current priority.** Build the prerequisites, physical intuition, analysis skills, and project experience needed to understand and design power converters with an AI mentor. The seven curriculum stages below belong to this phase.
-2. **Research — planned progression.** Move from understanding established results to reading papers, reproducing results, defining research questions, and validating original work. This phase is a direction for development, not an implemented research curriculum.
+## Reproducible labs
 
-The technical foundation is Erickson and Maksimović's *Fundamentals of Power Electronics* and the CU Boulder power electronics teaching ecosystem. See the [initial research and framework discussion (in Chinese)](references/erickson-foundation-review.zh-CN.md) and [source register](references/erickson-sources.json), checked on September 6, 2026. The framework mapping is AIPE Academy's proposal, not a CU Boulder program or endorsement.
+All labs use Python 3.10+ and the standard library (matplotlib only behind an optional `--plot` flag). Each prints JSON with units, states its assumptions and limits, and rejects invalid inputs. They are analytical or numerical teaching models, not validated hardware.
 
-## Why This Exists
+```sh
+python labs/foundations/dc_circuits.py                 # Ohm's law, power and energy, dividers, nodal analysis
+python labs/buck_open.py                               # ideal CCM buck: duty, current, ripple
+python labs/power-electronics/buck_switching.py        # time-domain switching simulation, CCM/DCM detection
+python labs/power-systems/three_phase.py               # balanced three-phase power, PF correction, per-unit
+python labs/renewable-energy/pv_model.py --mppt        # single-diode PV module, MPP, irradiance/temperature, P&O
+```
 
-Traditional engineering education is powerful, but it is often expensive, slow, and hard to personalize. AI changes the learning interface.
+## Academic baseline: MIT OpenCourseWare
 
-AIPE Academy treats AI as a one-on-one mentor that can:
+Twenty-two MIT OCW courses were reviewed as the scope-and-depth baseline (verified against the live site on 2026-10-20, status recorded per course): [mit-ocw-baseline.md](references/mit-ocw-baseline.md), [mit-ocw-catalogue.json](references/mit-ocw-catalogue.json), the [academic coverage map](references/academic-coverage-map.md) (MIT course → MIT topic → AIPE module → AIPE lesson, with gaps) and the [academic source guidelines](references/academic-source-guidelines.md). MIT 6.622 (Spring 2023) is the principal power-electronics benchmark; 6.334 (2007) is kept as a historical complement. AIPE Academy links to official MIT pages and records metadata only; all explanations, derivations, exercises and code here are original.
 
-- explain concepts at the learner's level
-- turn theory into simulations and small experiments
-- review calculations, code, and design choices
-- guide students through a curriculum without requiring a formal university setting
+## Learning paths
 
-The long-term vision is to make power electronics education open, practical, and accessible to junior high students, high school students, self-taught engineers, and industry beginners.
+Domains and modules describe *what* exists; learning paths describe *in what order* to study. The original seven-stage power-electronics path (Orientation → Foundations → Components → Converters → Modelling and Control → Practical Design → Systems) with its G1/G2/G3 readiness checks is preserved as `power-electronics-core`, and entry paths exist for the other three domains ([curriculum/taxonomy.json](curriculum/taxonomy.json), `learning_paths`). The diagrams below show the power-electronics path and the Foundations dependencies.
 
-## Syllabus and Prerequisites
-
-This path answers three questions: **What should I learn now, why does it come first, and what does it prepare me for?** AIPE Academy designed this path with reference to university courses. See the [MIT / Princeton foundation review (in Chinese)](references/undergraduate-foundations-review.zh-CN.md) and [Erickson course review (in Chinese)](references/erickson-foundation-review.zh-CN.md) for the sources.
-
-The first diagram shows the path from orientation to research. The second expands the foundation modules. **Solid arrows indicate required knowledge or demonstrated skills; dashed arrows indicate supporting study that can be interleaved.** Multiple solid arrows entering a node mean that all those foundations are needed. An arrow does not require reading an entire textbook. Prerequisites inherited through earlier modules are not drawn again.
-
-### 1. The Overall Path: From Orientation to Research
+### 1. The power-electronics path: from orientation to research
 
 ```mermaid
 flowchart TD
@@ -66,11 +72,11 @@ flowchart TD
     R1 --> R2["Research Practice · Ask questions, compare, validate and report"]
 ```
 
-**You do not need to finish every foundation module before starting a project.** Once you meet G1, begin buck / boost analysis. Add G2 foundations when approaching control, then deepen magnetics, measurement and numerical methods during design and research. The diagram shows the sequence for complete design tasks; simple component selection and measurement exercises can start earlier.
+**You do not need to finish every foundation module before starting a project.** Once you meet G1, begin buck / boost analysis. Add G2 foundations when approaching control, then deepen magnetics, measurement and numerical methods during design and research.
 
-### 2. Foundation Dependencies
+### 2. Foundation dependencies
 
-F00–F09 are submodules of Stage 01. F00 can also run alongside Stage 00. F05, F06 and F09 contain several levels of depth; only the relevant parts are needed before the first project.
+F00–F09 are the modules of the Foundations domain (`f.learning-with-ai`, `f.quantities`, `f.dc-circuits`, `f.computation`, `f.calculus`/`f.dynamics`, `f.ac`, `f.electronics`, `f.signals`, `f.magnetism`, `f.linear-algebra`). Solid arrows are required knowledge; dashed arrows are supporting study.
 
 ```mermaid
 flowchart TD
@@ -96,145 +102,83 @@ flowchart TD
     F09 -.-> RESEARCH["Supports research and reproduction"]
 ```
 
-F02 establishes circuit reasoning. F04 extends static circuits to behavior over time. F05 describes switching through waveforms, while F07 explains how systems respond to inputs and feedback. F03 supplies computational tools throughout the path. F08 connects physical models to engineering, and F09 helps evaluate complex models and research results.
+| Module | What you learn | Evidence of learning |
+|---|---|---|
+| **F00 Learning with AI** | Ordinary-language questions, predictions, verification and records | Describe a gap and explain a learning result in your own words |
+| **F01 Quantities, Units and Algebra** | Ratios, unit conversions, equations and graphs | Distinguish W from Wh and check orders of magnitude |
+| **F02 Electricity and DC Circuits** | Voltage, current, power, series/parallel circuits, KCL/KVL and equivalents | Explain why a voltage divider changes when loaded |
+| **F03 Computation and Simulation Tools** | Variables, functions, plots, models and parameter sweeps | Change one parameter, interpret results and state model assumptions |
+| **F04 Calculus and Energy Storage Dynamics** | Slopes, areas, exponentials, differential equations and RC/RL responses | Predict capacitor voltage, inductor current and time constants |
+| **F05 Periodic Waveforms and AC Basics** | Period, duty cycle, average, RMS, phasors and impedance | Distinguish average from RMS and explain frequency effects |
+| **F06 Devices and Basic Electronics** | Diodes, MOSFETs, op-amps, operating points, small signals and losses | Compare ideal and real switch behavior |
+| **F07 Signals, Systems and Feedback** | Steps, frequency response, Laplace transforms, poles and Bode plots | Explain filtering, negative feedback and model limits |
+| **F08 Magnetics and Engineering Measurement** | Induction, magnetic circuits, saturation, ranges, sampling, error and heat | Explain possible discrepancies between models and measurements |
+| **F09 Linear Algebra and Numerical Methods** | Linear equations, matrices, state space, step size, error and basic statistics | Compare simulation settings, record errors and assess reliability |
 
-### 3. Foundation Module Syllabus
+See the [prerequisite path (in Chinese)](curriculum/01-foundations/prerequisite-path.zh-CN.md) for exercises and the G1/G2/G3 criteria, and the stage outlines under [curriculum/](curriculum/README.md). Research preparation and research practice remain a planned progression, not an implemented course.
 
-| Module | What you learn | Why the prerequisites matter | Evidence of learning |
-|---|---|---|---|
-| **F00 Learning with AI** | Ordinary-language questions, predictions, verification and records | No prerequisites or prompt-writing experience needed | Describe a gap and explain a learning result in your own words |
-| **F01 Quantities, Units and Algebra** | Ratios, unit conversions, equations and graphs | No prerequisites; revisit arithmetic when needed | Distinguish W from Wh and check orders of magnitude |
-| **F02 Electricity and DC Circuits** | Voltage, current, power, series/parallel circuits, KCL/KVL and equivalents | F01 supports equations, calculations and unit checks | Explain why a voltage divider changes when loaded |
-| **F03 Computation and Simulation Tools** | Variables, functions, plots, models and parameter sweeps | F01 supports computation; circuit tasks also need F02 | Change one parameter, interpret results and state model assumptions |
-| **F04 Calculus and Energy Storage Dynamics** | Slopes, areas, exponentials, differential equations and RC/RL responses | F02 provides circuit relationships; graphs reveal change | Predict capacitor voltage, inductor current and time constants |
-| **F05 Periodic Waveforms and AC Basics** | Period, duty cycle, average, RMS, phasors and impedance | F04 connects rates of change and storage to waveforms and AC analysis | Distinguish average from RMS and explain frequency effects |
-| **F06 Devices and Basic Electronics** | Diodes, MOSFETs, op-amps, operating points, small signals and losses | F02/F04 give device models a circuit and dynamic context | Compare ideal and real switch behavior |
-| **F07 Signals, Systems and Feedback** | Steps, frequency response, Laplace transforms, poles and Bode plots | F04/F05 connect time-domain behavior to frequency-domain descriptions | Explain filtering, negative feedback and model limits |
-| **F08 Magnetics and Engineering Measurement** | Induction, magnetic circuits, saturation, ranges, sampling, error and heat | F04/F06 connect storage and devices to real constraints | Explain possible discrepancies between models and measurements |
-| **F09 Linear Algebra and Numerical Methods** | Linear equations, matrices, state space, step size, error and basic statistics | F03/F04 support numerical work; dynamic system topics also need F07 | Compare simulation settings, record errors and assess reliability |
+## AI-native tutoring
 
-See the [prerequisite path (in Chinese)](curriculum/01-foundations/prerequisite-path.zh-CN.md) for exercises and the G1/G2/G3 criteria. F06 bridges into Stage 02; it does not require taking the same material twice. Measurement awareness from F08 begins with early circuit exercises.
+The shared tutor workflow ([prompts/tutor-guide.md](prompts/tutor-guide.md)) defines seven workflows: start learning, explain a topic, learn by simulation, check understanding, continue learning, explore advanced topics, and learning records. The Codex skill and the Claude Code plugin load the same skill text ([skills/aipe-academy/SKILL.md](skills/aipe-academy/SKILL.md)) and call the same companion command, which answers curriculum questions deterministically from the generated catalogue:
 
-### 4. Domain Courses and Research Progression
-
-| Stage | What you learn | Prerequisites and their purpose | Assignment / project milestone |
-|---|---|---|---|
-| [Stage 00 · Orientation](curriculum/00-orientation/README.md) | Conversion types, applications, a field map and learning methods | No technical prerequisites; establish a purpose | Draw the energy flow of a familiar product |
-| [Stage 01 · Foundations](curriculum/01-foundations/README.md) | F00–F09, introduced as tasks require them | Use a diagnostic to find the starting point | Units, voltage dividers, RC/RL and waveform exercises |
-| [Stage 02 · Components](curriculum/02-components/README.md) | Passive parts, semiconductors, datasheets, parasitics and ratings | F02/F04 explain how components affect circuits | Compare component models and justify selection |
-| [Stage 03 · Converters](curriculum/03-converters/README.md) | Buck, boost, isolated topologies, PWM, CCM/DCM, ripple and efficiency | Pass G1; understand storage and switches before analyzing switching states | Derive and simulate a converter, then explain parameter changes |
-| [Stage 04 · Modeling and Control](curriculum/04-modeling-and-control/README.md) | Averaged and small-signal models, transfer functions, compensation, stability and digital control basics | Stage 03 + G2; understand the operating point before disturbances and regulation | Design a feedback regulator and check load-step response |
-| [Stage 05 · Practical Design](curriculum/05-practical-design/README.md) | Magnetics, driving, isolation, protection, layout, EMI, heat and measurement | Relevant Stage 02–04 skills and F08 translate theory into constrained designs | Document specifications, components, losses, control and verification |
-| [Stage 06 · Systems and Applications](curriculum/06-systems-and-applications/README.md) | Solar, storage, vehicles, motors and server power systems | Stage 05 provides converter design skills before system interfaces and tradeoffs | Complete a system project with specifications and verification records |
-| **Research Preparation (planned)** | Choose a direction, search literature, read papers, reproduce results and analyze error | Project skills + topic-specific F09 content establish a reliable baseline | A reproduction report that someone else can rerun |
-| **Research Practice (planned)** | Define questions, form hypotheses, compare fairly, validate and communicate | Use reproduction work to identify a researchable question | A report, experimental materials, limitations and follow-up questions |
-
-**Using this syllabus:** Start at the earliest skill you have not demonstrated. Move forward when you can complete a task independently and explain what changes under new conditions. Add specialized mathematics, devices or control topics as a research question requires. Completing coursework and producing original research are distinct achievements.
-
-**Current status:** The [learning entry point](START-HERE.md), tutor workflow and [first original lesson (in Chinese)](curriculum/01-foundations/first-lesson.zh-CN.md) are available. Most other modules are outlines and project specifications; research remains planned. Diagram connections describe the intended learning relationships, not completed course materials.
-
-## AI-Native Study Loop
-
-Each topic should eventually include:
-
-- a plain-language explanation
-- a concept map
-- example calculations
-- simulation tasks
-- hands-on or lab-style exercises
-- common mistakes
-- AI tutor prompts
-- self-check questions
-- extension challenges
-
-The intended workflow is:
-
-1. Read the topic brief.
-2. Ask an AI mentor to explain it at your level.
-3. Run a simulation or calculation.
-4. Compare the result with the expected behavior.
-5. Ask the AI to challenge your understanding.
-6. Record what you learned.
-7. Move to the next project.
-
-## Repository Structure
-
-Current structure:
-
-```text
-.
-+-- index.html
-+-- styles.css
-+-- START-HERE.md
-+-- AGENTS.md
-+-- assets/
-|   +-- hero-power-electronics-ai.png
-+-- curriculum/
-|   +-- README.md
-|   +-- 00-orientation/
-|   +-- 01-foundations/
-|   +-- 02-components/
-|   +-- 03-converters/
-|   +-- 04-modeling-and-control/
-|   +-- 05-practical-design/
-|   +-- 06-systems-and-applications/
-+-- prompts/
-|   +-- ai-tutor-prompts.md
-|   +-- tutor-guide.md
-+-- references/
-|   +-- power-electronics-reading-map.md
-+-- templates/
-|   +-- topic-template.md
-+-- README.md
-+-- README.zh-CN.md
-+-- LICENSE.md
+```sh
+python skills/aipe-academy/scripts/academy.py status
+python skills/aipe-academy/scripts/academy.py onboarding --goal "solar"
+python skills/aipe-academy/scripts/academy.py prerequisites buck-converter-fundamentals
+python skills/aipe-academy/scripts/academy.py lab three-phase-fundamentals -- --help
+python skills/aipe-academy/scripts/academy.py references --lesson solar-pv-fundamentals
 ```
 
-Planned expansion:
-
-```text
-labs/
-  spice/
-  python/
-  hardware/
-
-projects/
-  beginner/
-  intermediate/
-  advanced/
-
-diagrams/
-  concept-maps/
-  converter-current-paths/
-  system-block-diagrams/
-```
+Learning records live in `learning/progress.json` (git-ignored); `demonstrated` is recorded only for independent work. The tutor never claims to remember progress that is not in the record.
 
 ## Website
 
-Open `index.html` in a browser to view the current static showcase page.
+<https://aipel.co.uk/academy/> is generated from this repository at a pinned revision: lessons, the knowledge graph topics, prerequisites and the academic references all come from `generated/`. Each website lesson links its canonical Markdown source here, its lab scripts and its external academic references. See [docs/website-integration.md](docs/website-integration.md).
 
-No build step is required.
+## Repository structure
 
-## Contributing Direction
+```text
+.
+├── README.md · README.zh-CN.md · START-HERE.md · AGENTS.md · aipe.yaml
+├── curriculum/
+│   ├── taxonomy.json            Domain → Track → Module, learning paths, G1/G2/G3 gates
+│   ├── catalogue.json           one record per lesson, lab, tutorial, guide or stage outline
+│   ├── 00-orientation … 06-systems-and-applications/   v0.1 stage outlines and lessons (preserved)
+│   ├── foundations/ · power-electronics/ · power-systems/ · renewable-energy/   v0.2 lessons
+├── labs/                        standard-library Python labs (buck_open.py and labs/<domain>/)
+├── references/                  MIT OCW catalogue, verification, coverage, baseline, guidelines; v0.1 reviews
+├── schemas/                     lesson, taxonomy and academic-reference JSON Schemas
+├── scripts/                     build_catalogue.py · build_reference_docs.py · verify_academic_sources.py
+├── generated/                   lessons.json · knowledge-graph.json · academic-references.json
+├── prompts/ · templates/        tutor workflow, lesson and learning-record templates
+├── skills/aipe-academy/         shared Codex / Claude Code skill and companion command
+├── .agents/skills/aipe-academy/ Codex repository-discovery entry
+├── .claude-plugin/              Claude Code plugin and marketplace manifests
+├── tests/ · .github/workflows/  offline tests, lab runs, plugin validation
+└── docs/                        architecture, curriculum guide, plugin installation, website integration
+```
 
-Good contributions should help learners move from confusion to capability.
+## Development and validation
 
-Useful contribution types include:
+```sh
+python -m pip install -r requirements-dev.txt
+python scripts/build_catalogue.py --check        # taxonomy, catalogue, references, generated outputs
+python scripts/build_reference_docs.py --check   # Markdown references rendered from JSON
+python -m unittest discover -s tests -v          # curriculum, taxonomy, references, labs, CLI, packaging
+claude plugin validate .                         # Claude Code plugin manifest (optional, needs the CLI)
+python scripts/verify_academic_sources.py        # network re-verification of the MIT OCW pages (on demand)
+```
 
-- beginner-friendly explanations
-- diagrams and concept maps
-- converter design walkthroughs
-- simulation files
-- Python analysis notebooks
-- datasheet reading guides
-- safety notes
-- AI prompt templates
-- project briefs with expected learning outcomes
+Architecture and contribution details: [docs/architecture.md](docs/architecture.md), [docs/curriculum-guide.md](docs/curriculum-guide.md).
+
+## Contributing direction
+
+Good contributions help learners move from confusion to capability: beginner-friendly explanations, standard-format lessons for planned modules, reproducible labs and tests, translations with reviewed status, datasheet reading guides, safety notes, and tutor exercises. Follow the curriculum guide and the academic source guidelines; never copy external course material.
 
 ## License
 
-The repository currently includes a Creative Commons Attribution 4.0 International license in `LICENSE.md`, suitable for open educational content.
+Educational content, code and metadata in this repository are released under the Creative Commons Attribution 4.0 International licence in `LICENSE.md`. External academic references, including MIT OpenCourseWare, keep their own licences and are linked, not copied.
 
-## Ecosystem v0.1
+## Ecosystem
 
-Existing stages remain canonical. See [metadata, coverage and open labs](docs/ecosystem-v0.1.md), the [open buck lab](curriculum/03-converters/buck-open-lab.md), and [generated lesson catalogue](generated/lessons.json). Future power-engineering domains can add metadata without moving these files.
+AIPE Academy is the education capability of the AIPE ecosystem (`aipe.yaml`). The v0.1 integration notes remain in [docs/ecosystem-v0.1.md](docs/ecosystem-v0.1.md).

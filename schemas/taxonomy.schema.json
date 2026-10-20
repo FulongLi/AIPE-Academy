@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AIPE Academy knowledge taxonomy v0.2",
+  "description": "curriculum/taxonomy.json: Domain -> Track -> Module hierarchy plus learning paths. Referential checks (ids exist, tracks belong to their domain, requires is acyclic) are performed by scripts/build_catalogue.py.",
+  "type": "object",
+  "required": ["schema_version", "domains", "tracks", "modules", "learning_paths"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "0.2.0"},
+    "description": {"type": "string"},
+    "domains": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "order", "title", "summary", "color"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+          "order": {"type": "integer", "minimum": 1},
+          "title": {"$ref": "#/$defs/bilingual"},
+          "summary": {"$ref": "#/$defs/bilingual"},
+          "color": {"type": "string", "pattern": "^#[0-9a-fA-F]{6}$"},
+          "legacy_stages": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "tracks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "domain", "order", "title", "summary"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+          "domain": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+          "order": {"type": "integer", "minimum": 1},
+          "title": {"$ref": "#/$defs/bilingual"},
+          "summary": {"$ref": "#/$defs/bilingual"}
+        }
+      }
+    },
+    "modules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "domain", "track", "title", "summary", "requires", "related"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z]{1,3}\\.[a-z][a-z0-9-]*$"},
+          "domain": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+          "track": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+          "parent": {"type": "string", "pattern": "^[a-z]{1,3}\\.[a-z][a-z0-9-]*$"},
+          "title": {"$ref": "#/$defs/bilingual"},
+          "summary": {"$ref": "#/$defs/bilingual"},
+          "requires": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^[a-z]{1,3}\\.[a-z][a-z0-9-]*$"}},
+          "related": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^[a-z]{1,3}\\.[a-z][a-z0-9-]*$"}},
+          "legacy": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "foundation_module": {"type": "string", "pattern": "^F0[0-9]$"},
+              "stage": {"type": "string", "pattern": "^0[0-6]-[a-z-]+$"}
+            }
+          }
+        }
+      }
+    },
+    "learning_paths": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "summary", "domain", "stages", "gates"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+          "title": {"$ref": "#/$defs/bilingual"},
+          "summary": {"$ref": "#/$defs/bilingual"},
+          "domain": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+          "stages": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["id", "title", "modules", "lessons"],
+              "additionalProperties": false,
+              "properties": {
+                "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+                "title": {"$ref": "#/$defs/bilingual"},
+                "gate": {"type": "string", "pattern": "^G[1-9]$"},
+                "modules": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+                "lessons": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}
+              }
+            }
+          },
+          "gates": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "required": ["title", "demonstrate", "criteria"],
+              "additionalProperties": false,
+              "properties": {
+                "title": {"$ref": "#/$defs/bilingual"},
+                "demonstrate": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+                "criteria": {
+                  "type": "object",
+                  "required": ["en", "zh"],
+                  "additionalProperties": false,
+                  "properties": {
+                    "en": {"type": "array", "items": {"type": "string"}},
+                    "zh": {"type": "array", "items": {"type": "string"}}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "bilingual": {
+      "type": "object",
+      "required": ["en", "zh"],
+      "additionalProperties": false,
+      "properties": {
+        "en": {"type": "string", "minLength": 1},
+        "zh": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

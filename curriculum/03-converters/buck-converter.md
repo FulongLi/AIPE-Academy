@@ -512,3 +512,35 @@ The central habit remains the same: write down the requirement, explain the ener
 ## Further study
 
 Robert W. Erickson and Dragan Maksimović, [*Fundamentals of Power Electronics*, third edition, Springer, 2020](https://link.springer.com/book/10.1007/978-3-030-43881-4). Relevant chapters cover steady-state converter analysis, AC equivalent circuit modelling, converter transfer functions and controller design. The derivations and numerical example on this page are presented independently; this article is not a reproduction of the textbook.
+
+## Academic References
+
+### MIT OpenCourseWare
+
+Primary academic reference:
+
+- MIT 6.622 — Power Electronics (Spring 2023)
+  https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/
+
+Complementary historical reference:
+
+- MIT 6.334 — Power Electronics (Spring 2007)
+  https://ocw.mit.edu/courses/6-334-power-electronics-spring-2007/
+
+Relevant subjects:
+
+- DC/DC converter steady-state analysis and conversion ratios
+- Averaged and small-signal converter modelling
+- Feedback control of switching converters
+- Converter design practice (component sizing, losses, layout)
+
+Verified teaching resources (official MIT OCW pages):
+
+- 6.622 syllabus: https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/pages/syllabus/
+- 6.622 lecture videos: https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/video_galleries/video-lectures/
+- 6.334 syllabus: https://ocw.mit.edu/courses/6-334-power-electronics-spring-2007/pages/syllabus/
+
+This tutorial has been independently developed by AIPE Academy with reference
+to the academic scope of the above courses. MIT OpenCourseWare is an external
+educational resource released under its own licence (generally CC BY-NC-SA 4.0).
+AIPE Academy is not affiliated with or endorsed by MIT.

@@ -27,8 +27,15 @@ def calculate(v_in=24.0, v_out=12.0, power=30.0, frequency=100000.0, inductance=
 
 
 if __name__ == "__main__":
+    import sys
+
     p = argparse.ArgumentParser(description=__doc__)
     for name, default in (("v-in",24.0),("v-out",12.0),("power",30.0),("frequency",100000.0),("inductance",0.00015)):
         p.add_argument("--"+name, type=float, default=default)
     args = vars(p.parse_args())
-    print(json.dumps(calculate(**args), indent=2, allow_nan=False))
+    try:
+        print(json.dumps(calculate(**args), indent=2, allow_nan=False))
+    except ValueError as exc:
+        # Same convention as the other labs: a rejected input or assumption is exit code 2.
+        print(f"error: {exc}", file=sys.stderr)
+        sys.exit(2)

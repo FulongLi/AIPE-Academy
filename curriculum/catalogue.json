@@ -3,7 +3,9 @@
     "title": "Orientation and learning methods",
     "slug": "orientation",
     "domain": "foundations",
-    "track": "beginner-bridge",
+    "track": "learning-methods",
+    "module": "f.learning-with-ai",
+    "concept": "orientation",
     "level": "beginner",
     "type": "stage",
     "prerequisites": [],
@@ -26,7 +28,9 @@
     "title": "Foundations readiness map",
     "slug": "foundations",
     "domain": "foundations",
-    "track": "beginner-bridge",
+    "track": "learning-methods",
+    "module": null,
+    "concept": "foundations-readiness",
     "level": "beginner",
     "type": "stage",
     "prerequisites": [
@@ -37,13 +41,15 @@
     ],
     "next": [
       "prerequisite-path-zh",
+      "dc-circuit-fundamentals",
       "components"
     ],
     "estimated_time": 30,
     "tools": [],
     "status": "outline",
     "references": [
-      "references/erickson-sources.json"
+      "references/erickson-sources.json",
+      "references/undergraduate-sources.json"
     ],
     "source": "curriculum/01-foundations/README.md",
     "language": "en"
@@ -52,7 +58,9 @@
     "title": "电力电子之前：先修课程路线",
     "slug": "prerequisite-path-zh",
     "domain": "foundations",
-    "track": "beginner-bridge",
+    "track": "learning-methods",
+    "module": null,
+    "concept": "prerequisite-path",
     "level": "beginner",
     "type": "guide",
     "prerequisites": [
@@ -68,7 +76,8 @@
     "tools": [],
     "status": "outline",
     "references": [
-      "references/erickson-sources.json"
+      "references/erickson-sources.json",
+      "references/undergraduate-sources.json"
     ],
     "source": "curriculum/01-foundations/prerequisite-path.zh-CN.md",
     "language": "zh-CN"
@@ -77,7 +86,12 @@
     "title": "一个简单电路用了多少电？",
     "slug": "first-circuit-zh",
     "domain": "foundations",
-    "track": "beginner-bridge",
+    "track": "circuits",
+    "module": "f.dc-circuits",
+    "covers": [
+      "f.quantities"
+    ],
+    "concept": "first-circuit",
     "level": "beginner",
     "type": "lesson",
     "prerequisites": [],
@@ -86,22 +100,82 @@
       "计算理想电阻电路并解释单位"
     ],
     "next": [
+      "dc-circuit-fundamentals",
       "components"
     ],
     "estimated_time": 30,
     "tools": [],
     "status": "available",
     "references": [
-      "references/erickson-sources.json"
+      "references/erickson-sources.json",
+      "references/undergraduate-sources.json"
+    ],
+    "academic_references": [
+      "mit-6-002-2007"
     ],
     "source": "curriculum/01-foundations/first-lesson.zh-CN.md",
     "language": "zh-CN"
   },
   {
+    "title": "DC circuit fundamentals: voltage, current, power and the circuit laws",
+    "slug": "dc-circuit-fundamentals",
+    "domain": "foundations",
+    "track": "circuits",
+    "module": "f.dc-circuits",
+    "covers": [
+      "f.quantities"
+    ],
+    "concept": "dc-circuit-fundamentals",
+    "level": "beginner",
+    "type": "lesson",
+    "format": "aipe-lesson-v2",
+    "prerequisites": [
+      "orientation"
+    ],
+    "learning_objectives": [
+      "Define voltage, current, resistance, power and energy with SI units and distinguish W from Wh",
+      "Apply Ohm's law, KCL and KVL to series, parallel and loaded-divider circuits",
+      "Verify hand calculations with a reproducible Python lab and interpret model limits"
+    ],
+    "next": [
+      "components",
+      "buck-converter-fundamentals",
+      "three-phase-fundamentals"
+    ],
+    "estimated_time": 90,
+    "tools": [
+      {
+        "id": "python",
+        "licence_class": "open_source",
+        "optional": false
+      }
+    ],
+    "status": "available",
+    "references": [
+      "references/mit-ocw-catalogue.json",
+      "references/undergraduate-sources.json"
+    ],
+    "academic_references": [
+      "mit-6-002-2007",
+      "mit-8-02-2007",
+      "mit-18-01sc-2010"
+    ],
+    "labs": [
+      "labs/foundations/dc_circuits.py"
+    ],
+    "source": "curriculum/foundations/circuits/dc-circuit-fundamentals.md",
+    "language": "en"
+  },
+  {
     "title": "Devices and switching models",
     "slug": "components",
     "domain": "power-electronics",
-    "track": "power-electronics",
+    "track": "devices-and-components",
+    "module": "pe.devices",
+    "covers": [
+      "pe.passives"
+    ],
+    "concept": "components-stage",
     "level": "undergraduate",
     "type": "stage",
     "prerequisites": [
@@ -126,7 +200,16 @@
     "title": "Steady-state converters",
     "slug": "converters",
     "domain": "power-electronics",
-    "track": "power-electronics",
+    "track": "dc-dc-conversion",
+    "module": "pe.topologies",
+    "covers": [
+      "pe.boost",
+      "pe.rectifiers",
+      "pe.inverters",
+      "pe.isolated",
+      "pe.losses"
+    ],
+    "concept": "converters-stage",
     "level": "undergraduate",
     "type": "stage",
     "prerequisites": [
@@ -136,6 +219,7 @@
       "Identify the stage's knowledge requirements and evidence of readiness"
     ],
     "next": [
+      "buck-converter-fundamentals",
       "buck-converter",
       "buck-open-lab",
       "dynamics-and-control"
@@ -150,10 +234,70 @@
     "language": "en"
   },
   {
+    "title": "Buck converter fundamentals: from switch states to ripple and conduction modes",
+    "slug": "buck-converter-fundamentals",
+    "domain": "power-electronics",
+    "track": "dc-dc-conversion",
+    "module": "pe.buck",
+    "covers": [
+      "pe.topologies"
+    ],
+    "concept": "buck-converter-fundamentals",
+    "level": "undergraduate",
+    "type": "lesson",
+    "format": "aipe-lesson-v2",
+    "prerequisites": [
+      "dc-circuit-fundamentals",
+      "converters"
+    ],
+    "learning_objectives": [
+      "Explain buck operation from the two switch states and their current paths",
+      "Derive the conversion ratio from volt-second balance and the inductor ripple from the on-interval",
+      "Identify the CCM/DCM boundary and compare analytical predictions with a switching simulation",
+      "State the limits of the ideal model and what losses, ESR and startup change"
+    ],
+    "next": [
+      "buck-open-lab",
+      "buck-converter",
+      "dynamics-and-control"
+    ],
+    "estimated_time": 120,
+    "tools": [
+      {
+        "id": "python",
+        "licence_class": "open_source",
+        "optional": false
+      }
+    ],
+    "status": "available",
+    "references": [
+      "references/mit-ocw-catalogue.json",
+      "references/erickson-sources.json"
+    ],
+    "academic_references": [
+      "mit-6-622-2023",
+      "mit-6-334-2007",
+      "mit-6-002-2007"
+    ],
+    "labs": [
+      "labs/buck_open.py",
+      "labs/power-electronics/buck_switching.py"
+    ],
+    "source": "curriculum/power-electronics/dc-dc-conversion/buck-converter-fundamentals.md",
+    "language": "en"
+  },
+  {
     "title": "Buck converter: from principles to design",
     "slug": "buck-converter",
     "domain": "power-electronics",
-    "track": "power-electronics",
+    "track": "dc-dc-conversion",
+    "module": "pe.buck",
+    "covers": [
+      "pe.modelling",
+      "pe.control",
+      "pe.practical"
+    ],
+    "concept": "buck-converter-design",
     "level": "undergraduate",
     "type": "tutorial",
     "prerequisites": [
@@ -186,7 +330,12 @@
     ],
     "status": "draft",
     "references": [
-      "references/erickson-sources.json"
+      "references/erickson-sources.json",
+      "references/website-migration.json"
+    ],
+    "academic_references": [
+      "mit-6-622-2023",
+      "mit-6-334-2007"
     ],
     "source": "curriculum/03-converters/buck-converter.md",
     "language": "en"
@@ -195,7 +344,9 @@
     "title": "Predict and check an ideal buck converter",
     "slug": "buck-open-lab",
     "domain": "power-electronics",
-    "track": "power-electronics",
+    "track": "dc-dc-conversion",
+    "module": "pe.buck",
+    "concept": "buck-open-lab",
     "level": "undergraduate",
     "type": "lab",
     "prerequisites": [
@@ -220,6 +371,12 @@
     "references": [
       "references/erickson-sources.json"
     ],
+    "academic_references": [
+      "mit-6-622-2023"
+    ],
+    "labs": [
+      "labs/buck_open.py"
+    ],
     "source": "curriculum/03-converters/buck-open-lab.md",
     "language": "en"
   },
@@ -227,7 +384,13 @@
     "title": "Dynamics, transfer functions and control",
     "slug": "dynamics-and-control",
     "domain": "power-electronics",
-    "track": "power-electronics",
+    "track": "modelling-and-control",
+    "module": "pe.modelling",
+    "covers": [
+      "pe.control",
+      "pe.simulation"
+    ],
+    "concept": "dynamics-and-control-stage",
     "level": "undergraduate",
     "type": "stage",
     "prerequisites": [
@@ -252,7 +415,15 @@
     "title": "Magnetics and practical design",
     "slug": "practical-design",
     "domain": "power-electronics",
-    "track": "power-electronics",
+    "track": "practical-design",
+    "module": "pe.practical",
+    "covers": [
+      "pe.magnetics",
+      "pe.thermal",
+      "pe.gate-driving",
+      "pe.emi-pcb"
+    ],
+    "concept": "practical-design-stage",
     "level": "undergraduate",
     "type": "stage",
     "prerequisites": [
@@ -277,7 +448,9 @@
     "title": "Systems and applications",
     "slug": "systems-applications",
     "domain": "power-electronics",
-    "track": "power-electronics",
+    "track": "systems-integration",
+    "module": "pe.applications",
+    "concept": "systems-applications-stage",
     "level": "undergraduate",
     "type": "stage",
     "prerequisites": [
@@ -294,6 +467,100 @@
       "references/erickson-sources.json"
     ],
     "source": "curriculum/06-systems-and-applications/README.md",
+    "language": "en"
+  },
+  {
+    "title": "Three-phase system fundamentals: balanced operation, power and the per-unit system",
+    "slug": "three-phase-fundamentals",
+    "domain": "power-systems",
+    "track": "ac-power-networks",
+    "module": "ps.three-phase",
+    "covers": [
+      "ps.per-unit"
+    ],
+    "concept": "three-phase-fundamentals",
+    "level": "undergraduate",
+    "type": "lesson",
+    "format": "aipe-lesson-v2",
+    "prerequisites": [
+      "dc-circuit-fundamentals"
+    ],
+    "learning_objectives": [
+      "Explain why balanced three-phase systems deliver constant power and relate phase and line quantities",
+      "Compute real, reactive, apparent power and power factor for balanced wye and delta loads",
+      "Convert network quantities to per-unit values and explain why the per-unit system simplifies analysis",
+      "Reproduce every result with an open Python lab and recognise the limits of the balanced model"
+    ],
+    "next": [
+      "solar-pv-fundamentals"
+    ],
+    "estimated_time": 120,
+    "tools": [
+      {
+        "id": "python",
+        "licence_class": "open_source",
+        "optional": false
+      }
+    ],
+    "status": "available",
+    "references": [
+      "references/mit-ocw-catalogue.json"
+    ],
+    "academic_references": [
+      "mit-6-061-2011",
+      "mit-6-002-2007"
+    ],
+    "labs": [
+      "labs/power-systems/three_phase.py"
+    ],
+    "source": "curriculum/power-systems/ac-power-networks/three-phase-fundamentals.md",
+    "language": "en"
+  },
+  {
+    "title": "Solar PV fundamentals: from photons to the maximum power point",
+    "slug": "solar-pv-fundamentals",
+    "domain": "renewable-energy",
+    "track": "solar-photovoltaics",
+    "module": "re.pv",
+    "covers": [
+      "re.mppt"
+    ],
+    "concept": "solar-pv-fundamentals",
+    "level": "undergraduate",
+    "type": "lesson",
+    "format": "aipe-lesson-v2",
+    "prerequisites": [
+      "dc-circuit-fundamentals",
+      "buck-converter-fundamentals"
+    ],
+    "learning_objectives": [
+      "Explain photovoltaic energy conversion and the current-source-plus-diode picture of a solar cell",
+      "Read an I-V curve: short-circuit current, open-circuit voltage, fill factor and the maximum power point",
+      "Predict and simulate the effect of irradiance and temperature with a single-diode model",
+      "Explain why a converter and an MPPT algorithm are needed and demonstrate perturb-and-observe"
+    ],
+    "next": [],
+    "estimated_time": 120,
+    "tools": [
+      {
+        "id": "python",
+        "licence_class": "open_source",
+        "optional": false
+      }
+    ],
+    "status": "available",
+    "references": [
+      "references/mit-ocw-catalogue.json"
+    ],
+    "academic_references": [
+      "mit-2-627-2013",
+      "mit-ec-s07-2004",
+      "mit-6-012-2005"
+    ],
+    "labs": [
+      "labs/renewable-energy/pv_model.py"
+    ],
+    "source": "curriculum/renewable-energy/solar-photovoltaics/solar-pv-fundamentals.md",
     "language": "en"
   }
 ]

@@ -1,0 +1,17 @@
+{
+  "name": "aipe-academy",
+  "description": "AIPE Academy: open, AI-native learning of electrical power and energy engineering for Claude Code.",
+  "owner": {
+    "name": "AIPE Labs",
+    "url": "https://aipel.co.uk/"
+  },
+  "plugins": [
+    {
+      "name": "aipe-academy",
+      "source": "./",
+      "description": "Guided tutor for Foundations, Power Electronics, Power Systems and Renewable Energy with reproducible Python labs, learning paths, local progress records and an MIT OpenCourseWare academic reference baseline.",
+      "category": "education",
+      "tags": ["education", "power-electronics", "power-systems", "renewable-energy", "electrical-engineering"]
+    }
+  ]
+}

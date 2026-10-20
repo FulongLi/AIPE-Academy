@@ -1,0 +1,3277 @@
+{
+  "domains": [
+    {
+      "color": "#c79522",
+      "id": "foundations",
+      "legacy_stages": [
+        "00-orientation",
+        "01-foundations"
+      ],
+      "order": 1,
+      "summary": {
+        "en": "Shared knowledge layer for the three engineering domains: mathematics, physics, circuits, electronics, signals, computation and measurement, introduced progressively as engineering problems need them.",
+        "zh": "三个专业领域共享的知识层：数学、物理、电路、电子学、信号、计算与测量，随着工程问题的需要逐步引入。"
+      },
+      "title": {
+        "en": "Foundations",
+        "zh": "基础"
+      },
+      "tracks": [
+        "learning-methods",
+        "mathematics",
+        "physics",
+        "circuits",
+        "electronics",
+        "signals-and-control",
+        "computation",
+        "magnetism-and-measurement"
+      ]
+    },
+    {
+      "color": "#5f8fe0",
+      "id": "power-electronics",
+      "legacy_stages": [
+        "02-components",
+        "03-converters",
+        "04-modeling-and-control",
+        "05-practical-design",
+        "06-systems-and-applications"
+      ],
+      "order": 2,
+      "summary": {
+        "en": "Switching devices, converter topologies, losses, modelling, control, magnetics and the practical constraints of real converters.",
+        "zh": "开关器件、变换器拓扑、损耗、建模、控制、磁性元件，以及真实变换器中的工程约束。"
+      },
+      "title": {
+        "en": "Power Electronics",
+        "zh": "电力电子"
+      },
+      "tracks": [
+        "devices-and-components",
+        "dc-dc-conversion",
+        "ac-dc-and-dc-ac",
+        "isolated-and-resonant",
+        "losses-and-thermal",
+        "modelling-and-control",
+        "magnetics-design",
+        "practical-design",
+        "systems-integration"
+      ]
+    },
+    {
+      "color": "#8d70dc",
+      "id": "power-systems",
+      "legacy_stages": [],
+      "order": 3,
+      "summary": {
+        "en": "Three-phase networks, transformers and machines, per-unit analysis, power flow, faults and protection, stability, and converter-dominated modern grids.",
+        "zh": "三相网络、变压器与电机、标幺值分析、潮流、故障与保护、稳定性，以及由变换器主导的现代电网。"
+      },
+      "title": {
+        "en": "Power Systems",
+        "zh": "电力系统"
+      },
+      "tracks": [
+        "ac-power-networks",
+        "machines-and-transformers",
+        "network-analysis",
+        "dynamics-and-stability",
+        "modern-grids"
+      ]
+    },
+    {
+      "color": "#3fb58e",
+      "id": "renewable-energy",
+      "legacy_stages": [],
+      "order": 4,
+      "summary": {
+        "en": "Solar photovoltaics, wind, energy storage, energy conversion, and the grid integration of renewable generation through power electronics and power systems.",
+        "zh": "光伏、风能、储能、能量转换，以及通过电力电子与电力系统实现可再生能源并网。"
+      },
+      "title": {
+        "en": "Renewable Energy",
+        "zh": "可再生能源"
+      },
+      "tracks": [
+        "solar-photovoltaics",
+        "wind-energy",
+        "energy-storage",
+        "energy-conversion",
+        "grid-integration-and-systems"
+      ]
+    }
+  ],
+  "learning_paths": [
+    {
+      "domain": "power-electronics",
+      "gates": {
+        "G1": {
+          "criteria": {
+            "en": [
+              "Label voltages and currents in a simple circuit and write KCL/KVL",
+              "Compute power and energy and distinguish W from Wh",
+              "Explain inductor current and capacitor voltage continuity and the ideal-model conditions",
+              "Distinguish period, duty cycle, average and RMS",
+              "Distinguish an ideal switch from a real device and judge whether a simulation result is plausible"
+            ],
+            "zh": [
+              "能为简单电路标出电压、电流方向并写出 KCL/KVL",
+              "能计算功率与能量，分清 W 与 Wh",
+              "能解释电感电流和电容电压的连续性及相应理想模型条件",
+              "能解释周期、占空比、平均值与 RMS 的区别",
+              "能区分理想开关与实际器件，并检查一个仿真结果是否合理"
+            ]
+          },
+          "demonstrate": [
+            "f.quantities",
+            "f.dc-circuits",
+            "f.dynamics",
+            "f.ac",
+            "f.electronics",
+            "f.computation"
+          ],
+          "title": {
+            "en": "G1 · Ready for basic converters",
+            "zh": "G1 · 可以开始基础变换器"
+          }
+        },
+        "G2": {
+          "criteria": {
+            "en": [
+              "Explain step response, poles and frequency response",
+              "State where a small-signal model applies and verify with a changed parameter",
+              "Solve a small linear system and explain numerical error at an introductory level"
+            ],
+            "zh": [
+              "能解释阶跃响应、极点和频率响应",
+              "理解小信号模型适用范围，并用改变参数的例子验证",
+              "能求解小型线性方程组并说明数值误差入门概念"
+            ]
+          },
+          "demonstrate": [
+            "f.ac",
+            "f.signals",
+            "f.linear-algebra"
+          ],
+          "title": {
+            "en": "G2 · Ready for dynamics and control",
+            "zh": "G2 · 可以开始变换器动态与控制"
+          }
+        },
+        "G3": {
+          "criteria": {
+            "en": [
+              "Produce a design with specification, device constraints and a verification record",
+              "Reproduce one documented result with assumptions, errors, failures and applicability recorded"
+            ],
+            "zh": [
+              "完成一项有规格、器件约束和验证记录的设计",
+              "复现一项明确结果，记录假设、误差、失败与适用范围"
+            ]
+          },
+          "demonstrate": [
+            "f.magnetism",
+            "f.linear-algebra",
+            "f.computation"
+          ],
+          "title": {
+            "en": "G3 · Ready for engineering design and research preparation",
+            "zh": "G3 · 可以开始工程设计与研究准备"
+          }
+        }
+      },
+      "id": "power-electronics-core",
+      "stages": [
+        {
+          "id": "00-orientation",
+          "lesson_status": {
+            "orientation": "outline"
+          },
+          "lessons": [
+            "orientation"
+          ],
+          "modules": [
+            "f.learning-with-ai"
+          ],
+          "title": {
+            "en": "Stage 00 · Orientation and learning methods",
+            "zh": "阶段 00 · 领域入门与学习方法"
+          }
+        },
+        {
+          "id": "01-foundations",
+          "lesson_status": {
+            "dc-circuit-fundamentals": "available",
+            "first-circuit-zh": "available",
+            "foundations": "outline",
+            "prerequisite-path-zh": "outline"
+          },
+          "lessons": [
+            "foundations",
+            "prerequisite-path-zh",
+            "first-circuit-zh",
+            "dc-circuit-fundamentals"
+          ],
+          "modules": [
+            "f.quantities",
+            "f.dc-circuits",
+            "f.computation",
+            "f.calculus",
+            "f.dynamics",
+            "f.ac",
+            "f.electronics",
+            "f.signals",
+            "f.magnetism",
+            "f.linear-algebra"
+          ],
+          "title": {
+            "en": "Stage 01 · Foundations F00–F09",
+            "zh": "阶段 01 · 基础课 F00–F09"
+          }
+        },
+        {
+          "id": "02-components",
+          "lesson_status": {
+            "components": "outline"
+          },
+          "lessons": [
+            "components"
+          ],
+          "modules": [
+            "pe.devices",
+            "pe.passives"
+          ],
+          "title": {
+            "en": "Stage 02 · Components",
+            "zh": "阶段 02 · 元器件"
+          }
+        },
+        {
+          "gate": "G1",
+          "id": "03-converters",
+          "lesson_status": {
+            "buck-converter": "draft",
+            "buck-converter-fundamentals": "available",
+            "buck-open-lab": "available",
+            "converters": "outline"
+          },
+          "lessons": [
+            "converters",
+            "buck-converter-fundamentals",
+            "buck-open-lab",
+            "buck-converter"
+          ],
+          "modules": [
+            "pe.topologies",
+            "pe.buck",
+            "pe.boost",
+            "pe.rectifiers",
+            "pe.inverters",
+            "pe.isolated",
+            "pe.resonant",
+            "pe.losses",
+            "pe.simulation"
+          ],
+          "title": {
+            "en": "Stage 03 · Converters",
+            "zh": "阶段 03 · 变换器"
+          }
+        },
+        {
+          "gate": "G2",
+          "id": "04-modeling-and-control",
+          "lesson_status": {
+            "dynamics-and-control": "outline"
+          },
+          "lessons": [
+            "dynamics-and-control"
+          ],
+          "modules": [
+            "pe.modelling",
+            "pe.control"
+          ],
+          "title": {
+            "en": "Stage 04 · Modeling and Control",
+            "zh": "阶段 04 · 建模与控制"
+          }
+        },
+        {
+          "id": "05-practical-design",
+          "lesson_status": {
+            "practical-design": "outline"
+          },
+          "lessons": [
+            "practical-design"
+          ],
+          "modules": [
+            "pe.magnetics",
+            "pe.thermal",
+            "pe.practical",
+            "pe.gate-driving",
+            "pe.emi-pcb"
+          ],
+          "title": {
+            "en": "Stage 05 · Practical Design",
+            "zh": "阶段 05 · 实际设计"
+          }
+        },
+        {
+          "gate": "G3",
+          "id": "06-systems-and-applications",
+          "lesson_status": {
+            "systems-applications": "outline"
+          },
+          "lessons": [
+            "systems-applications"
+          ],
+          "modules": [
+            "pe.applications"
+          ],
+          "title": {
+            "en": "Stage 06 · Systems and Applications",
+            "zh": "阶段 06 · 系统与应用"
+          }
+        }
+      ],
+      "summary": {
+        "en": "The original AIPE Academy progression from orientation to systems, with the G1/G2/G3 readiness checks. Stages are a recommended order through the taxonomy, not additional domains.",
+        "zh": "AIPE Academy 最初的学习递进，从领域入门到系统应用，含 G1/G2/G3 准备度检查。阶段是穿越知识体系的推荐顺序，不是额外的领域。"
+      },
+      "title": {
+        "en": "Power electronics: the seven-stage path",
+        "zh": "电力电子：七阶段路线"
+      }
+    },
+    {
+      "domain": "foundations",
+      "gates": {},
+      "id": "foundations-first-circuits",
+      "stages": [
+        {
+          "id": "orientation",
+          "lesson_status": {
+            "orientation": "outline"
+          },
+          "lessons": [
+            "orientation"
+          ],
+          "modules": [
+            "f.learning-with-ai"
+          ],
+          "title": {
+            "en": "Orientation",
+            "zh": "入门"
+          }
+        },
+        {
+          "id": "quantities",
+          "lesson_status": {
+            "prerequisite-path-zh": "outline"
+          },
+          "lessons": [
+            "prerequisite-path-zh"
+          ],
+          "modules": [
+            "f.quantities"
+          ],
+          "title": {
+            "en": "Quantities and units",
+            "zh": "数量与单位"
+          }
+        },
+        {
+          "id": "dc-circuits",
+          "lesson_status": {
+            "dc-circuit-fundamentals": "available",
+            "first-circuit-zh": "available"
+          },
+          "lessons": [
+            "first-circuit-zh",
+            "dc-circuit-fundamentals"
+          ],
+          "modules": [
+            "f.dc-circuits"
+          ],
+          "title": {
+            "en": "DC circuits",
+            "zh": "直流电路"
+          }
+        },
+        {
+          "id": "dynamics",
+          "lesson_status": {},
+          "lessons": [],
+          "modules": [
+            "f.calculus",
+            "f.dynamics"
+          ],
+          "title": {
+            "en": "Energy storage dynamics",
+            "zh": "储能元件动态"
+          }
+        },
+        {
+          "id": "ac",
+          "lesson_status": {},
+          "lessons": [],
+          "modules": [
+            "f.ac"
+          ],
+          "title": {
+            "en": "Waveforms and AC",
+            "zh": "周期波形与交流"
+          }
+        }
+      ],
+      "summary": {
+        "en": "A beginner's entry path through the shared Foundations layer. Steps whose module has no lesson yet are taught by the AI tutor from the module outline.",
+        "zh": "面向初学者的基础层入门路线。尚无课程的模块由 AI 导师根据模块大纲讲授。"
+      },
+      "title": {
+        "en": "Foundations: from quantities to AC",
+        "zh": "基础：从物理量到交流"
+      }
+    },
+    {
+      "domain": "power-systems",
+      "gates": {},
+      "id": "power-systems-intro",
+      "stages": [
+        {
+          "id": "ac-prerequisites",
+          "lesson_status": {
+            "dc-circuit-fundamentals": "available"
+          },
+          "lessons": [
+            "dc-circuit-fundamentals"
+          ],
+          "modules": [
+            "f.dc-circuits",
+            "f.ac"
+          ],
+          "title": {
+            "en": "AC prerequisites",
+            "zh": "交流先修"
+          }
+        },
+        {
+          "id": "three-phase",
+          "lesson_status": {
+            "three-phase-fundamentals": "available"
+          },
+          "lessons": [
+            "three-phase-fundamentals"
+          ],
+          "modules": [
+            "ps.three-phase",
+            "ps.per-unit"
+          ],
+          "title": {
+            "en": "Three-phase systems and per-unit",
+            "zh": "三相系统与标幺值"
+          }
+        },
+        {
+          "id": "transformers",
+          "lesson_status": {},
+          "lessons": [],
+          "modules": [
+            "ps.transformers",
+            "ps.components"
+          ],
+          "title": {
+            "en": "Transformers and components",
+            "zh": "变压器与元件"
+          }
+        },
+        {
+          "id": "power-flow",
+          "lesson_status": {},
+          "lessons": [],
+          "modules": [
+            "ps.power-flow"
+          ],
+          "title": {
+            "en": "Power flow",
+            "zh": "潮流"
+          }
+        },
+        {
+          "id": "machines",
+          "lesson_status": {},
+          "lessons": [],
+          "modules": [
+            "ps.machines"
+          ],
+          "title": {
+            "en": "Electric machines",
+            "zh": "电机"
+          }
+        },
+        {
+          "id": "faults",
+          "lesson_status": {},
+          "lessons": [],
+          "modules": [
+            "ps.faults",
+            "ps.protection"
+          ],
+          "title": {
+            "en": "Faults and protection",
+            "zh": "故障与保护"
+          }
+        },
+        {
+          "id": "stability",
+          "lesson_status": {},
+          "lessons": [],
+          "modules": [
+            "ps.stability",
+            "ps.grid-control",
+            "ps.grid-converters",
+            "ps.converter-dominated",
+            "ps.dc-grids",
+            "ps.microgrids"
+          ],
+          "title": {
+            "en": "Stability and modern grids",
+            "zh": "稳定性与现代电网"
+          }
+        }
+      ],
+      "summary": {
+        "en": "Electrical circuits → AC and three-phase systems → transformers → per-unit → power flow → machines → faults and protection → stability and grid control.",
+        "zh": "电路 → 交流与三相系统 → 变压器 → 标幺值 → 潮流 → 电机 → 故障与保护 → 稳定性与电网控制。"
+      },
+      "title": {
+        "en": "Power systems: from AC circuits to the grid",
+        "zh": "电力系统：从交流电路到电网"
+      }
+    },
+    {
+      "domain": "renewable-energy",
+      "gates": {},
+      "id": "renewable-energy-intro",
+      "stages": [
+        {
+          "id": "conversion",
+          "lesson_status": {},
+          "lessons": [],
+          "modules": [
+            "re.conversion"
+          ],
+          "title": {
+            "en": "Energy conversion fundamentals",
+            "zh": "能量转换基础"
+          }
+        },
+        {
+          "id": "pv",
+          "lesson_status": {
+            "solar-pv-fundamentals": "available"
+          },
+          "lessons": [
+            "solar-pv-fundamentals"
+          ],
+          "modules": [
+            "re.pv",
+            "re.mppt"
+          ],
+          "title": {
+            "en": "Solar PV fundamentals",
+            "zh": "光伏基础"
+          }
+        },
+        {
+          "id": "storage",
+          "lesson_status": {},
+          "lessons": [],
+          "modules": [
+            "re.storage",
+            "re.batteries"
+          ],
+          "title": {
+            "en": "Energy storage",
+            "zh": "储能"
+          }
+        },
+        {
+          "id": "wind",
+          "lesson_status": {},
+          "lessons": [],
+          "modules": [
+            "re.wind"
+          ],
+          "title": {
+            "en": "Wind energy",
+            "zh": "风能"
+          }
+        },
+        {
+          "id": "integration",
+          "lesson_status": {},
+          "lessons": [],
+          "modules": [
+            "re.pv-systems",
+            "re.integration",
+            "re.hybrid-systems",
+            "re.energy-management",
+            "re.system-design"
+          ],
+          "title": {
+            "en": "Grid integration and system design",
+            "zh": "并网与系统设计"
+          }
+        }
+      ],
+      "summary": {
+        "en": "Energy conversion → solar PV fundamentals → MPPT → storage → wind → grid integration and system design.",
+        "zh": "能量转换 → 光伏基础 → MPPT → 储能 → 风能 → 并网与系统设计。"
+      },
+      "title": {
+        "en": "Renewable energy: from the solar cell to the grid",
+        "zh": "可再生能源：从太阳能电池到电网"
+      }
+    }
+  ],
+  "lesson_count": 15,
+  "modules": [
+    {
+      "academic_references": [],
+      "domain": "foundations",
+      "id": "f.learning-with-ai",
+      "legacy": {
+        "foundation_module": "F00",
+        "stage": "00-orientation"
+      },
+      "lessons": [
+        "orientation"
+      ],
+      "related": [],
+      "requires": [],
+      "status": "outline",
+      "summary": {
+        "en": "Orientation to the field and the learning method: ask in ordinary language, predict, verify, record evidence of understanding.",
+        "zh": "领域入门与学习方法：用普通语言提问、预测、验证，并记录理解的证据。"
+      },
+      "title": {
+        "en": "Learning with AI",
+        "zh": "与 AI 一起学习"
+      },
+      "track": "learning-methods"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-22-081j-2010"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-8-21-2009"
+        }
+      ],
+      "domain": "foundations",
+      "id": "f.quantities",
+      "legacy": {
+        "foundation_module": "F01",
+        "stage": "01-foundations"
+      },
+      "lessons": [
+        "dc-circuit-fundamentals",
+        "first-circuit-zh"
+      ],
+      "related": [],
+      "requires": [],
+      "status": "available",
+      "summary": {
+        "en": "Ratios, scientific notation, unit conversion and simple equations: the arithmetic every engineering estimate rests on.",
+        "zh": "比例、科学计数法、单位换算与简单方程：一切工程估算所依赖的基本运算。"
+      },
+      "title": {
+        "en": "Quantities, units and algebra",
+        "zh": "数量、单位与代数"
+      },
+      "track": "mathematics"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "core",
+          "id": "mit-18-01sc-2010"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-18-02sc-2010"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-18-03sc-2011"
+        }
+      ],
+      "domain": "foundations",
+      "id": "f.calculus",
+      "legacy": {
+        "foundation_module": "F04",
+        "stage": "01-foundations"
+      },
+      "lessons": [],
+      "related": [
+        "f.dynamics"
+      ],
+      "requires": [
+        "f.quantities"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Slopes, areas, exponentials and first-order differential equations, introduced through charging and discharging circuits.",
+        "zh": "斜率、面积、指数函数与一阶微分方程，通过充放电电路引入。"
+      },
+      "title": {
+        "en": "Calculus and differential equations",
+        "zh": "微积分与微分方程"
+      },
+      "track": "mathematics"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "partial",
+          "id": "mit-18-02sc-2010"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-18-03sc-2011"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-18-06sc-2011"
+        }
+      ],
+      "domain": "foundations",
+      "id": "f.linear-algebra",
+      "legacy": {
+        "foundation_module": "F09",
+        "stage": "01-foundations"
+      },
+      "lessons": [],
+      "related": [
+        "f.computation",
+        "f.signals"
+      ],
+      "requires": [
+        "f.quantities"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Systems of linear equations, matrices and state-space descriptions, introduced when node equations and dynamic models need them.",
+        "zh": "线性方程组、矩阵与状态空间描述，在节点方程与动态模型需要时引入。"
+      },
+      "title": {
+        "en": "Linear algebra and state space",
+        "zh": "线性代数与状态空间"
+      },
+      "track": "mathematics"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "partial",
+          "id": "mit-6-012-2005"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-013-2005"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-685-2013"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-8-02-2007"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-8-21-2009"
+        }
+      ],
+      "domain": "foundations",
+      "id": "f.electromagnetism",
+      "legacy": {
+        "foundation_module": "F02",
+        "stage": "01-foundations"
+      },
+      "lessons": [],
+      "related": [
+        "f.dc-circuits",
+        "f.magnetism"
+      ],
+      "requires": [
+        "f.quantities",
+        "f.calculus"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Charge, electric field and potential, current, magnetic fields, Faraday's law and energy stored in fields.",
+        "zh": "电荷、电场与电势、电流、磁场、法拉第定律以及场中储存的能量。"
+      },
+      "title": {
+        "en": "Electricity and magnetism",
+        "zh": "电磁学"
+      },
+      "track": "physics"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "core",
+          "id": "mit-6-002-2007"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-8-02-2007"
+        }
+      ],
+      "domain": "foundations",
+      "id": "f.dc-circuits",
+      "legacy": {
+        "foundation_module": "F02",
+        "stage": "01-foundations"
+      },
+      "lessons": [
+        "dc-circuit-fundamentals",
+        "first-circuit-zh"
+      ],
+      "related": [
+        "f.electromagnetism"
+      ],
+      "requires": [
+        "f.quantities"
+      ],
+      "status": "available",
+      "summary": {
+        "en": "Voltage, current, power and energy; Ohm's law, KCL, KVL, series and parallel networks and equivalent circuits.",
+        "zh": "电压、电流、功率与能量；欧姆定律、KCL、KVL、串并联网络与等效电路。"
+      },
+      "title": {
+        "en": "DC circuits",
+        "zh": "直流电路"
+      },
+      "track": "circuits"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "partial",
+          "id": "mit-18-03sc-2011"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-002-2007"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-6-013-2005"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-8-02-2007"
+        }
+      ],
+      "domain": "foundations",
+      "id": "f.dynamics",
+      "legacy": {
+        "foundation_module": "F04",
+        "stage": "01-foundations"
+      },
+      "lessons": [],
+      "related": [],
+      "requires": [
+        "f.dc-circuits",
+        "f.calculus"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Capacitors and inductors, first-order differential equations, RC and RL responses and time constants.",
+        "zh": "电容与电感、一阶微分方程、RC 与 RL 响应以及时间常数。"
+      },
+      "title": {
+        "en": "Energy storage dynamics",
+        "zh": "储能元件动态"
+      },
+      "track": "circuits"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "partial",
+          "id": "mit-18-03sc-2011"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-002-2007"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-8-02-2007"
+        }
+      ],
+      "domain": "foundations",
+      "id": "f.ac",
+      "legacy": {
+        "foundation_module": "F05",
+        "stage": "01-foundations"
+      },
+      "lessons": [],
+      "related": [],
+      "requires": [
+        "f.quantities",
+        "f.dynamics"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Period, frequency, duty cycle, average and RMS values; complex numbers, phasors and impedance.",
+        "zh": "周期、频率、占空比、平均值与有效值；复数、相量与阻抗。"
+      },
+      "title": {
+        "en": "Waveforms and AC",
+        "zh": "周期波形与交流"
+      },
+      "track": "circuits"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "partial",
+          "id": "mit-2-627-2013"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-002-2007"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-012-2005"
+        }
+      ],
+      "domain": "foundations",
+      "id": "f.electronics",
+      "legacy": {
+        "foundation_module": "F06",
+        "stage": "01-foundations"
+      },
+      "lessons": [],
+      "related": [],
+      "requires": [
+        "f.dc-circuits",
+        "f.dynamics"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Simplified models of diodes and MOSFETs, operating points, losses and ratings.",
+        "zh": "二极管与 MOSFET 的简化模型、工作点、损耗与额定值。"
+      },
+      "title": {
+        "en": "Basic electronic devices",
+        "zh": "基础电子器件"
+      },
+      "track": "electronics"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "core",
+          "id": "mit-18-03sc-2011"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-18-06sc-2011"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-002-2007"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-003-2011"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-012-2005"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-302-2007"
+        }
+      ],
+      "domain": "foundations",
+      "id": "f.signals",
+      "legacy": {
+        "foundation_module": "F07",
+        "stage": "01-foundations"
+      },
+      "lessons": [],
+      "related": [
+        "f.linear-algebra"
+      ],
+      "requires": [
+        "f.dynamics",
+        "f.ac"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Linear time-invariant systems, step and frequency response, Laplace transforms, poles, Bode plots and negative feedback.",
+        "zh": "线性时不变系统、阶跃与频率响应、拉普拉斯变换、极点、Bode 图与负反馈。"
+      },
+      "title": {
+        "en": "Signals and feedback",
+        "zh": "信号、系统与反馈"
+      },
+      "track": "signals-and-control"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-18-01sc-2010"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-18-03sc-2011"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-6-003-2011"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-691-2006"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-ec-s07-2004"
+        }
+      ],
+      "domain": "foundations",
+      "id": "f.computation",
+      "legacy": {
+        "foundation_module": "F03",
+        "stage": "01-foundations"
+      },
+      "lessons": [],
+      "related": [
+        "f.linear-algebra"
+      ],
+      "requires": [
+        "f.quantities",
+        "f.dynamics"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Scripts, plots and simulation models; numerical integration, step sizes and numerical error.",
+        "zh": "脚本、绘图与仿真模型；数值积分、仿真步长与数值误差。"
+      },
+      "title": {
+        "en": "Computation and numerics",
+        "zh": "计算与数值方法"
+      },
+      "track": "computation"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-6-002-2007"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-6-003-2011"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-013-2005"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-061-2011"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-685-2013"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-8-02-2007"
+        }
+      ],
+      "domain": "foundations",
+      "id": "f.magnetism",
+      "legacy": {
+        "foundation_module": "F08",
+        "stage": "01-foundations"
+      },
+      "lessons": [],
+      "related": [
+        "f.electromagnetism"
+      ],
+      "requires": [
+        "f.dynamics",
+        "f.electronics"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Flux, induction, magnetic circuits and saturation; measurement range, sampling, reference points and error.",
+        "zh": "磁通、感应、磁路与饱和；测量量程、采样、参考点与误差。"
+      },
+      "title": {
+        "en": "Magnetism and measurement",
+        "zh": "磁学与工程测量"
+      },
+      "track": "magnetism-and-measurement"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-6-002-2007"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-012-2005"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-6-622-2023"
+        }
+      ],
+      "domain": "power-electronics",
+      "id": "pe.devices",
+      "legacy": {
+        "stage": "02-components"
+      },
+      "lessons": [
+        "components"
+      ],
+      "related": [
+        "pe.losses"
+      ],
+      "requires": [
+        "f.electronics"
+      ],
+      "status": "outline",
+      "summary": {
+        "en": "Diodes, MOSFETs, IGBTs, SiC and GaN as switches; datasheets, parasitics and conduction loss.",
+        "zh": "作为开关的二极管、MOSFET、IGBT、SiC 与 GaN 器件；数据手册、寄生参数与导通损耗。"
+      },
+      "title": {
+        "en": "Power semiconductor devices",
+        "zh": "功率半导体器件"
+      },
+      "track": "devices-and-components"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-622-2023"
+        }
+      ],
+      "domain": "power-electronics",
+      "id": "pe.passives",
+      "legacy": {
+        "stage": "02-components"
+      },
+      "lessons": [
+        "components"
+      ],
+      "related": [
+        "pe.magnetics"
+      ],
+      "requires": [
+        "f.dynamics",
+        "f.ac"
+      ],
+      "status": "outline",
+      "summary": {
+        "en": "Capacitors and inductors as real components: ESR, ESL, ripple-current ratings, saturation and tolerance.",
+        "zh": "作为真实元件的电容与电感：ESR、ESL、纹波电流额定值、饱和与公差。"
+      },
+      "title": {
+        "en": "Passive and magnetic components",
+        "zh": "无源与磁性元件"
+      },
+      "track": "devices-and-components"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-6-061-2011"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-622-2023"
+        }
+      ],
+      "domain": "power-electronics",
+      "id": "pe.topologies",
+      "legacy": {
+        "stage": "03-converters"
+      },
+      "lessons": [
+        "buck-converter-fundamentals",
+        "converters"
+      ],
+      "related": [],
+      "requires": [
+        "pe.devices",
+        "f.ac"
+      ],
+      "status": "available",
+      "summary": {
+        "en": "Switching converters in steady state: volt-second and charge balance, conversion ratios, ripple, CCM and DCM.",
+        "zh": "稳态下的开关变换器：伏秒平衡与电荷平衡、变比、纹波、CCM 与 DCM。"
+      },
+      "title": {
+        "en": "Converter fundamentals and topologies",
+        "zh": "变换器基础与拓扑"
+      },
+      "track": "dc-dc-conversion"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-6-061-2011"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-622-2023"
+        }
+      ],
+      "domain": "power-electronics",
+      "id": "pe.buck",
+      "legacy": {
+        "stage": "03-converters"
+      },
+      "lessons": [
+        "buck-converter",
+        "buck-converter-fundamentals",
+        "buck-open-lab"
+      ],
+      "parent": "pe.topologies",
+      "related": [
+        "pe.simulation"
+      ],
+      "requires": [
+        "pe.topologies"
+      ],
+      "status": "available",
+      "summary": {
+        "en": "The step-down converter worked from switch states to duty ratio, inductor ripple, conduction modes and component choice.",
+        "zh": "从开关状态出发分析降压变换器，直至占空比、电感纹波、导通模式与元件选择。"
+      },
+      "title": {
+        "en": "Buck converter",
+        "zh": "Buck 变换器"
+      },
+      "track": "dc-dc-conversion"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-6-061-2011"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-622-2023"
+        }
+      ],
+      "domain": "power-electronics",
+      "id": "pe.boost",
+      "legacy": {
+        "stage": "03-converters"
+      },
+      "lessons": [
+        "converters"
+      ],
+      "parent": "pe.topologies",
+      "related": [],
+      "requires": [
+        "pe.buck"
+      ],
+      "status": "outline",
+      "summary": {
+        "en": "Step-up and inverting converters, their conversion ratios, stresses and the right-half-plane zero.",
+        "zh": "升压与反相变换器，它们的变比、应力以及右半平面零点。"
+      },
+      "title": {
+        "en": "Boost and buck-boost converters",
+        "zh": "Boost 与 Buck-Boost 变换器"
+      },
+      "track": "dc-dc-conversion"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-6-061-2011"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-622-2023"
+        }
+      ],
+      "domain": "power-electronics",
+      "id": "pe.rectifiers",
+      "legacy": {
+        "stage": "03-converters"
+      },
+      "lessons": [
+        "converters"
+      ],
+      "related": [
+        "ps.three-phase"
+      ],
+      "requires": [
+        "pe.topologies",
+        "f.ac"
+      ],
+      "status": "outline",
+      "summary": {
+        "en": "Diode and controlled rectifiers, harmonics, power factor and power factor correction.",
+        "zh": "二极管整流与可控整流、谐波、功率因数与功率因数校正。"
+      },
+      "title": {
+        "en": "AC/DC rectifiers",
+        "zh": "AC/DC 整流器"
+      },
+      "track": "ac-dc-and-dc-ac"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-6-061-2011"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-622-2023"
+        }
+      ],
+      "domain": "power-electronics",
+      "id": "pe.inverters",
+      "legacy": {
+        "stage": "03-converters"
+      },
+      "lessons": [
+        "converters"
+      ],
+      "related": [
+        "ps.grid-converters",
+        "re.pv-systems"
+      ],
+      "requires": [
+        "pe.topologies",
+        "f.ac"
+      ],
+      "status": "outline",
+      "summary": {
+        "en": "Half- and full-bridge inverters, pulse-width modulation, harmonics and output filters.",
+        "zh": "半桥与全桥逆变器、脉宽调制、谐波与输出滤波器。"
+      },
+      "title": {
+        "en": "DC/AC inverters",
+        "zh": "DC/AC 逆变器"
+      },
+      "track": "ac-dc-and-dc-ac"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "core",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-622-2023"
+        }
+      ],
+      "domain": "power-electronics",
+      "id": "pe.isolated",
+      "legacy": {
+        "stage": "03-converters"
+      },
+      "lessons": [
+        "converters"
+      ],
+      "parent": "pe.topologies",
+      "related": [
+        "ps.sst"
+      ],
+      "requires": [
+        "pe.topologies",
+        "pe.magnetics"
+      ],
+      "status": "outline",
+      "summary": {
+        "en": "Transformer-based converters such as flyback, forward, bridge and dual-active-bridge stages.",
+        "zh": "基于变压器的变换器，例如反激、正激、桥式与双有源桥。"
+      },
+      "title": {
+        "en": "Isolated converters",
+        "zh": "隔离型变换器"
+      },
+      "track": "isolated-and-resonant"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "core",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-622-2023"
+        }
+      ],
+      "domain": "power-electronics",
+      "id": "pe.resonant",
+      "legacy": {
+        "stage": "03-converters"
+      },
+      "lessons": [],
+      "related": [
+        "pe.losses"
+      ],
+      "requires": [
+        "pe.isolated",
+        "f.signals"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Resonant tanks, LLC stages, zero-voltage and zero-current switching.",
+        "zh": "谐振腔、LLC 变换器、零电压与零电流开关。"
+      },
+      "title": {
+        "en": "Resonant and soft-switched converters",
+        "zh": "谐振与软开关变换器"
+      },
+      "track": "isolated-and-resonant"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-6-002-2007"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-6-012-2005"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-622-2023"
+        }
+      ],
+      "domain": "power-electronics",
+      "id": "pe.losses",
+      "legacy": {
+        "stage": "03-converters"
+      },
+      "lessons": [
+        "converters"
+      ],
+      "related": [],
+      "requires": [
+        "pe.devices",
+        "pe.topologies"
+      ],
+      "status": "outline",
+      "summary": {
+        "en": "Conduction, switching, gate and magnetic losses; efficiency budgets and their measurement.",
+        "zh": "导通、开关、驱动与磁性损耗；效率预算及其测量。"
+      },
+      "title": {
+        "en": "Switching losses and efficiency",
+        "zh": "开关损耗与效率"
+      },
+      "track": "losses-and-thermal"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "partial",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-622-2023"
+        }
+      ],
+      "domain": "power-electronics",
+      "id": "pe.thermal",
+      "legacy": {
+        "stage": "05-practical-design"
+      },
+      "lessons": [
+        "practical-design"
+      ],
+      "related": [
+        "pe.practical"
+      ],
+      "requires": [
+        "pe.losses"
+      ],
+      "status": "outline",
+      "summary": {
+        "en": "Thermal resistance, junction temperature, heatsinks and cooling.",
+        "zh": "热阻、结温、散热器与冷却。"
+      },
+      "title": {
+        "en": "Thermal management",
+        "zh": "热管理"
+      },
+      "track": "losses-and-thermal"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "partial",
+          "id": "mit-6-012-2005"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-302-2007"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-622-2023"
+        }
+      ],
+      "domain": "power-electronics",
+      "id": "pe.modelling",
+      "legacy": {
+        "stage": "04-modeling-and-control"
+      },
+      "lessons": [
+        "buck-converter",
+        "dynamics-and-control"
+      ],
+      "related": [],
+      "requires": [
+        "pe.topologies",
+        "f.signals"
+      ],
+      "status": "draft",
+      "summary": {
+        "en": "Averaged and small-signal models, linearisation around an operating point, and converter transfer functions.",
+        "zh": "平均模型与小信号模型、围绕工作点的线性化，以及变换器传递函数。"
+      },
+      "title": {
+        "en": "Converter modelling",
+        "zh": "变换器建模"
+      },
+      "track": "modelling-and-control"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-6-003-2011"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-302-2007"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-622-2023"
+        }
+      ],
+      "domain": "power-electronics",
+      "id": "pe.control",
+      "legacy": {
+        "stage": "04-modeling-and-control"
+      },
+      "lessons": [
+        "buck-converter",
+        "dynamics-and-control"
+      ],
+      "related": [],
+      "requires": [
+        "pe.modelling"
+      ],
+      "status": "draft",
+      "summary": {
+        "en": "Loop design, compensation, phase and gain margins, voltage- and current-mode control, digital implementation.",
+        "zh": "环路设计、补偿、相位与增益裕度、电压型与电流型控制、数字实现。"
+      },
+      "title": {
+        "en": "Feedback and digital control",
+        "zh": "反馈与数字控制"
+      },
+      "track": "modelling-and-control"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-6-012-2005"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-6-334-2007"
+        }
+      ],
+      "domain": "power-electronics",
+      "id": "pe.simulation",
+      "legacy": {
+        "stage": "03-converters"
+      },
+      "lessons": [
+        "dynamics-and-control"
+      ],
+      "related": [
+        "pe.modelling"
+      ],
+      "requires": [
+        "pe.topologies",
+        "f.computation"
+      ],
+      "status": "outline",
+      "summary": {
+        "en": "Switching and averaged simulation with open tools, and checking a simulation result against hand analysis.",
+        "zh": "使用开源工具进行开关模型与平均模型仿真，并用手算结果核对仿真。"
+      },
+      "title": {
+        "en": "Simulation",
+        "zh": "仿真"
+      },
+      "track": "modelling-and-control"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "core",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-622-2023"
+        }
+      ],
+      "domain": "power-electronics",
+      "id": "pe.magnetics",
+      "legacy": {
+        "stage": "05-practical-design"
+      },
+      "lessons": [
+        "practical-design"
+      ],
+      "related": [
+        "pe.passives"
+      ],
+      "requires": [
+        "f.magnetism",
+        "f.ac"
+      ],
+      "status": "outline",
+      "summary": {
+        "en": "Inductor and transformer design: saturation, core loss, copper loss and leakage.",
+        "zh": "电感与变压器设计：饱和、磁芯损耗、铜损与漏感。"
+      },
+      "title": {
+        "en": "Magnetics design",
+        "zh": "磁性元件设计"
+      },
+      "track": "magnetics-design"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "partial",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-622-2023"
+        }
+      ],
+      "domain": "power-electronics",
+      "id": "pe.practical",
+      "legacy": {
+        "stage": "05-practical-design"
+      },
+      "lessons": [
+        "buck-converter",
+        "practical-design"
+      ],
+      "related": [
+        "pe.magnetics",
+        "pe.thermal"
+      ],
+      "requires": [
+        "pe.devices",
+        "pe.topologies"
+      ],
+      "status": "draft",
+      "summary": {
+        "en": "Gate driving, PCB layout, EMI, thermal design, protection and safety: the constraints of real hardware.",
+        "zh": "栅极驱动、PCB 布局、EMI、热设计、保护与安全：真实硬件中的工程约束。"
+      },
+      "title": {
+        "en": "Practical design",
+        "zh": "工程实践设计"
+      },
+      "track": "practical-design"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-6-622-2023"
+        }
+      ],
+      "domain": "power-electronics",
+      "id": "pe.gate-driving",
+      "legacy": {
+        "stage": "05-practical-design"
+      },
+      "lessons": [
+        "practical-design"
+      ],
+      "parent": "pe.practical",
+      "related": [],
+      "requires": [
+        "pe.devices"
+      ],
+      "status": "outline",
+      "summary": {
+        "en": "Gate drivers, dead time, bootstrap supplies, isolation, overcurrent and overvoltage protection.",
+        "zh": "栅极驱动器、死区、自举电源、隔离、过流与过压保护。"
+      },
+      "title": {
+        "en": "Gate driving and protection",
+        "zh": "栅极驱动与保护"
+      },
+      "track": "practical-design"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "partial",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-622-2023"
+        }
+      ],
+      "domain": "power-electronics",
+      "id": "pe.emi-pcb",
+      "legacy": {
+        "stage": "05-practical-design"
+      },
+      "lessons": [
+        "practical-design"
+      ],
+      "parent": "pe.practical",
+      "related": [],
+      "requires": [
+        "pe.practical"
+      ],
+      "status": "outline",
+      "summary": {
+        "en": "Commutation loops, parasitic inductance, layout, filters and electromagnetic compatibility.",
+        "zh": "换流回路、寄生电感、布局、滤波器与电磁兼容。"
+      },
+      "title": {
+        "en": "EMI and PCB design",
+        "zh": "EMI 与 PCB 设计"
+      },
+      "track": "practical-design"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-6-061-2011"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-6-622-2023"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-6-685-2013"
+        }
+      ],
+      "domain": "power-electronics",
+      "id": "pe.applications",
+      "legacy": {
+        "stage": "06-systems-and-applications"
+      },
+      "lessons": [
+        "systems-applications"
+      ],
+      "related": [
+        "ps.grid-converters",
+        "re.pv",
+        "re.storage"
+      ],
+      "requires": [
+        "pe.control",
+        "pe.practical"
+      ],
+      "status": "outline",
+      "summary": {
+        "en": "How converters become products: chargers, server supplies, EV drives, solar inverters, requirements and trade-offs.",
+        "zh": "变换器如何成为产品：充电器、服务器电源、电动汽车驱动、光伏逆变器，以及需求与权衡。"
+      },
+      "title": {
+        "en": "Systems and applications",
+        "zh": "系统与应用"
+      },
+      "track": "systems-integration"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "core",
+          "id": "mit-6-061-2011"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-622-2023"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-691-2006"
+        }
+      ],
+      "domain": "power-systems",
+      "id": "ps.three-phase",
+      "legacy": {},
+      "lessons": [
+        "three-phase-fundamentals"
+      ],
+      "related": [
+        "pe.rectifiers"
+      ],
+      "requires": [
+        "f.ac"
+      ],
+      "status": "available",
+      "summary": {
+        "en": "Balanced three-phase circuits, phase and line quantities, real, reactive and apparent power, power factor.",
+        "zh": "对称三相电路、相量与线量、有功、无功与视在功率、功率因数。"
+      },
+      "title": {
+        "en": "Three-phase systems",
+        "zh": "三相系统"
+      },
+      "track": "ac-power-networks"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "partial",
+          "id": "mit-6-061-2011"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-685-2013"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-6-691-2006"
+        }
+      ],
+      "domain": "power-systems",
+      "id": "ps.per-unit",
+      "legacy": {},
+      "lessons": [
+        "three-phase-fundamentals"
+      ],
+      "related": [
+        "ps.transformers"
+      ],
+      "requires": [
+        "ps.three-phase"
+      ],
+      "status": "available",
+      "summary": {
+        "en": "Base quantities, per-unit impedances and how they simplify multi-voltage networks.",
+        "zh": "基准值、标幺阻抗，以及它们如何简化多电压等级网络。"
+      },
+      "title": {
+        "en": "Per-unit system",
+        "zh": "标幺值系统"
+      },
+      "track": "ac-power-networks"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-22-081j-2010"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-6-013-2005"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-061-2011"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-691-2006"
+        }
+      ],
+      "domain": "power-systems",
+      "id": "ps.components",
+      "legacy": {},
+      "lessons": [],
+      "related": [
+        "ps.transformers"
+      ],
+      "requires": [
+        "ps.three-phase"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Lines, cables, buses and loads; transmission and distribution structure and line models.",
+        "zh": "线路、电缆、母线与负荷；输配电结构与线路模型。"
+      },
+      "title": {
+        "en": "Power system components, transmission and distribution",
+        "zh": "电力系统元件、输电与配电"
+      },
+      "track": "ac-power-networks"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "partial",
+          "id": "mit-6-061-2011"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-6-334-2007"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-6-685-2013"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-6-691-2006"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-8-02-2007"
+        }
+      ],
+      "domain": "power-systems",
+      "id": "ps.transformers",
+      "legacy": {},
+      "lessons": [],
+      "related": [
+        "ps.per-unit"
+      ],
+      "requires": [
+        "ps.three-phase",
+        "f.magnetism"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Ideal and real transformer models, equivalent circuits, three-phase connections.",
+        "zh": "理想与实际变压器模型、等效电路、三相接法。"
+      },
+      "title": {
+        "en": "Transformers",
+        "zh": "变压器"
+      },
+      "track": "machines-and-transformers"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "partial",
+          "id": "mit-6-013-2005"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-061-2011"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-685-2013"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-691-2006"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-8-02-2007"
+        }
+      ],
+      "domain": "power-systems",
+      "id": "ps.machines",
+      "legacy": {},
+      "lessons": [],
+      "related": [
+        "re.wind"
+      ],
+      "requires": [
+        "ps.transformers",
+        "f.magnetism"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Electromechanical energy conversion, synchronous and induction machines, machine models for system studies.",
+        "zh": "机电能量转换、同步电机与感应电机、用于系统研究的电机模型。"
+      },
+      "title": {
+        "en": "Electric machines",
+        "zh": "电机"
+      },
+      "track": "machines-and-transformers"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "partial",
+          "id": "mit-6-061-2011"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-691-2006"
+        }
+      ],
+      "domain": "power-systems",
+      "id": "ps.power-flow",
+      "legacy": {},
+      "lessons": [],
+      "related": [],
+      "requires": [
+        "ps.three-phase",
+        "ps.per-unit",
+        "f.computation",
+        "f.linear-algebra"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Network models and the power-flow problem: bus voltages, line flows and losses in a grid.",
+        "zh": "电网模型与潮流问题：母线电压、线路潮流与网络损耗。"
+      },
+      "title": {
+        "en": "Power flow",
+        "zh": "潮流计算"
+      },
+      "track": "network-analysis"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "core",
+          "id": "mit-6-061-2011"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-691-2006"
+        }
+      ],
+      "domain": "power-systems",
+      "id": "ps.faults",
+      "legacy": {},
+      "lessons": [],
+      "related": [
+        "ps.protection"
+      ],
+      "requires": [
+        "ps.power-flow"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Balanced and unbalanced faults, sequence networks and fault currents.",
+        "zh": "对称与不对称故障、序网络与故障电流。"
+      },
+      "title": {
+        "en": "Fault analysis and symmetrical components",
+        "zh": "故障分析与对称分量"
+      },
+      "track": "network-analysis"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-6-061-2011"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-6-691-2006"
+        }
+      ],
+      "domain": "power-systems",
+      "id": "ps.protection",
+      "legacy": {},
+      "lessons": [],
+      "related": [],
+      "requires": [
+        "ps.faults"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Protection principles, relays, coordination and the challenges of converter-fed faults.",
+        "zh": "保护原理、继电器、配合，以及变换器馈电故障带来的挑战。"
+      },
+      "title": {
+        "en": "Protection and relaying",
+        "zh": "保护与继电"
+      },
+      "track": "network-analysis"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-6-685-2013"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-691-2006"
+        }
+      ],
+      "domain": "power-systems",
+      "id": "ps.stability",
+      "legacy": {},
+      "lessons": [],
+      "related": [
+        "ps.grid-converters",
+        "ps.machines"
+      ],
+      "requires": [
+        "ps.power-flow",
+        "pe.modelling"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Rotor-angle, frequency and voltage stability; small-signal stability of grids with many converters.",
+        "zh": "功角、频率与电压稳定性；含大量变换器的电网小信号稳定性。"
+      },
+      "title": {
+        "en": "Power system stability and dynamics",
+        "zh": "电力系统稳定性与动态"
+      },
+      "track": "dynamics-and-stability"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-15-031j-2012"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-22-081j-2010"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-6-691-2006"
+        }
+      ],
+      "domain": "power-systems",
+      "id": "ps.grid-control",
+      "legacy": {},
+      "lessons": [],
+      "related": [
+        "re.energy-management"
+      ],
+      "requires": [
+        "ps.stability"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Frequency and voltage control, reserves, dispatch and the operation of interconnected systems.",
+        "zh": "频率与电压控制、备用、调度以及互联系统的运行。"
+      },
+      "title": {
+        "en": "Grid operation and control",
+        "zh": "电网运行与控制"
+      },
+      "track": "dynamics-and-stability"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-6-302-2007"
+        }
+      ],
+      "domain": "power-systems",
+      "id": "ps.grid-converters",
+      "legacy": {},
+      "lessons": [],
+      "related": [
+        "pe.inverters"
+      ],
+      "requires": [
+        "pe.control",
+        "ps.three-phase"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Converters that exchange power with the grid: synchronisation, current control and grid-support functions.",
+        "zh": "与电网交换功率的变换器：同步、电流控制与电网支撑功能。"
+      },
+      "title": {
+        "en": "Grid-connected converters",
+        "zh": "并网变换器"
+      },
+      "track": "modern-grids"
+    },
+    {
+      "academic_references": [],
+      "domain": "power-systems",
+      "id": "ps.converter-dominated",
+      "legacy": {},
+      "lessons": [],
+      "related": [
+        "re.integration"
+      ],
+      "requires": [
+        "ps.grid-converters",
+        "ps.stability"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Inverter-dominated grids, grid-forming converters, converter interaction and stability.",
+        "zh": "逆变器主导电网、构网型变换器、变换器交互与稳定性。"
+      },
+      "title": {
+        "en": "Converter-dominated power systems",
+        "zh": "变换器主导的电力系统"
+      },
+      "track": "modern-grids"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-6-061-2011"
+        }
+      ],
+      "domain": "power-systems",
+      "id": "ps.dc-grids",
+      "legacy": {},
+      "lessons": [],
+      "related": [
+        "ps.microgrids"
+      ],
+      "requires": [
+        "ps.grid-converters"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "DC distribution, DC grids and the comparison of AC and DC networks.",
+        "zh": "直流配电、直流电网，以及交直流网络的比较。"
+      },
+      "title": {
+        "en": "AC and DC power networks",
+        "zh": "交流与直流电力网络"
+      },
+      "track": "modern-grids"
+    },
+    {
+      "academic_references": [],
+      "domain": "power-systems",
+      "id": "ps.microgrids",
+      "legacy": {},
+      "lessons": [],
+      "related": [
+        "re.hybrid-systems"
+      ],
+      "requires": [
+        "ps.grid-converters",
+        "ps.power-flow"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "DC, AC and hybrid microgrids: droop control, power sharing and energy management.",
+        "zh": "直流、交流与交直流混合微电网：下垂控制、功率分配与能量管理。"
+      },
+      "title": {
+        "en": "Microgrids",
+        "zh": "微电网"
+      },
+      "track": "modern-grids"
+    },
+    {
+      "academic_references": [],
+      "domain": "power-systems",
+      "id": "ps.sst",
+      "legacy": {},
+      "lessons": [],
+      "related": [],
+      "requires": [
+        "pe.isolated",
+        "ps.grid-converters"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Multi-stage power-electronic transformers that interface medium-voltage grids, DC links and loads.",
+        "zh": "连接中压电网、直流母线与负载的多级电力电子变压器。"
+      },
+      "title": {
+        "en": "Solid-state transformers",
+        "zh": "固态变压器"
+      },
+      "track": "modern-grids"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-2-60j-2020"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-2-627-2013"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-22-081j-2010"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-8-21-2009"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-ec-s07-2004"
+        }
+      ],
+      "domain": "renewable-energy",
+      "id": "re.pv",
+      "legacy": {},
+      "lessons": [
+        "solar-pv-fundamentals"
+      ],
+      "related": [
+        "re.conversion"
+      ],
+      "requires": [
+        "f.electronics",
+        "f.dc-circuits"
+      ],
+      "status": "available",
+      "summary": {
+        "en": "Photovoltaic energy conversion, the I-V characteristic, the maximum power point, and irradiance and temperature effects.",
+        "zh": "光伏能量转换、I-V 特性、最大功率点，以及辐照度与温度的影响。"
+      },
+      "title": {
+        "en": "Solar PV fundamentals",
+        "zh": "光伏基础"
+      },
+      "track": "solar-photovoltaics"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-ec-s07-2004"
+        }
+      ],
+      "domain": "renewable-energy",
+      "id": "re.mppt",
+      "legacy": {},
+      "lessons": [
+        "solar-pv-fundamentals"
+      ],
+      "parent": "re.pv",
+      "related": [
+        "pe.control"
+      ],
+      "requires": [
+        "re.pv",
+        "pe.buck"
+      ],
+      "status": "available",
+      "summary": {
+        "en": "Why PV needs a converter, perturb-and-observe and other MPPT algorithms, and their limits.",
+        "zh": "光伏为何需要变换器、扰动观察法及其他 MPPT 算法，以及它们的局限。"
+      },
+      "title": {
+        "en": "Maximum power point tracking",
+        "zh": "最大功率点跟踪"
+      },
+      "track": "solar-photovoltaics"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-2-627-2013"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-ec-s07-2004"
+        }
+      ],
+      "domain": "renewable-energy",
+      "id": "re.pv-systems",
+      "legacy": {},
+      "lessons": [],
+      "related": [
+        "re.system-design"
+      ],
+      "requires": [
+        "re.pv",
+        "pe.inverters",
+        "ps.grid-converters"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Arrays, string and central inverters, grid-connected and off-grid PV systems.",
+        "zh": "阵列、组串式与集中式逆变器、并网与离网光伏系统。"
+      },
+      "title": {
+        "en": "PV systems, inverters and grid interfaces",
+        "zh": "光伏系统、逆变器与并网接口"
+      },
+      "track": "solar-photovoltaics"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-2-60j-2020"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-22-081j-2010"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-6-685-2013"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-8-21-2009"
+        }
+      ],
+      "domain": "renewable-energy",
+      "id": "re.wind",
+      "legacy": {},
+      "lessons": [],
+      "related": [
+        "ps.machines"
+      ],
+      "requires": [
+        "f.magnetism",
+        "ps.grid-converters"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Wind resource and power in the wind, turbine aerodynamics, generators and the back-to-back converters that connect them to the grid.",
+        "zh": "风资源与风能、风机空气动力学、发电机及其连接电网的背靠背变换器。"
+      },
+      "title": {
+        "en": "Wind energy",
+        "zh": "风力发电"
+      },
+      "track": "wind-energy"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "partial",
+          "id": "mit-10-626-2014"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-2-60j-2020"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-22-081j-2010"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-8-21-2009"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-ec-s07-2004"
+        }
+      ],
+      "domain": "renewable-energy",
+      "id": "re.storage",
+      "legacy": {},
+      "lessons": [],
+      "related": [],
+      "requires": [
+        "pe.topologies"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Storage technologies and their roles, energy and power ratings, round-trip efficiency, and bidirectional converter interfaces.",
+        "zh": "储能技术及其作用、能量与功率额定值、循环效率，以及双向变换器接口。"
+      },
+      "title": {
+        "en": "Energy storage",
+        "zh": "储能"
+      },
+      "track": "energy-storage"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "core",
+          "id": "mit-10-626-2014"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-2-60j-2020"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-22-081j-2010"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-ec-s07-2004"
+        }
+      ],
+      "domain": "renewable-energy",
+      "id": "re.batteries",
+      "legacy": {},
+      "lessons": [],
+      "parent": "re.storage",
+      "related": [],
+      "requires": [
+        "re.storage"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Electrochemical cells, battery chemistries, state of charge, ageing and battery management systems.",
+        "zh": "电化学电池、电池体系、荷电状态、老化与电池管理系统。"
+      },
+      "title": {
+        "en": "Battery technologies and management",
+        "zh": "电池技术与管理"
+      },
+      "track": "energy-storage"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "partial",
+          "id": "mit-10-626-2014"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-15-031j-2012"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-2-60j-2020"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-2-627-2013"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-22-081j-2010"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-8-21-2009"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-ec-s07-2004"
+        }
+      ],
+      "domain": "renewable-energy",
+      "id": "re.conversion",
+      "legacy": {},
+      "lessons": [],
+      "related": [
+        "re.pv",
+        "re.wind",
+        "re.storage"
+      ],
+      "requires": [
+        "f.quantities",
+        "f.calculus"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Energy, power and efficiency across physical conversion processes; the resources and limits of renewable energy.",
+        "zh": "各类物理转换过程中的能量、功率与效率；可再生能源的资源与极限。"
+      },
+      "title": {
+        "en": "Energy conversion fundamentals",
+        "zh": "能量转换基础"
+      },
+      "track": "energy-conversion"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-ec-s07-2004"
+        }
+      ],
+      "domain": "renewable-energy",
+      "id": "re.integration",
+      "legacy": {},
+      "lessons": [],
+      "related": [
+        "re.pv-systems",
+        "re.wind",
+        "re.storage",
+        "ps.converter-dominated"
+      ],
+      "requires": [
+        "ps.grid-converters",
+        "ps.stability"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Connecting variable renewable generation and storage to the grid: grid codes, hosting capacity and stability.",
+        "zh": "把波动性可再生能源与储能接入电网：并网规范、承载能力与稳定性。"
+      },
+      "title": {
+        "en": "Grid integration and stability",
+        "zh": "并网集成与稳定性"
+      },
+      "track": "grid-integration-and-systems"
+    },
+    {
+      "academic_references": [],
+      "domain": "renewable-energy",
+      "id": "re.hybrid-systems",
+      "legacy": {},
+      "lessons": [],
+      "related": [],
+      "requires": [
+        "re.integration",
+        "ps.microgrids"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Combining solar, wind, storage and conventional sources in microgrids and hybrid systems.",
+        "zh": "在微电网与混合系统中组合光伏、风电、储能与常规电源。"
+      },
+      "title": {
+        "en": "Microgrids and hybrid energy systems",
+        "zh": "微电网与混合能源系统"
+      },
+      "track": "grid-integration-and-systems"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "introductory",
+          "id": "mit-ec-s07-2004"
+        }
+      ],
+      "domain": "renewable-energy",
+      "id": "re.energy-management",
+      "legacy": {},
+      "lessons": [],
+      "related": [
+        "ps.grid-control"
+      ],
+      "requires": [
+        "re.hybrid-systems",
+        "f.computation"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Forecasting, scheduling and control of energy flows in renewable and storage systems.",
+        "zh": "可再生能源与储能系统中能量流的预测、调度与控制。"
+      },
+      "title": {
+        "en": "Energy management",
+        "zh": "能量管理"
+      },
+      "track": "grid-integration-and-systems"
+    },
+    {
+      "academic_references": [
+        {
+          "coverage": "partial",
+          "id": "mit-15-031j-2012"
+        },
+        {
+          "coverage": "introductory",
+          "id": "mit-2-60j-2020"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-2-627-2013"
+        },
+        {
+          "coverage": "partial",
+          "id": "mit-22-081j-2010"
+        },
+        {
+          "coverage": "core",
+          "id": "mit-ec-s07-2004"
+        }
+      ],
+      "domain": "renewable-energy",
+      "id": "re.system-design",
+      "legacy": {},
+      "lessons": [],
+      "related": [],
+      "requires": [
+        "re.pv-systems",
+        "re.storage",
+        "re.integration"
+      ],
+      "status": "planned",
+      "summary": {
+        "en": "Sizing, component selection, economics and verification of a renewable energy system.",
+        "zh": "可再生能源系统的容量配置、元件选型、经济性与验证。"
+      },
+      "title": {
+        "en": "Renewable energy system design",
+        "zh": "可再生能源系统设计"
+      },
+      "track": "grid-integration-and-systems"
+    }
+  ],
+  "schema_version": "0.2.0",
+  "tracks": [
+    {
+      "domain": "foundations",
+      "id": "learning-methods",
+      "modules": [
+        "f.learning-with-ai"
+      ],
+      "order": 1,
+      "summary": {
+        "en": "How to learn engineering with an AI tutor: asking, predicting, verifying and recording evidence.",
+        "zh": "如何与 AI 导师一起学习工程：提问、预测、验证并记录证据。"
+      },
+      "title": {
+        "en": "Learning with AI",
+        "zh": "与 AI 一起学习"
+      }
+    },
+    {
+      "domain": "foundations",
+      "id": "mathematics",
+      "modules": [
+        "f.quantities",
+        "f.calculus",
+        "f.linear-algebra"
+      ],
+      "order": 2,
+      "summary": {
+        "en": "Quantities and algebra, calculus and differential equations, linear algebra.",
+        "zh": "数量与代数、微积分与微分方程、线性代数。"
+      },
+      "title": {
+        "en": "Engineering Mathematics",
+        "zh": "工程数学"
+      }
+    },
+    {
+      "domain": "foundations",
+      "id": "physics",
+      "modules": [
+        "f.electromagnetism"
+      ],
+      "order": 3,
+      "summary": {
+        "en": "Electricity and magnetism as physical phenomena before they become circuit models.",
+        "zh": "在成为电路模型之前，作为物理现象的电与磁。"
+      },
+      "title": {
+        "en": "Physics",
+        "zh": "物理基础"
+      }
+    },
+    {
+      "domain": "foundations",
+      "id": "circuits",
+      "modules": [
+        "f.dc-circuits",
+        "f.dynamics",
+        "f.ac"
+      ],
+      "order": 4,
+      "summary": {
+        "en": "DC circuit analysis, energy storage dynamics, periodic waveforms and AC analysis.",
+        "zh": "直流电路分析、储能元件动态、周期波形与交流分析。"
+      },
+      "title": {
+        "en": "Electrical Circuits",
+        "zh": "电路"
+      }
+    },
+    {
+      "domain": "foundations",
+      "id": "electronics",
+      "modules": [
+        "f.electronics"
+      ],
+      "order": 5,
+      "summary": {
+        "en": "Diodes, transistors as switches, operating points and simple electronic circuits.",
+        "zh": "二极管、作为开关的晶体管、工作点与简单电子电路。"
+      },
+      "title": {
+        "en": "Electronics Fundamentals",
+        "zh": "电子学基础"
+      }
+    },
+    {
+      "domain": "foundations",
+      "id": "signals-and-control",
+      "modules": [
+        "f.signals"
+      ],
+      "order": 6,
+      "summary": {
+        "en": "Linear systems, frequency response, Laplace transforms and feedback fundamentals.",
+        "zh": "线性系统、频率响应、拉普拉斯变换与反馈基础。"
+      },
+      "title": {
+        "en": "Signals, Systems and Feedback",
+        "zh": "信号、系统与反馈"
+      }
+    },
+    {
+      "domain": "foundations",
+      "id": "computation",
+      "modules": [
+        "f.computation"
+      ],
+      "order": 7,
+      "summary": {
+        "en": "Python, plotting, simulation models, numerical error and step size.",
+        "zh": "Python、绘图、仿真模型、数值误差与步长。"
+      },
+      "title": {
+        "en": "Programming, Scientific Computing and Numerical Methods",
+        "zh": "编程、科学计算与数值方法"
+      }
+    },
+    {
+      "domain": "foundations",
+      "id": "magnetism-and-measurement",
+      "modules": [
+        "f.magnetism"
+      ],
+      "order": 8,
+      "summary": {
+        "en": "Magnetic circuits and saturation; measurement range, sampling, reference points and error.",
+        "zh": "磁路与饱和；测量量程、采样、参考点与误差。"
+      },
+      "title": {
+        "en": "Magnetism and Engineering Measurement",
+        "zh": "磁学与工程测量"
+      }
+    },
+    {
+      "domain": "power-electronics",
+      "id": "devices-and-components",
+      "modules": [
+        "pe.devices",
+        "pe.passives"
+      ],
+      "order": 1,
+      "summary": {
+        "en": "Power semiconductors and the passive and magnetic components converters are built from.",
+        "zh": "功率半导体，以及构成变换器的无源与磁性元件。"
+      },
+      "title": {
+        "en": "Devices and Components",
+        "zh": "器件与元件"
+      }
+    },
+    {
+      "domain": "power-electronics",
+      "id": "dc-dc-conversion",
+      "modules": [
+        "pe.topologies",
+        "pe.buck",
+        "pe.boost"
+      ],
+      "order": 2,
+      "summary": {
+        "en": "Steady-state converter analysis: buck, boost and buck-boost families.",
+        "zh": "稳态变换器分析：Buck、Boost 与 Buck-Boost 族。"
+      },
+      "title": {
+        "en": "DC/DC Conversion",
+        "zh": "直流-直流变换"
+      }
+    },
+    {
+      "domain": "power-electronics",
+      "id": "ac-dc-and-dc-ac",
+      "modules": [
+        "pe.rectifiers",
+        "pe.inverters"
+      ],
+      "order": 3,
+      "summary": {
+        "en": "Rectification, power factor correction, inverters and pulse-width modulation.",
+        "zh": "整流、功率因数校正、逆变器与脉宽调制。"
+      },
+      "title": {
+        "en": "AC/DC Rectifiers and DC/AC Inverters",
+        "zh": "AC/DC 整流与 DC/AC 逆变"
+      }
+    },
+    {
+      "domain": "power-electronics",
+      "id": "isolated-and-resonant",
+      "modules": [
+        "pe.isolated",
+        "pe.resonant"
+      ],
+      "order": 4,
+      "summary": {
+        "en": "Transformer-isolated topologies and resonant, soft-switched conversion.",
+        "zh": "变压器隔离拓扑与谐振软开关变换。"
+      },
+      "title": {
+        "en": "Isolated and Resonant Converters",
+        "zh": "隔离与谐振变换器"
+      }
+    },
+    {
+      "domain": "power-electronics",
+      "id": "losses-and-thermal",
+      "modules": [
+        "pe.losses",
+        "pe.thermal"
+      ],
+      "order": 5,
+      "summary": {
+        "en": "Conduction and switching losses, efficiency budgets and thermal design.",
+        "zh": "导通与开关损耗、效率预算与热设计。"
+      },
+      "title": {
+        "en": "Losses, Efficiency and Thermal Management",
+        "zh": "损耗、效率与热管理"
+      }
+    },
+    {
+      "domain": "power-electronics",
+      "id": "modelling-and-control",
+      "modules": [
+        "pe.modelling",
+        "pe.control",
+        "pe.simulation"
+      ],
+      "order": 6,
+      "summary": {
+        "en": "Averaged and small-signal models, feedback and digital control, simulation practice.",
+        "zh": "平均与小信号模型、反馈与数字控制、仿真实践。"
+      },
+      "title": {
+        "en": "Modelling, Control and Simulation",
+        "zh": "建模、控制与仿真"
+      }
+    },
+    {
+      "domain": "power-electronics",
+      "id": "magnetics-design",
+      "modules": [
+        "pe.magnetics"
+      ],
+      "order": 7,
+      "summary": {
+        "en": "Inductor and transformer design for switching converters.",
+        "zh": "面向开关变换器的电感与变压器设计。"
+      },
+      "title": {
+        "en": "Magnetics Design",
+        "zh": "磁性元件设计"
+      }
+    },
+    {
+      "domain": "power-electronics",
+      "id": "practical-design",
+      "modules": [
+        "pe.practical",
+        "pe.gate-driving",
+        "pe.emi-pcb"
+      ],
+      "order": 8,
+      "summary": {
+        "en": "The constraints of real hardware: driving, protection, layout and electromagnetic compatibility.",
+        "zh": "真实硬件的约束：驱动、保护、布局与电磁兼容。"
+      },
+      "title": {
+        "en": "Gate Driving, Protection, EMI and PCB Design",
+        "zh": "驱动、保护、EMI 与 PCB 设计"
+      }
+    },
+    {
+      "domain": "power-electronics",
+      "id": "systems-integration",
+      "modules": [
+        "pe.applications"
+      ],
+      "order": 9,
+      "summary": {
+        "en": "How converters become products and infrastructure.",
+        "zh": "变换器如何成为产品与基础设施。"
+      },
+      "title": {
+        "en": "Converter Systems and Applications",
+        "zh": "变换器系统与应用"
+      }
+    },
+    {
+      "domain": "power-systems",
+      "id": "ac-power-networks",
+      "modules": [
+        "ps.three-phase",
+        "ps.per-unit",
+        "ps.components"
+      ],
+      "order": 1,
+      "summary": {
+        "en": "Three-phase systems, complex power, the per-unit system and network components.",
+        "zh": "三相系统、复功率、标幺值系统与网络元件。"
+      },
+      "title": {
+        "en": "AC Power Networks",
+        "zh": "交流电力网络"
+      }
+    },
+    {
+      "domain": "power-systems",
+      "id": "machines-and-transformers",
+      "modules": [
+        "ps.transformers",
+        "ps.machines"
+      ],
+      "order": 2,
+      "summary": {
+        "en": "Electromechanical energy conversion and transformer modelling.",
+        "zh": "机电能量转换与变压器建模。"
+      },
+      "title": {
+        "en": "Transformers and Electric Machines",
+        "zh": "变压器与电机"
+      }
+    },
+    {
+      "domain": "power-systems",
+      "id": "network-analysis",
+      "modules": [
+        "ps.power-flow",
+        "ps.faults",
+        "ps.protection"
+      ],
+      "order": 3,
+      "summary": {
+        "en": "Power-flow analysis, fault analysis with symmetrical components, protection and relaying.",
+        "zh": "潮流分析、基于对称分量的故障分析、保护与继电。"
+      },
+      "title": {
+        "en": "Power Flow, Faults and Protection",
+        "zh": "潮流、故障与保护"
+      }
+    },
+    {
+      "domain": "power-systems",
+      "id": "dynamics-and-stability",
+      "modules": [
+        "ps.stability",
+        "ps.grid-control"
+      ],
+      "order": 4,
+      "summary": {
+        "en": "Power system stability, dynamics, frequency and voltage control, grid operation.",
+        "zh": "电力系统稳定性、动态、频率与电压控制、电网运行。"
+      },
+      "title": {
+        "en": "Stability, Dynamics and Grid Control",
+        "zh": "稳定性、动态与电网控制"
+      }
+    },
+    {
+      "domain": "power-systems",
+      "id": "modern-grids",
+      "modules": [
+        "ps.grid-converters",
+        "ps.converter-dominated",
+        "ps.dc-grids",
+        "ps.microgrids",
+        "ps.sst"
+      ],
+      "order": 5,
+      "summary": {
+        "en": "Grid-connected converters, grid-forming control, DC networks, microgrids and solid-state transformers.",
+        "zh": "并网变换器、构网控制、直流网络、微电网与固态变压器。"
+      },
+      "title": {
+        "en": "Modern and Converter-Dominated Grids",
+        "zh": "现代电网与变换器主导电网"
+      }
+    },
+    {
+      "domain": "renewable-energy",
+      "id": "solar-photovoltaics",
+      "modules": [
+        "re.pv",
+        "re.mppt",
+        "re.pv-systems"
+      ],
+      "order": 1,
+      "summary": {
+        "en": "PV physics, I-V characteristics, maximum power point tracking and PV systems.",
+        "zh": "光伏物理、I-V 特性、最大功率点跟踪与光伏系统。"
+      },
+      "title": {
+        "en": "Solar Photovoltaics",
+        "zh": "光伏"
+      }
+    },
+    {
+      "domain": "renewable-energy",
+      "id": "wind-energy",
+      "modules": [
+        "re.wind"
+      ],
+      "order": 2,
+      "summary": {
+        "en": "Wind resource, turbines, generators and their grid interfaces.",
+        "zh": "风资源、风机、发电机及其并网接口。"
+      },
+      "title": {
+        "en": "Wind Energy",
+        "zh": "风能"
+      }
+    },
+    {
+      "domain": "renewable-energy",
+      "id": "energy-storage",
+      "modules": [
+        "re.storage",
+        "re.batteries"
+      ],
+      "order": 3,
+      "summary": {
+        "en": "Storage technologies, batteries, management systems and bidirectional interfaces.",
+        "zh": "储能技术、电池、管理系统与双向接口。"
+      },
+      "title": {
+        "en": "Energy Storage",
+        "zh": "储能"
+      }
+    },
+    {
+      "domain": "renewable-energy",
+      "id": "energy-conversion",
+      "modules": [
+        "re.conversion"
+      ],
+      "order": 4,
+      "summary": {
+        "en": "Physical and thermodynamic foundations of renewable energy conversion.",
+        "zh": "可再生能源转换的物理与热力学基础。"
+      },
+      "title": {
+        "en": "Energy Conversion Fundamentals",
+        "zh": "能量转换基础"
+      }
+    },
+    {
+      "domain": "renewable-energy",
+      "id": "grid-integration-and-systems",
+      "modules": [
+        "re.integration",
+        "re.hybrid-systems",
+        "re.energy-management",
+        "re.system-design"
+      ],
+      "order": 5,
+      "summary": {
+        "en": "Grid-connected renewable generation, microgrids and hybrid systems, energy management and system design.",
+        "zh": "可再生能源并网、微电网与混合系统、能量管理与系统设计。"
+      },
+      "title": {
+        "en": "Grid Integration and Energy Systems",
+        "zh": "并网与能源系统"
+      }
+    }
+  ]
+}
