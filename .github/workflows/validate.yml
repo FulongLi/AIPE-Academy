@@ -1,5 +1,5 @@
-name: Academy metadata and open lab
-on: [push, pull_request]
+name: Academy metadata, labs and agent integrations
+on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
 jobs:
@@ -11,6 +11,39 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install -r requirements-dev.txt
+      # Deterministic offline checks: taxonomy, catalogue, academic references, generated outputs.
       - run: python scripts/build_catalogue.py --check
+      - run: python scripts/build_reference_docs.py --check
       - run: python -m unittest discover -s tests -v
+      # Every reproducible lab runs with its lesson's default inputs.
       - run: python labs/buck_open.py
+      - run: python labs/foundations/dc_circuits.py
+      - run: python labs/power-electronics/buck_switching.py
+      - run: python labs/power-systems/three_phase.py
+      - run: python labs/renewable-energy/pv_model.py
+      # The shared companion command used by the Codex skill and the Claude Code plugin.
+      - run: python skills/aipe-academy/scripts/academy.py status --json
+      - run: python skills/aipe-academy/scripts/academy.py onboarding --goal "power electronics" --json
+      - run: python skills/aipe-academy/scripts/academy.py lab buck-converter-fundamentals --json
+      # Functional plugin validation with the real Claude Code CLI (no account needed for validate).
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install -g @anthropic-ai/claude-code
+      - run: claude plugin validate .
+      - run: claude --plugin-dir . plugin list
+
+  verify-sources:
+    # Network-dependent verification of the MIT OpenCourseWare pages, run on demand only.
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/verify_academic_sources.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mit-ocw-verification
+          path: references/mit-ocw-verification.json
