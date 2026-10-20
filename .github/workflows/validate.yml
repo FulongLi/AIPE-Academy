@@ -24,7 +24,8 @@ jobs:
       # The shared companion command used by the Codex skill and the Claude Code plugin.
       - run: python skills/aipe-academy/scripts/academy.py status --json
       - run: python skills/aipe-academy/scripts/academy.py onboarding --goal "power electronics" --json
-      - run: python skills/aipe-academy/scripts/academy.py lab buck-converter-fundamentals --json
+      - run: python skills/aipe-academy/scripts/academy.py --json lab buck-converter-fundamentals
+      - run: python skills/aipe-academy/scripts/academy.py --json lab labs/power-electronics/buck_switching.py
       # Functional plugin validation with the real Claude Code CLI (no account needed for validate).
       - uses: actions/setup-node@v4
         with:

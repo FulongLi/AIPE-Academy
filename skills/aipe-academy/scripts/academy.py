@@ -502,19 +502,20 @@ def cmd_record(academy: Academy, args) -> dict:
     raise AcademyError("Unknown record command")
 
 
-def resolve_lab(academy: Academy, target: str) -> Path:
+def resolve_lab(academy: Academy, target: str) -> tuple[Path, list[str]]:
+    """Return the lab script for a lesson slug or a labs/ path, plus any further labs the lesson lists."""
+    other_labs: list[str] = []
     if target in academy.lessons:
         labs = academy.lessons[target]["labs"]
         if not labs:
             raise AcademyError(f"Lesson '{target}' has no lab script")
-        if len(labs) > 1:
-            raise AcademyError(f"Lesson '{target}' has several labs; name one: {', '.join(labs)}")
-        target = labs[0]
+        # A lesson lists its labs in teaching order; the first is the default, the others are reported.
+        target, other_labs = labs[0], labs[1:]
     path = (academy.root / target).resolve()
     labs_root = (academy.root / "labs").resolve()
     if not path.is_relative_to(labs_root) or path.suffix != ".py" or not path.is_file():
         raise AcademyError(f"'{target}' is not a lab script inside {labs_root}")
-    return path
+    return path, other_labs
 
 
 def cmd_lab(academy: Academy, args) -> dict:
@@ -522,7 +523,7 @@ def cmd_lab(academy: Academy, args) -> dict:
         return [{"lesson": row["slug"], "labs": row["labs"]} for row in academy.lessons.values() if row["labs"]]
     if not args.target:
         raise AcademyError("Name a lesson slug or a lab path, or use --list")
-    path = resolve_lab(academy, args.target)
+    path, other_labs = resolve_lab(academy, args.target)
     command = [sys.executable, str(path), *args.lab_args]
     try:
         completed = subprocess.run(command, cwd=str(academy.root), capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=args.timeout)
@@ -540,7 +541,8 @@ def cmd_lab(academy: Academy, args) -> dict:
         "result": output,
         "stdout": completed.stdout if output is None else None,
         "stderr": completed.stderr.strip() or None,
-        "interpretation": "exit code 0: calculation completed; 2: the lab rejected an input or assumption (read stderr and discuss it with the learner); other: unexpected error",
+        "other_labs": other_labs,
+        "interpretation": "exit code 0: calculation completed; 2: the lab rejected an input or assumption (read stderr and discuss it with the learner); other: unexpected error. other_labs lists further scripts of the same lesson; run one by its labs/ path.",
     }
 
 
@@ -639,35 +641,43 @@ def human(result, indent: int = 0) -> str:
     return f"{pad}{result}"
 
 
+def add_global_options(parser: argparse.ArgumentParser, suppress: bool) -> None:
+    """Global options; also attached to every subcommand so `status --json` and `--json status` both work."""
+    default = {"default": argparse.SUPPRESS} if suppress else {}
+    parser.add_argument("--repo", help="AIPE Academy checkout (default: discovered)", **default)
+    parser.add_argument("--json", action="store_true", help="machine-readable output", **default)
+    parser.add_argument("--language", help="label language for titles: en or zh", **({"default": argparse.SUPPRESS} if suppress else {"default": "en"}))
+    parser.add_argument("--record", help="learning record path (default: <repo>/learning/progress.json)", **default)
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="academy", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--repo", help="AIPE Academy checkout (default: discovered)")
-    parser.add_argument("--json", action="store_true", help="machine-readable output")
-    parser.add_argument("--language", default="en", help="label language for titles: en or zh")
-    parser.add_argument("--record", help="learning record path (default: <repo>/learning/progress.json)")
+    add_global_options(parser, suppress=False)
+    common = argparse.ArgumentParser(add_help=False)
+    add_global_options(common, suppress=True)
     sub = parser.add_subparsers(dest="command", required=True)
-    sub.add_parser("status")
-    sub.add_parser("domains")
-    p = sub.add_parser("tracks"); p.add_argument("--domain")
-    p = sub.add_parser("modules"); p.add_argument("--domain"); p.add_argument("--track"); p.add_argument("--status")
-    p = sub.add_parser("module"); p.add_argument("id")
-    p = sub.add_parser("lessons"); p.add_argument("--domain"); p.add_argument("--module"); p.add_argument("--lang", choices=list(LANGUAGE_NAMES)); p.add_argument("--status"); p.add_argument("--type")
-    p = sub.add_parser("lesson"); p.add_argument("slug"); p.add_argument("--content", action="store_true", help="include the lesson Markdown")
-    sub.add_parser("paths")
-    p = sub.add_parser("path"); p.add_argument("id")
-    p = sub.add_parser("onboarding"); p.add_argument("--goal"); p.add_argument("--lang", choices=list(LANGUAGE_NAMES))
-    p = sub.add_parser("prerequisites"); p.add_argument("slug")
-    sub.add_parser("resume")
-    p = sub.add_parser("record"); rs = p.add_subparsers(dest="record_command", required=True)
-    r = rs.add_parser("init"); r.add_argument("--goal"); r.add_argument("--lang", choices=list(LANGUAGE_NAMES)); r.add_argument("--time"); r.add_argument("--force", action="store_true")
-    rs.add_parser("show")
-    r = rs.add_parser("set"); r.add_argument("--module"); r.add_argument("--lesson"); r.add_argument("--next-task", dest="next_task")
-    r = rs.add_parser("log"); r.add_argument("--lesson"); r.add_argument("--module"); r.add_argument("--task", required=True); r.add_argument("--mode", choices=["independent", "assisted"], required=True); r.add_argument("--evidence", required=True); r.add_argument("--status", choices=STATUSES[1:], required=True); r.add_argument("--help-given", dest="help_given")
-    p = sub.add_parser("lab"); p.add_argument("target", nargs="?"); p.add_argument("--list", action="store_true"); p.add_argument("--timeout", type=float, default=120.0); p.add_argument("lab_args", nargs=argparse.REMAINDER, help="arguments passed to the lab script after --")
-    p = sub.add_parser("references"); p.add_argument("--domain"); p.add_argument("--module"); p.add_argument("--lesson")
-    p = sub.add_parser("reference"); p.add_argument("id")
-    p = sub.add_parser("search"); p.add_argument("text")
-    sub.add_parser("check-tools")
+    sub.add_parser("status", parents=[common])
+    sub.add_parser("domains", parents=[common])
+    p = sub.add_parser("tracks", parents=[common]); p.add_argument("--domain")
+    p = sub.add_parser("modules", parents=[common]); p.add_argument("--domain"); p.add_argument("--track"); p.add_argument("--status")
+    p = sub.add_parser("module", parents=[common]); p.add_argument("id")
+    p = sub.add_parser("lessons", parents=[common]); p.add_argument("--domain"); p.add_argument("--module"); p.add_argument("--lang", choices=list(LANGUAGE_NAMES)); p.add_argument("--status"); p.add_argument("--type")
+    p = sub.add_parser("lesson", parents=[common]); p.add_argument("slug"); p.add_argument("--content", action="store_true", help="include the lesson Markdown")
+    sub.add_parser("paths", parents=[common])
+    p = sub.add_parser("path", parents=[common]); p.add_argument("id")
+    p = sub.add_parser("onboarding", parents=[common]); p.add_argument("--goal"); p.add_argument("--lang", choices=list(LANGUAGE_NAMES))
+    p = sub.add_parser("prerequisites", parents=[common]); p.add_argument("slug")
+    sub.add_parser("resume", parents=[common])
+    p = sub.add_parser("record", parents=[common]); rs = p.add_subparsers(dest="record_command", required=True)
+    r = rs.add_parser("init", parents=[common]); r.add_argument("--goal"); r.add_argument("--lang", choices=list(LANGUAGE_NAMES)); r.add_argument("--time"); r.add_argument("--force", action="store_true")
+    rs.add_parser("show", parents=[common])
+    r = rs.add_parser("set", parents=[common]); r.add_argument("--module"); r.add_argument("--lesson"); r.add_argument("--next-task", dest="next_task")
+    r = rs.add_parser("log", parents=[common]); r.add_argument("--lesson"); r.add_argument("--module"); r.add_argument("--task", required=True); r.add_argument("--mode", choices=["independent", "assisted"], required=True); r.add_argument("--evidence", required=True); r.add_argument("--status", choices=STATUSES[1:], required=True); r.add_argument("--help-given", dest="help_given")
+    p = sub.add_parser("lab", parents=[common]); p.add_argument("target", nargs="?"); p.add_argument("--list", action="store_true"); p.add_argument("--timeout", type=float, default=120.0); p.add_argument("lab_args", nargs=argparse.REMAINDER, help="arguments passed to the lab script after --")
+    p = sub.add_parser("references", parents=[common]); p.add_argument("--domain"); p.add_argument("--module"); p.add_argument("--lesson")
+    p = sub.add_parser("reference", parents=[common]); p.add_argument("id")
+    p = sub.add_parser("search", parents=[common]); p.add_argument("text")
+    sub.add_parser("check-tools", parents=[common])
     return parser
 
 

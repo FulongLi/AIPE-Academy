@@ -24,7 +24,7 @@ Exit codes: 0 success, 1 curriculum or record error (message on stderr),
 | `record show` | Print the record | |
 | `record set [--module M] [--lesson S] [--next-task TEXT]` | Update the current position | `record set --lesson dc-circuit-fundamentals --next-task "loaded divider exercise"` |
 | `record log --task T --mode independent|assisted --evidence E --status learning|needs_review|demonstrated [--lesson S] [--module M] [--help-given H]` | Append an attempt; `demonstrated` is refused for assisted work | |
-| `lab <slug|labs/path> [--timeout S] -- [args]` | Run a lab script and relay its JSON | `lab buck-converter-fundamentals -- --frequency 200000` |
+| `lab <slug|labs/path> [--timeout S] -- [args]` | Run a lab script and relay its JSON; for a lesson with several labs the first listed runs and `other_labs` names the rest | `lab buck-converter-fundamentals -- --frequency 200000`; `lab labs/power-electronics/buck_switching.py` |
 | `lab --list` | Lessons with labs | |
 | `references [--domain D] [--module M] [--lesson S]` | Academic reference baseline (MIT OpenCourseWare) | `references --lesson three-phase-fundamentals` |
 | `reference <id>` | One reference with verified facts, mapped modules and citing lessons | `reference mit-6-622-2023` |

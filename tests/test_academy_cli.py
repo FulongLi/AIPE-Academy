@@ -151,6 +151,24 @@ class LabExecutionTests(unittest.TestCase):
         _, stderr = run("lab", "orientation", expect=1)
         self.assertIn("has no lab script", stderr)
 
+    def test_lesson_with_several_labs_runs_the_first_and_reports_the_rest(self):
+        result, _ = run("lab", "buck-converter-fundamentals")
+        self.assertEqual(result["exit_code"], 0)
+        self.assertTrue(result["command"][1].replace("\\", "/").endswith("labs/buck_open.py"))
+        self.assertEqual(result["other_labs"], ["labs/power-electronics/buck_switching.py"])
+        switching, _ = run("lab", "labs/power-electronics/buck_switching.py")
+        self.assertEqual(switching["exit_code"], 0)
+        self.assertEqual(switching["result"]["steady_state"]["conduction_mode"]["value"] if isinstance(switching["result"]["steady_state"]["conduction_mode"], dict) else switching["result"]["steady_state"]["conduction_mode"], "CCM")
+
+    def test_global_options_accepted_after_the_subcommand(self):
+        command = [sys.executable, str(CLI), "status", "--json", "--repo", str(ROOT)]
+        completed = subprocess.run(command, capture_output=True, text=True, encoding="utf-8", cwd=str(ROOT), timeout=120)
+        self.assertEqual(completed.returncode, 0, completed.stderr)
+        self.assertEqual(json.loads(completed.stdout)["academic_references"], 22)
+        command = [sys.executable, str(CLI), "domains", "--language", "zh", "--json", "--repo", str(ROOT)]
+        completed = subprocess.run(command, capture_output=True, text=True, encoding="utf-8", cwd=str(ROOT), timeout=120)
+        self.assertEqual(json.loads(completed.stdout)[0]["title"], "基础")
+
     def test_new_labs_run_through_the_cli(self):
         for slug in ("dc-circuit-fundamentals", "three-phase-fundamentals", "solar-pv-fundamentals"):
             result, _ = run("lab", slug)
