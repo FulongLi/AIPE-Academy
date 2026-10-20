@@ -1,0 +1,1716 @@
+{
+  "schema_version": "0.2.0",
+  "checked_on": "2026-10-20",
+  "method": "HTTP GET of the official course page and its data.json; metadata only, no course content stored",
+  "results": [
+    {
+      "id": "mit-18-01sc-2010",
+      "requested_url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Single Variable Calculus | Mathematics | MIT OpenCourseWare",
+      "subpages": {
+        "download": [
+          "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/download"
+        ],
+        "exams": [
+          "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/final-exam/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/syllabus/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Single Variable Calculus",
+        "primary_course_number": "18.01SC",
+        "extra_course_numbers": "",
+        "term": "Fall",
+        "year": "2010",
+        "level": [
+          "Undergraduate"
+        ],
+        "instructors": [
+          "Prof. David Jerison"
+        ],
+        "department_numbers": [
+          "18"
+        ],
+        "topics": [
+          [
+            "Mathematics",
+            "Calculus"
+          ],
+          [
+            "Mathematics",
+            "Differential Equations"
+          ]
+        ],
+        "learning_resource_types": [
+          "Lecture Notes",
+          "Lecture Videos",
+          "Problem-solving Videos",
+          "Problem Sets",
+          "Problem Set Solutions",
+          "Exams",
+          "Exam Solutions"
+        ],
+        "description": "This calculus course covers differentiation and integration of functions of one variable, and concludes with a brief discussion of infinite series. Calculus is fundamental to many scientific disciplines including physics, engineering, and economics.\n\nCourse Format\n\nThis course has been designed for independent study. It includes all of the materials you will need to understand the concepts covered in this subject. The materials in this course include:\n\n- **Lecture Videos** with supporting written notes\n- **Recitation Videos** of problem-solving tips\n- **Worked Examples** with detailed solution"
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-18-02sc-2010",
+      "requested_url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Multivariable Calculus | Mathematics | MIT OpenCourseWare",
+      "subpages": {
+        "download": [
+          "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/download"
+        ],
+        "exams": [
+          "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/final-exam-1/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/syllabus/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Multivariable Calculus",
+        "primary_course_number": "18.02SC",
+        "extra_course_numbers": "",
+        "term": "Fall",
+        "year": "2010",
+        "level": [
+          "Undergraduate"
+        ],
+        "instructors": [
+          "Prof. Denis Auroux"
+        ],
+        "department_numbers": [
+          "18"
+        ],
+        "topics": [
+          [
+            "Mathematics",
+            "Calculus"
+          ],
+          [
+            "Mathematics",
+            "Linear Algebra"
+          ],
+          [
+            "Mathematics",
+            "Differential Equations"
+          ]
+        ],
+        "learning_resource_types": [
+          "Lecture Videos",
+          "Lecture Notes",
+          "Problem Sets",
+          "Problem Set Solutions",
+          "Exams",
+          "Exam Solutions"
+        ],
+        "description": "This course covers differential, integral and vector calculus for functions of more than one variable. These mathematical tools and methods are used extensively in the physical sciences, engineering, economics and computer graphics.\n\nThe materials have been organized to support independent study. The website includes all of the materials you will need to understand the concepts covered in this subject. The materials in this course include:\n\n- **Lecture Videos** recorded on the MIT campus\n- **Recitation Videos** with problem-solving tips\n- **Examples** of solutions to sample problems\n- **Proble"
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-18-03sc-2011",
+      "requested_url": "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Differential Equations | Mathematics | MIT OpenCourseWare",
+      "subpages": {
+        "download": [
+          "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/download"
+        ],
+        "exams": [
+          "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/pages/final-exam/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Differential Equations",
+        "primary_course_number": "18.03SC",
+        "extra_course_numbers": "",
+        "term": "Fall",
+        "year": "2011",
+        "level": [
+          "Undergraduate"
+        ],
+        "instructors": [
+          "Prof. Arthur Mattuck",
+          "Prof. Haynes Miller",
+          "Dr. Jeremy Orloff",
+          "Dr. John Lewis"
+        ],
+        "department_numbers": [
+          "18"
+        ],
+        "topics": [
+          [
+            "Mathematics",
+            "Differential Equations"
+          ],
+          [
+            "Mathematics",
+            "Linear Algebra"
+          ]
+        ],
+        "learning_resource_types": [
+          "Lecture Videos",
+          "Problem-solving Videos",
+          "Lecture Notes",
+          "Problem Sets",
+          "Problem Set Solutions",
+          "Exams",
+          "Exam Solutions"
+        ],
+        "description": "The laws of nature are expressed as differential equations. Scientists and engineers must know how to model the world in terms of differential equations, and how to solve those equations and interpret the solutions. This course focuses on the equations and techniques most useful in science and engineering.\n\nCourse Format\n\nThis course has been designed for independent study. It provides everything you will need to understand the concepts covered in the course. The materials include:\n\n- **Lecture Videos** by Professor Arthur Mattuck.\n- **Course Notes** on every topic.\n- **Practice Problems** wit"
+      },
+      "syllabus_status": null,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-18-06sc-2011",
+      "requested_url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Linear Algebra | Mathematics | MIT OpenCourseWare",
+      "subpages": {
+        "download": [
+          "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/download"
+        ],
+        "exams": [
+          "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/final-exam/"
+        ],
+        "instructor_insights": [
+          "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/instructor-insights/"
+        ],
+        "study_materials": [
+          "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/related-resources/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/syllabus/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Linear Algebra",
+        "primary_course_number": "18.06SC",
+        "extra_course_numbers": "",
+        "term": "Fall",
+        "year": "2011",
+        "level": [
+          "Undergraduate"
+        ],
+        "instructors": [
+          "Prof. Gilbert Strang"
+        ],
+        "department_numbers": [
+          "18"
+        ],
+        "topics": [
+          [
+            "Mathematics",
+            "Linear Algebra"
+          ]
+        ],
+        "learning_resource_types": [
+          "Lecture Videos",
+          "Lecture Notes",
+          "Problem-solving Videos",
+          "Instructor Insights",
+          "Problem Sets",
+          "Problem Set Solutions",
+          "Exams",
+          "Exam Solutions"
+        ],
+        "description": "This course covers matrix theory and linear algebra, emphasizing topics useful in other disciplines such as physics, economics and social sciences, natural sciences, and engineering. It parallels the combination of theory and applications in Professor Strang’s textbook {{% resource_link \"4cdcc772-348a-4e48-9678-0a6cc9328fde\" \"_Introduction to Linear Algebra_\" %}}.\n\nCourse Format\n\nThis course has been designed for independent study. It provides everything you will need to understand the concepts covered in the course. The materials include:\n\n- A complete set of **Lecture Videos** by Professor G"
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-8-02-2007",
+      "requested_url": "https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Physics II: Electricity and Magnetism | Physics | MIT OpenCourseWare",
+      "subpages": {
+        "download": [
+          "https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/download"
+        ],
+        "readings": [
+          "https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/pages/readings/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/pages/syllabus/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Physics II: Electricity and Magnetism",
+        "primary_course_number": "8.02",
+        "extra_course_numbers": "",
+        "term": "Spring",
+        "year": "2007",
+        "level": [
+          "Undergraduate"
+        ],
+        "instructors": [
+          "Physics Department Faculty, Lecturers, and Technical Staff"
+        ],
+        "department_numbers": [
+          "8"
+        ],
+        "topics": [
+          [
+            "Science",
+            "Physics",
+            "Electromagnetism"
+          ]
+        ],
+        "learning_resource_types": [
+          "Problem Sets",
+          "Lecture Notes"
+        ],
+        "description": "This freshman-level course is the second semester of introductory physics. The focus is on electricity and magnetism. The subject is taught using the TEAL (Technology Enabled Active Learning) format which utilizes small group interaction and current technology. The TEAL/Studio Project at MIT is a new approach to physics education designed to help students develop much better intuition about, and conceptual models of, physical phenomena.\n\n**Staff List**\n\nVisualizations:    \nProf. John Belcher\n\nInstructors:    \nDr. Peter Dourmashkin    \nProf. Bruce Knuteson    \nProf. Gunther Roland    \nProf. Bol"
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-6-002-2007",
+      "requested_url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Circuits and Electronics | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+      "subpages": {
+        "calendar": [
+          "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/calendar/"
+        ],
+        "download": [
+          "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/download"
+        ],
+        "exams": [
+          "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/exams/"
+        ],
+        "labs": [
+          "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/labs/"
+        ],
+        "lecture_notes": [
+          "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/lecture-notes/"
+        ],
+        "lecture_videos": [
+          "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/video_galleries/video-lectures/"
+        ],
+        "problem_sets": [
+          "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/assignments/"
+        ],
+        "readings": [
+          "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/readings/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/syllabus/"
+        ],
+        "tools": [
+          "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/tools/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Circuits and Electronics",
+        "primary_course_number": "6.002",
+        "extra_course_numbers": "",
+        "term": "Spring",
+        "year": "2007",
+        "level": [
+          "Undergraduate"
+        ],
+        "instructors": [
+          "Prof. Anant Agarwal"
+        ],
+        "department_numbers": [
+          "6"
+        ],
+        "topics": [
+          [
+            "Engineering",
+            "Electrical Engineering"
+          ],
+          [
+            "Engineering",
+            "Electrical Engineering",
+            "Electronics"
+          ]
+        ],
+        "learning_resource_types": [
+          "Lecture Videos",
+          "Problem Sets",
+          "Exams"
+        ],
+        "description": "6.002 is designed to serve as a first course in an undergraduate electrical engineering (EE), or electrical engineering and computer science (EECS) curriculum. At MIT, 6.002 is in the core of department subjects required for all undergraduates in EECS.\n\nThe course introduces the fundamentals of the lumped circuit abstraction. Topics covered include: resistive elements and networks; independent and dependent sources; switches and MOS transistors; digital abstraction; amplifiers; energy storage elements; dynamics of first- and second-order networks; design in the time and frequency domains; and "
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-6-003-2011",
+      "requested_url": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Signals and Systems | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+      "subpages": {
+        "calendar": [
+          "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/pages/calendar/"
+        ],
+        "download": [
+          "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/download"
+        ],
+        "exams": [
+          "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/pages/exams/"
+        ],
+        "lecture_notes": [
+          "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/pages/lecture-notes/"
+        ],
+        "lecture_videos": [
+          "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/video_galleries/lecture-videos/"
+        ],
+        "problem_sets": [
+          "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/pages/assignments/"
+        ],
+        "readings": [
+          "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/pages/readings/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/pages/syllabus/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Signals and Systems",
+        "primary_course_number": "6.003",
+        "extra_course_numbers": "",
+        "term": "Fall",
+        "year": "2011",
+        "level": [
+          "Undergraduate"
+        ],
+        "instructors": [
+          "Prof. Dennis Freeman"
+        ],
+        "department_numbers": [
+          "6"
+        ],
+        "topics": [
+          [
+            "Engineering",
+            "Electrical Engineering",
+            "Signal Processing"
+          ],
+          [
+            "Engineering",
+            "Electrical Engineering",
+            "Digital Systems"
+          ]
+        ],
+        "learning_resource_types": [
+          "Lecture Videos",
+          "Lecture Notes",
+          "Problem Sets",
+          "Problem Set Solutions",
+          "Exams",
+          "Exam Solutions"
+        ],
+        "description": "6.003 covers the fundamentals of signal and system analysis, focusing on representations of discrete-time and continuous-time signals (singularity functions, complex exponentials and geometrics, Fourier representations, Laplace and Z transforms, sampling) and representations of linear, time-invariant systems (difference and differential equations, block diagrams, system functions, poles and zeros, convolution, impulse and step responses, frequency responses). Applications are drawn broadly from engineering and physics, including feedback and control, communications, and signal processing.\n"
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-6-013-2005",
+      "requested_url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Electromagnetics and Applications | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+      "subpages": {
+        "calendar": [
+          "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/pages/calendar/"
+        ],
+        "download": [
+          "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/download"
+        ],
+        "exams": [
+          "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/pages/exams/"
+        ],
+        "lecture_notes": [
+          "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/pages/lecture-notes/"
+        ],
+        "problem_sets": [
+          "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/pages/assignments/"
+        ],
+        "readings": [
+          "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/pages/readings/"
+        ],
+        "study_materials": [
+          "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/pages/related-resources/",
+          "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/pages/study-materials/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-fall-2005/pages/syllabus/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Electromagnetics and Applications",
+        "primary_course_number": "6.013",
+        "extra_course_numbers": "ESD.013J",
+        "term": "Fall",
+        "year": "2005",
+        "level": [
+          "Undergraduate"
+        ],
+        "instructors": [
+          "Prof. David Staelin",
+          "Prof. Erich Ippen",
+          "Markus Zahn"
+        ],
+        "department_numbers": [
+          "6",
+          "ESD"
+        ],
+        "topics": [
+          [
+            "Engineering",
+            "Electrical Engineering"
+          ],
+          [
+            "Science",
+            "Physics",
+            "Electromagnetism"
+          ]
+        ],
+        "learning_resource_types": [
+          "Lecture Notes",
+          "Problem Sets",
+          "Problem Set Solutions",
+          "Exams",
+          "Exam Solutions"
+        ],
+        "description": "This course explores electromagnetic phenomena in modern applications, including wireless communications, circuits, computer interconnects and peripherals, optical fiber links and components, microwave communications and radar, antennas, sensors, micro-electromechanical systems, motors, and power generation and transmission. Fundamentals covered include: quasistatic and dynamic solutions to Maxwell's equations; waves, radiation, and diffraction; coupling to media and structures; guided and unguided waves; resonance; and forces, power, and energy.\n\n##### Acknowledgments\n\nThe instructors would l"
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-6-622-2023",
+      "requested_url": "https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Power Electronics | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+      "subpages": {
+        "download": [
+          "https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/download"
+        ],
+        "exams": [
+          "https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/lists/assessments/"
+        ],
+        "lecture_notes": [
+          "https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/lists/handwritten-lecture-notes/",
+          "https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/lists/typed-lecture-notes/",
+          "https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/pages/lecture-notes/"
+        ],
+        "lecture_videos": [
+          "https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/video_galleries/video-lectures/"
+        ],
+        "problem_sets": [
+          "https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/lists/problem-sets/"
+        ],
+        "projects": [
+          "https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/pages/design-project/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/pages/syllabus/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Power Electronics",
+        "primary_course_number": "6.622",
+        "extra_course_numbers": "6.6220",
+        "term": "Spring",
+        "year": "2023",
+        "level": [
+          "Graduate"
+        ],
+        "instructors": [
+          "Prof. David Perreault"
+        ],
+        "department_numbers": [
+          "6"
+        ],
+        "topics": [
+          [
+            "Energy",
+            "Electricity"
+          ],
+          [
+            "Engineering",
+            "Electrical Engineering",
+            "Electronics"
+          ]
+        ],
+        "learning_resource_types": [
+          "Lecture Videos",
+          "Lecture Notes",
+          "Design Assignments",
+          "Problem Sets",
+          "Problem Set Solutions",
+          "Exams",
+          "Exam Solutions"
+        ],
+        "description": "6.622 covers modeling, analysis, design, control, and application of circuits for energy conversion and control. As described by the Institute of Electrical and Electronics Engineers (IEEE), power electronics technology \"encompasses the use of electronic components, the application of circuit theory and design techniques, and the development of analytical tools toward efficient electronic conversion, control, and conditioning of electric power.\" Students taking this class will come away with an understanding of the fundamental principles of power electronics, and knowledge of how to both analy"
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-6-334-2007",
+      "requested_url": "https://ocw.mit.edu/courses/6-334-power-electronics-spring-2007/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/6-334-power-electronics-spring-2007/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Power Electronics | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+      "subpages": {
+        "calendar": [
+          "https://ocw.mit.edu/courses/6-334-power-electronics-spring-2007/pages/calendar/"
+        ],
+        "download": [
+          "https://ocw.mit.edu/courses/6-334-power-electronics-spring-2007/download"
+        ],
+        "lecture_notes": [
+          "https://ocw.mit.edu/courses/6-334-power-electronics-spring-2007/pages/lecture-notes/"
+        ],
+        "problem_sets": [
+          "https://ocw.mit.edu/courses/6-334-power-electronics-spring-2007/pages/assignments/"
+        ],
+        "study_materials": [
+          "https://ocw.mit.edu/courses/6-334-power-electronics-spring-2007/pages/related-resources/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/6-334-power-electronics-spring-2007/pages/syllabus/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Power Electronics",
+        "primary_course_number": "6.334",
+        "extra_course_numbers": "",
+        "term": "Spring",
+        "year": "2007",
+        "level": [
+          "Graduate"
+        ],
+        "instructors": [
+          "Prof. David Perreault"
+        ],
+        "department_numbers": [
+          "6"
+        ],
+        "topics": [
+          [
+            "Engineering",
+            "Electrical Engineering",
+            "Electronics"
+          ],
+          [
+            "Engineering",
+            "Electrical Engineering",
+            "Electric Power"
+          ]
+        ],
+        "learning_resource_types": [
+          "Problem Sets",
+          "Lecture Notes"
+        ],
+        "description": "6.334 examines the application of electronics to energy conversion and control. Topics covered include: modeling, analysis, and control techniques; design of power circuits including inverters, rectifiers, and DC-DC converters; analysis and design of magnetic components and filters; and characteristics of power semiconductor devices. Numerous application examples will be presented such as motion control systems, power supplies, and radio-frequency power amplifiers. The course is worth 6 engineering design points.\n"
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-6-012-2005",
+      "requested_url": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2005/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2005/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Microelectronic Devices and Circuits | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+      "subpages": {
+        "calendar": [
+          "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2005/pages/calendar/"
+        ],
+        "download": [
+          "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2005/download"
+        ],
+        "exams": [
+          "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2005/pages/exams/"
+        ],
+        "lecture_notes": [
+          "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2005/pages/lecture-notes/"
+        ],
+        "problem_sets": [
+          "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2005/pages/assignments/"
+        ],
+        "projects": [
+          "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2005/pages/projects/"
+        ],
+        "readings": [
+          "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2005/pages/readings/"
+        ],
+        "study_materials": [
+          "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2005/pages/study-materials/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2005/pages/syllabus/"
+        ],
+        "tools": [
+          "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2005/pages/tools/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Microelectronic Devices and Circuits",
+        "primary_course_number": "6.012",
+        "extra_course_numbers": "",
+        "term": "Fall",
+        "year": "2005",
+        "level": [
+          "Undergraduate"
+        ],
+        "instructors": [
+          "Prof. Jesús del Alamo"
+        ],
+        "department_numbers": [
+          "6"
+        ],
+        "topics": [
+          [
+            "Engineering",
+            "Electrical Engineering",
+            "Electronics"
+          ],
+          [
+            "Engineering",
+            "Computer Science",
+            "Computer Design and Engineering"
+          ]
+        ],
+        "learning_resource_types": [
+          "Exams",
+          "Lecture Notes",
+          "Projects",
+          "Problem Sets"
+        ],
+        "description": "6.012 is the header course for the department's \"Devices, Circuits and Systems\" concentration. The topics covered include: modeling of microelectronic devices, basic microelectronic circuit analysis and design, physical electronics of semiconductor junction and MOS devices, relation of electrical behavior to internal physical processes, development of circuit models, and understanding the uses and limitations of various models. The course uses incremental and large-signal techniques to analyze and design bipolar and field effect transistor circuits, with examples chosen from digital circuits, "
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-6-302-2007",
+      "requested_url": "https://ocw.mit.edu/courses/6-302-feedback-systems-spring-2007/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/6-302-feedback-systems-spring-2007/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Feedback Systems | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+      "subpages": {
+        "calendar": [
+          "https://ocw.mit.edu/courses/6-302-feedback-systems-spring-2007/pages/calendar/"
+        ],
+        "download": [
+          "https://ocw.mit.edu/courses/6-302-feedback-systems-spring-2007/download"
+        ],
+        "exams": [
+          "https://ocw.mit.edu/courses/6-302-feedback-systems-spring-2007/pages/exams/"
+        ],
+        "labs": [
+          "https://ocw.mit.edu/courses/6-302-feedback-systems-spring-2007/pages/labs/"
+        ],
+        "problem_sets": [
+          "https://ocw.mit.edu/courses/6-302-feedback-systems-spring-2007/pages/assignments/"
+        ],
+        "recitations": [
+          "https://ocw.mit.edu/courses/6-302-feedback-systems-spring-2007/pages/recitations/"
+        ],
+        "study_materials": [
+          "https://ocw.mit.edu/courses/6-302-feedback-systems-spring-2007/pages/video-resources/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/6-302-feedback-systems-spring-2007/pages/syllabus/"
+        ],
+        "tools": [
+          "https://ocw.mit.edu/courses/6-302-feedback-systems-spring-2007/pages/tools/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Feedback Systems",
+        "primary_course_number": "6.302",
+        "extra_course_numbers": "",
+        "term": "Spring",
+        "year": "2007",
+        "level": [
+          "Graduate"
+        ],
+        "instructors": [
+          "James Roberge",
+          "Prof. Joel Dawson",
+          "Dr. Kent Lundberg"
+        ],
+        "department_numbers": [
+          "6"
+        ],
+        "topics": [
+          [
+            "Engineering",
+            "Electrical Engineering",
+            "Electronics"
+          ],
+          [
+            "Engineering",
+            "Electrical Engineering",
+            "Robotics and Control Systems"
+          ]
+        ],
+        "learning_resource_types": [
+          "Problem Sets",
+          "Exams"
+        ],
+        "description": "This course provides an introduction to the design of feedback systems. Topics covered include: properties and advantages of feedback systems, time-domain and frequency-domain performance measures, stability and degree of stability, root locus method, Nyquist criterion, frequency-domain design, compensation techniques, application to a wide variety of physical systems, internal and external compensation of operational amplifiers, modeling and compensation of power converter systems, and phase lock loops.\n"
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-6-061-2011",
+      "requested_url": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Introduction to Electric Power Systems | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+      "subpages": {
+        "calendar": [
+          "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/pages/calendar/"
+        ],
+        "download": [
+          "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/download"
+        ],
+        "exams": [
+          "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/pages/quizzes/"
+        ],
+        "problem_sets": [
+          "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/pages/assignments/"
+        ],
+        "readings": [
+          "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/pages/readings/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/pages/syllabus/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Introduction to Electric Power Systems",
+        "primary_course_number": "6.061",
+        "extra_course_numbers": "6.690",
+        "term": "Spring",
+        "year": "2011",
+        "level": [
+          "Undergraduate"
+        ],
+        "instructors": [
+          "Prof. James L. Kirtley Jr."
+        ],
+        "department_numbers": [
+          "6"
+        ],
+        "topics": [
+          [
+            "Engineering",
+            "Electrical Engineering",
+            "Electric Power"
+          ]
+        ],
+        "learning_resource_types": [
+          "Problem Sets",
+          "Problem Set Solutions",
+          "Exams",
+          "Exam Solutions",
+          "Open Textbooks"
+        ],
+        "description": "This course is an introductory subject in the field of electric power systems and electrical to mechanical energy conversion. Electric power has become increasingly important as a way of transmitting and transforming energy in industrial, military and transportation uses. Electric power systems are also at the heart of alternative energy systems, including wind and solar electric, geothermal and small scale hydroelectric generation.\n"
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-6-691-2006",
+      "requested_url": "https://ocw.mit.edu/courses/6-691-seminar-in-electric-power-systems-spring-2006/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/6-691-seminar-in-electric-power-systems-spring-2006/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Seminar in Electric Power Systems | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+      "subpages": {
+        "download": [
+          "https://ocw.mit.edu/courses/6-691-seminar-in-electric-power-systems-spring-2006/download"
+        ],
+        "lecture_notes": [
+          "https://ocw.mit.edu/courses/6-691-seminar-in-electric-power-systems-spring-2006/pages/lecture-notes/"
+        ],
+        "problem_sets": [
+          "https://ocw.mit.edu/courses/6-691-seminar-in-electric-power-systems-spring-2006/pages/assignments/"
+        ],
+        "projects": [
+          "https://ocw.mit.edu/courses/6-691-seminar-in-electric-power-systems-spring-2006/pages/projects/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/6-691-seminar-in-electric-power-systems-spring-2006/pages/syllabus/"
+        ],
+        "tools": [
+          "https://ocw.mit.edu/courses/6-691-seminar-in-electric-power-systems-spring-2006/pages/tools/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Seminar in Electric Power Systems",
+        "primary_course_number": "6.691",
+        "extra_course_numbers": "",
+        "term": "Spring",
+        "year": "2006",
+        "level": [
+          "Graduate"
+        ],
+        "instructors": [
+          "Prof. James L. Kirtley Jr."
+        ],
+        "department_numbers": [
+          "6"
+        ],
+        "topics": [
+          [
+            "Energy",
+            "Electricity"
+          ],
+          [
+            "Engineering",
+            "Electrical Engineering",
+            "Electric Power"
+          ]
+        ],
+        "learning_resource_types": [
+          "Lecture Notes",
+          "Projects with Examples",
+          "Problem Sets",
+          "Problem Set Solutions"
+        ],
+        "description": "This course comprises of a seminar on planning and operation of modern electric power systems. Content varies with current interests of instructor and class; emphasis on engineering aspects, but economic issues may be examined too. Core topics include: overview of power system structure and operation; representation of components, including transmission lines, transformers, generating plants, loads; power flow analysis, dynamics and control of multimachine systems, steady-state and transient stability, system protection; economic dispatch; mobile and isolated power systems; computation and sim"
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-6-685-2013",
+      "requested_url": "https://ocw.mit.edu/courses/6-685-electric-machines-fall-2013/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/6-685-electric-machines-fall-2013/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Electric Machines | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+      "subpages": {
+        "calendar": [
+          "https://ocw.mit.edu/courses/6-685-electric-machines-fall-2013/pages/calendar/"
+        ],
+        "download": [
+          "https://ocw.mit.edu/courses/6-685-electric-machines-fall-2013/download"
+        ],
+        "exams": [
+          "https://ocw.mit.edu/courses/6-685-electric-machines-fall-2013/pages/exams/"
+        ],
+        "instructor_insights": [
+          "https://ocw.mit.edu/courses/6-685-electric-machines-fall-2013/pages/instructor-insights/"
+        ],
+        "problem_sets": [
+          "https://ocw.mit.edu/courses/6-685-electric-machines-fall-2013/pages/assignments/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/6-685-electric-machines-fall-2013/pages/syllabus/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Electric Machines",
+        "primary_course_number": "6.685",
+        "extra_course_numbers": "",
+        "term": "Fall",
+        "year": "2013",
+        "level": [
+          "Graduate"
+        ],
+        "instructors": [
+          "Prof. James L. Kirtley Jr."
+        ],
+        "department_numbers": [
+          "6"
+        ],
+        "topics": [
+          [
+            "Energy",
+            "Electricity"
+          ],
+          [
+            "Energy",
+            "Technology"
+          ],
+          [
+            "Engineering",
+            "Electrical Engineering",
+            "Electronics"
+          ]
+        ],
+        "learning_resource_types": [
+          "Lecture Notes",
+          "Instructor Insights",
+          "Problem Sets",
+          "Problem Set Solutions",
+          "Exams",
+          "Exam Solutions"
+        ],
+        "description": "This course teaches the principles and analysis of electromechanical systems. Students will develop analytical techniques for predicting device and system interaction characteristics as well as learn to design major classes of electric machines. Problems used in the course are intended to strengthen understanding of the phenomena and interactions in electromechanics, and include examples from current research.\n"
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-2-627-2013",
+      "requested_url": "https://ocw.mit.edu/courses/2-627-fundamentals-of-photovoltaics-fall-2013/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/2-627-fundamentals-of-photovoltaics-fall-2013/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Fundamentals of Photovoltaics | Mechanical Engineering | MIT OpenCourseWare",
+      "subpages": {
+        "download": [
+          "https://ocw.mit.edu/courses/2-627-fundamentals-of-photovoltaics-fall-2013/download"
+        ],
+        "exams": [
+          "https://ocw.mit.edu/courses/2-627-fundamentals-of-photovoltaics-fall-2013/pages/quizzes/"
+        ],
+        "lecture_videos": [
+          "https://ocw.mit.edu/courses/2-627-fundamentals-of-photovoltaics-fall-2013/video_galleries/assignments/",
+          "https://ocw.mit.edu/courses/2-627-fundamentals-of-photovoltaics-fall-2013/video_galleries/lecture-videos-slides/",
+          "https://ocw.mit.edu/courses/2-627-fundamentals-of-photovoltaics-fall-2013/video_galleries/tutorial-videos/"
+        ],
+        "study_materials": [
+          "https://ocw.mit.edu/courses/2-627-fundamentals-of-photovoltaics-fall-2013/pages/related-resources/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/2-627-fundamentals-of-photovoltaics-fall-2013/pages/syllabus/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Fundamentals of Photovoltaics",
+        "primary_course_number": "2.627",
+        "extra_course_numbers": "2.626",
+        "term": "Fall",
+        "year": "2013",
+        "level": [
+          "Undergraduate"
+        ],
+        "instructors": [
+          "Prof. Tonio Buonassisi"
+        ],
+        "department_numbers": [
+          "2"
+        ],
+        "topics": [
+          [
+            "Business",
+            "Innovation"
+          ],
+          [
+            "Engineering",
+            "Electrical Engineering",
+            "Electric Power"
+          ],
+          [
+            "Engineering",
+            "Materials Science and Engineering",
+            "Electronic Materials"
+          ],
+          [
+            "Engineering",
+            "Chemical Engineering",
+            "Transport Processes"
+          ],
+          [
+            "Science",
+            "Physics",
+            "Atomic, Molecular, Optical Physics"
+          ],
+          [
+            "Energy",
+            "Renewables"
+          ],
+          [
+            "Energy",
+            "Electricity"
+          ]
+        ],
+        "learning_resource_types": [
+          "Lecture Videos",
+          "Tutorial Videos",
+          "Problem Sets",
+          "Lecture Notes",
+          "Projects with Examples",
+          "Problem Set Solutions"
+        ],
+        "description": "Fundamentals of photoelectric conversion: charge excitation, conduction, separation, and collection. Lectures cover commercial and emerging photovoltaic technologies and cross-cutting themes, including conversion efficiencies, loss mechanisms, characterization, manufacturing, systems, reliability, life-cycle analysis, risk analysis, and technology evolution in the context of markets, policies, society, and environment.\n\nThis course is one of many [OCW Energy Courses](/courses/energy-courses/), and it is an elective subject in MIT's undergraduate {{% resource_link \"a50644fd-3c74-4d1e-807f-99bdd"
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-ec-s07-2004",
+      "requested_url": "https://ocw.mit.edu/courses/ec-s07-photovoltaic-solar-energy-systems-fall-2004/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/ec-s07-photovoltaic-solar-energy-systems-fall-2004/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Photovoltaic Solar Energy Systems | Edgerton Center | MIT OpenCourseWare",
+      "subpages": {
+        "calendar": [
+          "https://ocw.mit.edu/courses/ec-s07-photovoltaic-solar-energy-systems-fall-2004/pages/calendar/"
+        ],
+        "download": [
+          "https://ocw.mit.edu/courses/ec-s07-photovoltaic-solar-energy-systems-fall-2004/download"
+        ],
+        "lecture_notes": [
+          "https://ocw.mit.edu/courses/ec-s07-photovoltaic-solar-energy-systems-fall-2004/pages/lecture-notes/"
+        ],
+        "problem_sets": [
+          "https://ocw.mit.edu/courses/ec-s07-photovoltaic-solar-energy-systems-fall-2004/pages/assignments/"
+        ],
+        "study_materials": [
+          "https://ocw.mit.edu/courses/ec-s07-photovoltaic-solar-energy-systems-fall-2004/pages/related-resources/",
+          "https://ocw.mit.edu/courses/ec-s07-photovoltaic-solar-energy-systems-fall-2004/pages/study-materials/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/ec-s07-photovoltaic-solar-energy-systems-fall-2004/pages/syllabus/"
+        ],
+        "tools": [
+          "https://ocw.mit.edu/courses/ec-s07-photovoltaic-solar-energy-systems-fall-2004/pages/tools/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Photovoltaic Solar Energy Systems",
+        "primary_course_number": "EC.S07",
+        "extra_course_numbers": "",
+        "term": "Fall",
+        "year": "2004",
+        "level": [
+          "Undergraduate"
+        ],
+        "instructors": [
+          "Prof. Louis Bucciarelli"
+        ],
+        "department_numbers": [
+          "EC"
+        ],
+        "topics": [
+          [
+            "Engineering",
+            "Chemical Engineering",
+            "Transport Processes"
+          ],
+          [
+            "Engineering",
+            "Electrical Engineering",
+            "Electric Power"
+          ],
+          [
+            "Science",
+            "Physics",
+            "Electromagnetism"
+          ],
+          [
+            "Engineering",
+            "Materials Science and Engineering",
+            "Electronic Materials"
+          ],
+          [
+            "Science",
+            "Physics",
+            "Atomic, Molecular, Optical Physics"
+          ]
+        ],
+        "learning_resource_types": [
+          "Lecture Notes",
+          "Written Assignments",
+          "Activity Assignments"
+        ],
+        "description": "This class will study the behavior of photovoltaic solar energy systems, focusing on the behavior of \"stand-alone\" systems. The design of stand-alone photovoltaic systems will be covered. This will include estimation of costs and benefits, taking into account any available government subsidies. Introduction to the hardware elements and their behavior will be included.\n"
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-22-081j-2010",
+      "requested_url": "https://ocw.mit.edu/courses/22-081j-introduction-to-sustainable-energy-fall-2010/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/22-081j-introduction-to-sustainable-energy-fall-2010/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Introduction to Sustainable Energy | Nuclear Science and Engineering | MIT OpenCourseWare",
+      "subpages": {
+        "calendar": [
+          "https://ocw.mit.edu/courses/22-081j-introduction-to-sustainable-energy-fall-2010/pages/calendar/"
+        ],
+        "download": [
+          "https://ocw.mit.edu/courses/22-081j-introduction-to-sustainable-energy-fall-2010/download"
+        ],
+        "problem_sets": [
+          "https://ocw.mit.edu/courses/22-081j-introduction-to-sustainable-energy-fall-2010/pages/assignments-and-exams/"
+        ],
+        "study_materials": [
+          "https://ocw.mit.edu/courses/22-081j-introduction-to-sustainable-energy-fall-2010/pages/related-resources/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/22-081j-introduction-to-sustainable-energy-fall-2010/pages/syllabus/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Introduction to Sustainable Energy",
+        "primary_course_number": "22.081J",
+        "extra_course_numbers": "2.650J,10.291J,1.818J,2.65J,10.391J,11.371J,22.811J,ESD.166J",
+        "term": "Fall",
+        "year": "2010",
+        "level": [
+          "Undergraduate",
+          "Graduate"
+        ],
+        "instructors": [
+          "Prof. Michael Golay",
+          "Randall Field",
+          "Prof. William Green, Jr.",
+          "Dr. John C. Wright"
+        ],
+        "department_numbers": [
+          "22",
+          "2",
+          "10",
+          "1",
+          "11",
+          "ESD"
+        ],
+        "topics": [
+          [
+            "Energy",
+            "Combustion"
+          ],
+          [
+            "Energy",
+            "Electricity"
+          ],
+          [
+            "Energy",
+            "Fossil Fuels"
+          ],
+          [
+            "Energy",
+            "Nuclear Energy"
+          ],
+          [
+            "Energy",
+            "Renewables"
+          ],
+          [
+            "Energy",
+            "Transportation"
+          ],
+          [
+            "Energy",
+            "Technology"
+          ],
+          [
+            "Science",
+            "Earth Science",
+            "Sustainability"
+          ],
+          [
+            "Social Science",
+            "Public Administration",
+            "Science and Technology Policy"
+          ],
+          [
+            "Engineering",
+            "Electrical Engineering",
+            "Electric Power"
+          ]
+        ],
+        "learning_resource_types": [
+          "Lecture Notes",
+          "Written Assignments",
+          "Problem Sets"
+        ],
+        "description": "This class assesses current and potential future energy systems, covering resources, extraction, conversion, and end-use technologies, with emphasis on meeting regional and global energy needs in the 21st century in a sustainable manner. Instructors and guest lecturers will examine various renewable and conventional energy production technologies, energy end-use practices and alternatives, and consumption practices in different countries. Students will learn a quantitative framework to aid in evaluation and analysis of energy technology system proposals in the context of engineering, political"
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-8-21-2009",
+      "requested_url": "https://ocw.mit.edu/courses/8-21-the-physics-of-energy-fall-2009/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/8-21-the-physics-of-energy-fall-2009/",
+      "redirected": false,
+      "error": null,
+      "html_title": "The Physics of Energy | Physics | MIT OpenCourseWare",
+      "subpages": {
+        "download": [
+          "https://ocw.mit.edu/courses/8-21-the-physics-of-energy-fall-2009/download"
+        ],
+        "lecture_notes": [
+          "https://ocw.mit.edu/courses/8-21-the-physics-of-energy-fall-2009/pages/lecture-notes/"
+        ],
+        "study_materials": [
+          "https://ocw.mit.edu/courses/8-21-the-physics-of-energy-fall-2009/pages/related-resources/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/8-21-the-physics-of-energy-fall-2009/pages/syllabus/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "The Physics of Energy",
+        "primary_course_number": "8.21",
+        "extra_course_numbers": "",
+        "term": "Fall",
+        "year": "2009",
+        "level": [
+          "Undergraduate"
+        ],
+        "instructors": [
+          "Prof. Robert Jaffe",
+          "Prof. Washington Taylor"
+        ],
+        "department_numbers": [
+          "8"
+        ],
+        "topics": [
+          [
+            "Energy",
+            "Buildings"
+          ],
+          [
+            "Energy",
+            "Climate"
+          ],
+          [
+            "Energy",
+            "Combustion"
+          ],
+          [
+            "Energy",
+            "Electricity"
+          ],
+          [
+            "Energy",
+            "Fossil Fuels"
+          ],
+          [
+            "Energy",
+            "Fuel Cells"
+          ],
+          [
+            "Energy",
+            "Hydrogen and Alternatives"
+          ],
+          [
+            "Energy",
+            "Nuclear Energy"
+          ],
+          [
+            "Energy",
+            "Renewables"
+          ],
+          [
+            "Energy",
+            "Technology"
+          ],
+          [
+            "Science",
+            "Physics"
+          ]
+        ],
+        "learning_resource_types": [
+          "Lecture Notes"
+        ],
+        "description": "This course is designed to give you the scientific understanding you need to answer questions like:\n\n*   How much energy can we really get from wind?\n*   How does a solar photovoltaic work?\n*   What is an OTEC (Ocean Thermal Energy Converter) and how does it work?\n*   What is the physics behind global warming?\n*   What makes engines efficient?\n*   How does a nuclear reactor work, and what are the realistic hazards?\n\nThe course is designed for MIT sophomores, juniors, and seniors who want to understand the fundamental laws and physical processes that govern the sources, extraction, transmission"
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-10-626-2014",
+      "requested_url": "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Electrochemical Energy Systems | Chemical Engineering | MIT OpenCourseWare",
+      "subpages": {
+        "calendar": [
+          "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/calendar/"
+        ],
+        "download": [
+          "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/download"
+        ],
+        "exams": [
+          "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/exams/"
+        ],
+        "instructor_insights": [
+          "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/instructor-insights/"
+        ],
+        "lecture_notes": [
+          "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes",
+          "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/lecture-notes/"
+        ],
+        "problem_sets": [
+          "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/assignments/"
+        ],
+        "study_materials": [
+          "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/study-materials/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/10-626-electrochemical-energy-systems-spring-2014/pages/syllabus/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Electrochemical Energy Systems",
+        "primary_course_number": "10.626",
+        "extra_course_numbers": "10.426",
+        "term": "Spring",
+        "year": "2014",
+        "level": [
+          "Graduate"
+        ],
+        "instructors": [
+          "Prof. Martin Bazant"
+        ],
+        "department_numbers": [
+          "10"
+        ],
+        "topics": [
+          [
+            "Engineering",
+            "Materials Science and Engineering",
+            "Electronic Materials"
+          ],
+          [
+            "Engineering",
+            "Chemical Engineering",
+            "Transport Processes"
+          ],
+          [
+            "Science",
+            "Chemistry",
+            "Analytical Chemistry"
+          ],
+          [
+            "Science",
+            "Chemistry",
+            "Physical Chemistry"
+          ],
+          [
+            "Engineering",
+            "Chemical Engineering"
+          ]
+        ],
+        "learning_resource_types": [
+          "Problem Sets",
+          "Lecture Notes",
+          "Instructor Insights",
+          "Exams",
+          "Exam Solutions"
+        ],
+        "description": "This course introduces principles and mathematical models of electrochemical energy conversion and storage. Students study equivalent circuits, thermodynamics, reaction kinetics, transport phenomena, electrostatics, porous media, and phase transformations. In addition, this course includes applications to batteries, fuel cells, supercapacitors, and electrokinetics.\n"
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-2-60j-2020",
+      "requested_url": "https://ocw.mit.edu/courses/2-60j-fundamentals-of-advanced-energy-conversion-spring-2020/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/2-60j-fundamentals-of-advanced-energy-conversion-spring-2020/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Fundamentals of Advanced Energy Conversion | Mechanical Engineering | MIT OpenCourseWare",
+      "subpages": {
+        "calendar": [
+          "https://ocw.mit.edu/courses/2-60j-fundamentals-of-advanced-energy-conversion-spring-2020/pages/calendar/"
+        ],
+        "download": [
+          "https://ocw.mit.edu/courses/2-60j-fundamentals-of-advanced-energy-conversion-spring-2020/download"
+        ],
+        "lecture_notes": [
+          "https://ocw.mit.edu/courses/2-60j-fundamentals-of-advanced-energy-conversion-spring-2020/pages/lecture-notes/"
+        ],
+        "problem_sets": [
+          "https://ocw.mit.edu/courses/2-60j-fundamentals-of-advanced-energy-conversion-spring-2020/pages/assignments/"
+        ],
+        "projects": [
+          "https://ocw.mit.edu/courses/2-60j-fundamentals-of-advanced-energy-conversion-spring-2020/pages/projects/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/2-60j-fundamentals-of-advanced-energy-conversion-spring-2020/pages/syllabus/"
+        ],
+        "tools": [
+          "https://ocw.mit.edu/courses/2-60j-fundamentals-of-advanced-energy-conversion-spring-2020/pages/tools/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Fundamentals of Advanced Energy Conversion",
+        "primary_course_number": "2.60J",
+        "extra_course_numbers": "2.62J,10.392J,22.40J,10.390J",
+        "term": "Spring",
+        "year": "2020",
+        "level": [
+          "Undergraduate"
+        ],
+        "instructors": [
+          "Prof. Ahmed F. Ghoniem"
+        ],
+        "department_numbers": [
+          "2",
+          "10",
+          "22"
+        ],
+        "topics": [
+          [
+            "Energy",
+            "Combustion"
+          ],
+          [
+            "Energy",
+            "Fossil Fuels"
+          ],
+          [
+            "Energy",
+            "Fuel Cells"
+          ],
+          [
+            "Energy",
+            "Hydrogen and Alternatives"
+          ],
+          [
+            "Energy",
+            "Nuclear Energy"
+          ],
+          [
+            "Energy",
+            "Renewables"
+          ],
+          [
+            "Engineering",
+            "Systems Engineering"
+          ],
+          [
+            "Engineering",
+            "Chemical Engineering",
+            "Transport Processes"
+          ],
+          [
+            "Science",
+            "Physics",
+            "Thermodynamics"
+          ]
+        ],
+        "learning_resource_types": [
+          "Lecture Notes",
+          "Projects with Examples",
+          "Problem Sets",
+          "Problem Set Solutions"
+        ],
+        "description": "This course covers fundamentals of thermodynamics, chemistry, and transport applied to energy systems. Topics include analysis of energy conversion and storage in thermal, mechanical, chemical, and electrochemical processes in power and transportation systems, with emphasis on efficiency, performance, and environmental impact. Applications include fuel reforming and alternative fuels, hydrogen, fuel cells and batteries, combustion, catalysis, combined and hybrid power cycles using fossil, nuclear and renewable resources.\n"
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    },
+    {
+      "id": "mit-15-031j-2012",
+      "requested_url": "https://ocw.mit.edu/courses/15-031j-energy-decisions-markets-and-policies-spring-2012/",
+      "checked_on": "2026-10-20",
+      "homepage_status": 200,
+      "final_url": "https://ocw.mit.edu/courses/15-031j-energy-decisions-markets-and-policies-spring-2012/",
+      "redirected": false,
+      "error": null,
+      "html_title": "Energy Decisions, Markets, and Policies | Sloan School of Management | MIT OpenCourseWare",
+      "subpages": {
+        "calendar": [
+          "https://ocw.mit.edu/courses/15-031j-energy-decisions-markets-and-policies-spring-2012/pages/calendar/"
+        ],
+        "download": [
+          "https://ocw.mit.edu/courses/15-031j-energy-decisions-markets-and-policies-spring-2012/download"
+        ],
+        "instructor_insights": [
+          "https://ocw.mit.edu/courses/15-031j-energy-decisions-markets-and-policies-spring-2012/pages/instructor-insights/"
+        ],
+        "lecture_notes": [
+          "https://ocw.mit.edu/courses/15-031j-energy-decisions-markets-and-policies-spring-2012/pages/lecture-notes/"
+        ],
+        "lecture_videos": [
+          "https://ocw.mit.edu/courses/15-031j-energy-decisions-markets-and-policies-spring-2012/video_galleries/video-lectures/"
+        ],
+        "problem_sets": [
+          "https://ocw.mit.edu/courses/15-031j-energy-decisions-markets-and-policies-spring-2012/pages/assignments/"
+        ],
+        "readings": [
+          "https://ocw.mit.edu/courses/15-031j-energy-decisions-markets-and-policies-spring-2012/pages/readings/"
+        ],
+        "recitations": [
+          "https://ocw.mit.edu/courses/15-031j-energy-decisions-markets-and-policies-spring-2012/pages/recitations/"
+        ],
+        "syllabus": [
+          "https://ocw.mit.edu/courses/15-031j-energy-decisions-markets-and-policies-spring-2012/pages/syllabus/"
+        ]
+      },
+      "data_json_status": 200,
+      "observed": {
+        "course_title": "Energy Decisions, Markets, and Policies",
+        "primary_course_number": "15.031J",
+        "extra_course_numbers": "14.43J,21A.341J,11.161J",
+        "term": "Spring",
+        "year": "2012",
+        "level": [
+          "Undergraduate"
+        ],
+        "instructors": [
+          "Prof. Richard Schmalensee"
+        ],
+        "department_numbers": [
+          "15",
+          "14",
+          "21A",
+          "11"
+        ],
+        "topics": [
+          [
+            "Business",
+            "Globalization"
+          ],
+          [
+            "Energy"
+          ],
+          [
+            "Social Science",
+            "Economics",
+            "International Economics"
+          ],
+          [
+            "Social Science",
+            "Public Administration",
+            "Science and Technology Policy"
+          ]
+        ],
+        "learning_resource_types": [
+          "Lecture Videos",
+          "Lecture Notes",
+          "Written Assignments",
+          "Instructor Insights"
+        ],
+        "description": "This course examines the choices and constraints regarding sources and uses of energy by households, firms, and governments through a number of frameworks to describe and explain behavior at various levels of aggregation. Examples include a wide range of countries, scope, settings, and analytical approaches.\n\nThis course is one of many [OCW Energy Courses](/courses/energy-courses/), and it is a core subject in MIT's undergraduate {{% resource_link \"d4b41011-454b-4318-8b81-c480cc84f319\" \"Energy Studies Minor\" %}}. This Institute-wide program complements the deep expertise obtained in any major "
+      },
+      "syllabus_status": 200,
+      "expectation_mismatches": [],
+      "resource_status": "verified"
+    }
+  ]
+}

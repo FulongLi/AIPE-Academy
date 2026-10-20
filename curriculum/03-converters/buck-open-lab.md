@@ -32,3 +32,23 @@ optional extensions with separate licences and model-validation requirements.
 To pass, derive the voltage balance and explain an assumption failure without
 copying the answer. A tutor should record assisted and independent performance
 separately in the learner's local record, never the public repository.
+
+## Academic References
+
+### MIT OpenCourseWare
+
+Primary academic reference:
+
+- MIT 6.622 — Power Electronics (Spring 2023)
+  https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/
+
+Relevant subjects:
+
+- Steady-state analysis of the buck converter
+- Inductor volt-second balance and current ripple
+- Continuous and discontinuous conduction modes
+
+This lab has been independently developed by AIPE Academy with reference to the
+academic scope of the above course. MIT OpenCourseWare is an external
+educational resource released under its own licence (generally CC BY-NC-SA 4.0).
+AIPE Academy is not affiliated with or endorsed by MIT.
